@@ -8,18 +8,15 @@ const DOCK_SPACE = 128
 // The menu bar sits above every window.
 const MENUBAR = 32
 const TOP = MARGIN + MENUBAR
-const FULL_MS = 420
+const RESIZE_MS = 420
 const CASCADE = 40
 
 type Rect = { x: number; y: number; w: number; h: number | null }
 
-function fullRect(): Rect {
-  return { x: MARGIN, y: TOP, w: window.innerWidth - MARGIN * 2, h: window.innerHeight - TOP - DOCK_SPACE }
-}
 
-// One chrome for every XBorg OS window: icon, title and close (double click
-// the title bar to zoom),
-// dragged by its title bar, raised on click. Windows grow out of their dock
+
+// One chrome for every XBorg OS window: icon, title and close (no full
+// screen, by design), dragged by its title bar, raised on click. Windows grow out of their dock
 // tile (or desktop icon) and shrink back into it, as on macOS.
 export default function OsWindow({
   id,
@@ -57,9 +54,7 @@ export default function OsWindow({
   const reduce = useReducedMotion()
   const ref = useRef<HTMLElement>(null)
   const [rect, setRect] = useState<Rect | null>(null)
-  const [full, setFull] = useState(false)
   const [animating, setAnimating] = useState(false)
-  const restore = useRef<Rect | null>(null)
   const drag = useRef<{ dx: number; dy: number } | null>(null)
   const timer = useRef(0)
 
@@ -91,7 +86,7 @@ export default function OsWindow({
   useEffect(() => {
     if (sized.current.width === width && sized.current.height === height) return
     sized.current = { width, height }
-    if (!rect || full) return
+    if (!rect) return
     const vw = window.innerWidth
     const vh = window.innerHeight
     const w = Math.min(width, vw - MARGIN * 2)
@@ -99,8 +94,8 @@ export default function OsWindow({
     setAnimating(!reduce)
     setRect({ x: Math.max(MARGIN, (vw - w) / 2), y: Math.max(TOP, (vh - DOCK_SPACE - (h ?? 400)) / 2), w, h })
     window.clearTimeout(timer.current)
-    timer.current = window.setTimeout(() => setAnimating(false), reduce ? 0 : FULL_MS + 40)
-  }, [width, height, rect, full, reduce])
+    timer.current = window.setTimeout(() => setAnimating(false), reduce ? 0 : RESIZE_MS + 40)
+  }, [width, height, rect, reduce])
 
   useEffect(() => {
     if (front) ref.current?.querySelector<HTMLElement>('.os-win-close')?.focus({ preventScroll: true })
@@ -108,46 +103,8 @@ export default function OsWindow({
 
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
-  useEffect(() => {
-    if (!full) return
-    const onResize = () => setRect(fullRect())
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [full])
-
-  // Full screen animates left, top, width and height together. Height "auto"
-  // can't transition, so the current height is pinned first.
-  function toggleFull() {
-    const el = ref.current
-    if (!el || !rect) return
-    window.clearTimeout(timer.current)
-    const current: Rect = { ...rect, h: el.offsetHeight }
-    if (!full) {
-      restore.current = rect
-      setRect(current)
-      setAnimating(!reduce)
-      requestAnimationFrame(() =>
-        requestAnimationFrame(() => {
-          setFull(true)
-          setRect(fullRect())
-        }),
-      )
-    } else {
-      const back = restore.current ?? current
-      const backH = back.h ?? measureAutoHeight(el, back.w)
-      setAnimating(!reduce)
-      setFull(false)
-      setRect({ ...back, h: backH })
-      timer.current = window.setTimeout(() => {
-        setAnimating(false)
-        setRect(back)
-      }, reduce ? 0 : FULL_MS)
-    }
-    if (!reduce && !full) timer.current = window.setTimeout(() => setAnimating(false), FULL_MS + 40)
-  }
-
   function onPointerDown(e: PointerEvent<HTMLElement>) {
-    if (full || e.button !== 0 || !rect) return
+    if (e.button !== 0 || !rect) return
     if ((e.target as Element).closest('button, a')) return
     drag.current = { dx: e.clientX - rect.x, dy: e.clientY - rect.y }
     e.currentTarget.setPointerCapture(e.pointerId)
@@ -186,7 +143,7 @@ export default function OsWindow({
       aria-label={title}
       data-window={id}
       data-front={front ? 'true' : undefined}
-      className={`os-win${full ? ' is-full' : ''}${front ? ' is-front' : ''}${animating ? ' is-animating' : ''}${height ? ' has-height' : ''}${className ? ` ${className}` : ''}`}
+      className={`os-win${front ? ' is-front' : ''}${animating ? ' is-animating' : ''}${height ? ' has-height' : ''}${className ? ` ${className}` : ''}`}
       style={style}
       onPointerDownCapture={onFocus}
       initial={hidden}
@@ -194,7 +151,7 @@ export default function OsWindow({
       exit={{ ...hidden, transition: { duration: reduce ? 0 : 0.28, ease: [0.5, 0, 0.75, 0] } }}
       transition={{ duration: reduce ? 0 : 0.5, ease: [0.32, 0.72, 0, 1] }}
     >
-      <header className="os-win-bar" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onDoubleClick={toggleFull}>
+      <header className="os-win-bar" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}>
         <span className="os-win-icon" aria-hidden="true">
           {icon}
         </span>
@@ -209,14 +166,4 @@ export default function OsWindow({
       <div className="os-win-body">{children}</div>
     </motion.section>
   )
-}
-
-function measureAutoHeight(el: HTMLElement, w: number) {
-  const clone = el.cloneNode(true) as HTMLElement
-  clone.style.cssText += `;position:absolute;visibility:hidden;height:auto;width:${w}px;transition:none;transform:none`
-  clone.classList.remove('is-full')
-  el.parentElement!.appendChild(clone)
-  const h = clone.offsetHeight
-  clone.remove()
-  return h
 }

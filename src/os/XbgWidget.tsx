@@ -146,16 +146,19 @@ export default function XbgWidget({
           ) : null}
         </div>
         <div className={`os-widget-change${down ? ' is-down' : ''}`}>
-          <motion.img
-            src="/os/price-up.svg"
-            alt=""
-            width={16}
-            height={8}
+          {/* The arrow lives in its own span so turning it over for a fall
+              never fights the entrance animation's transform. */}
+          <motion.span
             className="os-widget-arrow"
             initial={reduce ? false : { opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-          />
+            aria-hidden="true"
+          >
+            <svg width="16" height="8" viewBox="0 0 14.59 7.79" fill="currentColor">
+              <path d="M6.94.15a.5.5 0 0 1 .71 0l6.79 6.79a.5.5 0 0 1-.35.85H.5a.5.5 0 0 1-.35-.85L6.94.15Z" />
+            </svg>
+          </motion.span>
           <motion.p className="os-widget-value">{text}</motion.p>
           <p className="os-widget-period">{XBG_WIDGET.period}</p>
         </div>

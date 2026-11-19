@@ -265,8 +265,11 @@
 }
 
 .os-widget-change.is-down .os-widget-arrow {
-  transform: scaleY(-1);
-  filter: hue-rotate(250deg) saturate(1.6);
+  color: #ff6b6b;
+}
+
+.os-widget-change.is-down .os-widget-arrow svg {
+  transform: rotate(180deg);
 }
 
 .os-widget-value {
@@ -281,6 +284,12 @@
 
 .os-widget-arrow {
   display: block;
+  color: var(--os-green);
+}
+
+.os-widget-arrow svg {
+  display: block;
+  transition: transform 0.3s var(--os-ease);
 }
 
 .os-widget-value {
