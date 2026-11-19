@@ -1,0 +1,33 @@
+stake-upcoming @1440
+  covered: a.btn.btn-secondary "Purchase Challenge" by span.window-resize.is-s
+  covered: button.btn.btn-quiet "Re-check" by span.window-resize.is-s
+  covered: a.btn.btn-secondary "Get FanBase Pro" by span.window-resize.is-s
+references @1440
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"
+  small target 267x23: a "WhatsApp, thread with system notes"
+  small target 201x23: a "Uniswap, connected header"
+  small target 152x23: a "Base, wallet settings"
+references @1024
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"
+  small target 267x23: a "WhatsApp, thread with system notes"
+stake-history @390
+  clipped: th "Season" by thead "Season Your XBG pledged Your reward Reward pool "
+  clipped: th "Your XBG pledged" by thead "Season Your XBG pledged Your reward Reward pool "
+  clipped: th "Your reward" by thead "Season Your XBG pledged Your reward Reward pool "
+  clipped: th "Reward pool" by thead "Season Your XBG pledged Your reward Reward pool "
+  clipped: th "Status" by thead "Season Your XBG pledged Your reward Reward pool "
+  covered: button.btn.btn-quiet "Reset Demo State" by button "Rewards"
+stake-leaderboard @390
+  clipped: th "Rank" by thead "Rank Wallet XBG pledged Current boost Season poi"
+  clipped: th "Wallet" by thead "Rank Wallet XBG pledged Current boost Season poi"
+  clipped: th "XBG pledged" by thead "Rank Wallet XBG pledged Current boost Season poi"
+  clipped: th "Current boost" by thead "Rank Wallet XBG pledged Current boost Season poi"
+  clipped: th "Season points" by thead "Rank Wallet XBG pledged Current boost Season poi"
+references @390
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"

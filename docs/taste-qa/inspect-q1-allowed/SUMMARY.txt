@@ -1,0 +1,18 @@
+FAIL emoji               1 | Emoji in the page: ✓
+FAIL eyebrow             1 | 1 eyebrow/kicker label(s) above headings: "Label" above "25,000 XBG"
+FAIL gradient            14 | 2 gradient fill(s): div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | d
+FAIL hairline            15 | 2 thin rule(s)/divider line(s): div.window-title 720px | div.window-title 640px
+FAIL headline-lines      1 | 1 headline(s) wrap past two lines at 390px: "Earn more XBG by helping ventures grow." → 3 lines (7 words, 32px)
+FAIL micro-label         12 | 3 tiny uppercase letter-spaced labels (e.g. "XBORG", "XBORG", "FANBASE").
+FAIL mono                8 | Monospace type outside code: Geist Mono — e.g. "0x8f2a…c41d", "Level 1 Member", "Level 2 Builder", "Level 2 Builder"
+FAIL numbering           14 | Decorative index numbers: "01", "02", "03", "04", "05"
+FAIL small-text          12 | 4 text blocks under 13px.
+WARN card-rows           1 | 8 rows of identical boxed cards.
+WARN first-action        2 | No visible button in the first screen.
+WARN grey-body           1 | The running text is a soft grey on its ground (6.8:1).
+WARN hairline            5 | 1 thin rule(s)/divider line(s): div.window-title 390px
+WARN measure             5 | Longest paragraph runs about 141 characters per line.
+WARN micro-label         14 | 2 tiny uppercase letter-spaced label(s): "XBORG", "FANBASE"
+WARN outlined-box        1 | 1 box(es) drawn with a 1px outline.
+WARN pinned-over-picture 1 | Pinned large text slides across pictures while the page scrolls: "startup studio." (screen 1, 45% over a picture)
+WARN small-text          3 | 3 text block(s) under 13px.

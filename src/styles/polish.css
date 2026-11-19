@@ -1,0 +1,250 @@
+/*
+  Polish pass, October 2026: the menu bar, the dock and the chat separators.
+  Loaded last so it refines the round 5 system without rewriting it. Tokens only.
+*/
+
+/* Menu bar: always a bar on the desktop, firmer once the chat scrolls under it.
+   No clock or system indicators, as every round has ruled. */
+@media (min-width: 900px) {
+  .topbar {
+    background: var(--x-menubar-rest);
+    border-bottom-color: var(--x-hairline);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+  }
+
+  .topbar[data-scrolled='true'] {
+    background: var(--x-menubar-scrolled);
+  }
+}
+
+.topbar-brand {
+  gap: var(--x-space-3);
+}
+
+.topbar-app {
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+  animation: topbar-app-in var(--x-dur-2) var(--x-ease);
+}
+
+@keyframes topbar-app-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+.topbar-status {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-4);
+}
+
+
+/* Dock, desktop. Hover nudges the tile up a few pixels and brightens it. Only
+   the icon moves: the buttons, and so the layout, never do. */
+@media (min-width: 900px) {
+  .dock-item,
+  .dock-item.is-hover {
+    transform: none;
+  }
+
+  /* Keyboard focus lifts the whole button, so its ring travels with the tile. */
+  .dock-item {
+    transition: transform var(--x-dur-lift) var(--x-ease);
+  }
+
+  [data-input='keyboard'] .dock-item:focus-visible {
+    transform: translateY(-3px) scale(1.05);
+  }
+
+  [data-input='keyboard'] .dock-item:focus-visible .dock-icon {
+    background: var(--x-tile-bg-hover);
+    box-shadow: var(--x-tile-lift-shadow);
+  }
+
+  .dock-icon,
+  .dock-product .dock-icon,
+  .dock-item.is-x .dock-icon,
+  .dock-item.is-discord .dock-icon,
+  .dock-item.is-portal .dock-icon,
+  .dock-item.is-portal.is-active .dock-icon {
+    transform-origin: 50% 100%;
+    transition:
+      transform var(--x-dur-lift) var(--x-ease),
+      background-color var(--x-dur-1) var(--x-ease),
+      box-shadow var(--x-dur-2) var(--x-ease);
+  }
+
+  .dock-item.is-hover .dock-icon {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--x-tile-bg-hover);
+    box-shadow: var(--x-tile-lift-shadow);
+  }
+
+  .dock-label {
+    bottom: calc(100% + var(--x-space-4));
+    padding: var(--x-space-1) var(--x-space-3);
+    border-radius: var(--x-radius-tile-sm);
+    background: var(--x-tooltip-bg);
+    box-shadow: var(--x-tooltip-edge);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    font-family: var(--x-font-body);
+    font-size: var(--x-t6);
+    line-height: var(--x-l6);
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--x-ink-1);
+    /* A hidden tooltip never catches the pointer above its tile. */
+    pointer-events: none;
+    transition:
+      opacity var(--x-dur-1) var(--x-ease),
+      transform var(--x-dur-2) var(--x-ease);
+  }
+
+  .dock-dot {
+    bottom: -7px;
+    height: var(--x-indicator-w);
+  }
+}
+
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .dock-item:hover {
+    transform: none;
+  }
+
+  .dock-item:hover .dock-icon {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--x-tile-bg-hover);
+    box-shadow: var(--x-tile-lift-shadow);
+  }
+
+  /* The tooltip waits a beat, so sweeping across the dock does not flicker. */
+  .dock-item:hover .dock-label {
+    pointer-events: auto;
+    transition-delay: 60ms;
+  }
+
+  .dock-item:active .dock-icon {
+    transform: translateY(-1px) scale(1.02);
+    transition-duration: 90ms;
+  }
+
+  /* Once clicked, the tile stays where the press left it: releasing the button
+     never lifts it again. Its app is now active, so this holds until the
+     pointer leaves. */
+  .dock-item.is-active:hover .dock-icon {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  /* A focused tile is already lifted; the pointer does not lift it twice. */
+  [data-input='keyboard'] .dock-item:focus-visible:hover .dock-icon {
+    transform: none;
+  }
+}
+
+/* Earn's coin fills its viewBox edge to edge, so it is set to the marks' optical size. */
+.dock-item[data-dock='earn'] .xborg-favicon,
+.dock-item[data-dock='earn'] .xborg-favicon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* The X glyph is drawn smaller in its file, so it gets the room Discord has. */
+.dock-item.is-x .dock-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Dock, phone. Real product casing, no tracking, and a press you can feel. */
+@media (max-width: 899px) {
+  .topbar .topbar-status {
+    display: none;
+  }
+
+  .dock-label {
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+    color: var(--x-ink-3);
+  }
+
+  .dock-item.is-active .dock-label {
+    color: var(--x-ink-1);
+  }
+
+  .dock-item.is-active .dock-icon {
+    background: var(--x-tile-bg-hover);
+  }
+
+  .dock-icon {
+    transition: transform var(--x-dur-1) var(--x-ease);
+  }
+
+  .dock-item:active .dock-icon {
+    transform: scale(0.96);
+  }
+}
+
+/* Chat: a beat starts with a quiet centred separator, not a numbered rule. */
+.beat-label {
+  justify-content: center;
+  margin: 0 0 var(--x-space-4) calc(var(--x-sender-gutter) * -1);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.beat-label::after {
+  display: none;
+}
+
+.beat-label .beat-name {
+  color: var(--x-ink-3);
+}
+
+/* Stake: anything meant to be read is 13px or more. Badges and window titles
+   keep 12px. */
+.stake-app .portal-kicker,
+.stake-entry .portal-kicker,
+.stake-app .season-panel-footer,
+.stake-app .balance-row dt,
+.stake-app .balance-row dd,
+.stake-app .balance-row p,
+.stake-app .list-heading,
+.stake-app .boost-list li > div span,
+.stake-app .season-metrics span,
+.stake-entry .season-metrics span,
+.stake-app .season-metrics .text-action,
+.stake-entry .season-metrics .text-action,
+.stake-app .position-meta dt,
+.summary-strip dt {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+/* How it works is a real ordered list. Its order reads from position, so the
+   01 to 04 counters go. */
+.how-list li::before {
+  content: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar-app {
+    animation: none;
+  }
+
+  .dock-item:hover .dock-icon,
+  .dock-item.is-hover .dock-icon,
+  .dock-item:active .dock-icon,
+  [data-input='keyboard'] .dock-item:focus-visible {
+    transform: none;
+  }
+}

@@ -1,0 +1,326 @@
+/*
+  Round 6: the living desktop. The sky canvas sits under everything on the
+  workspace; the grain stays above it. Values come from tokens.css.
+*/
+.sky {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--x-dur-sky) var(--x-ease);
+}
+
+.sky[data-ready='true'] {
+  opacity: 1;
+}
+
+.sky[data-lost='true'] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky {
+    transition: none;
+  }
+}
+
+/* The Ask field: the one thing in the middle of the menu bar. */
+.ask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ask-trigger {
+  display: flex;
+  width: var(--x-ask-w);
+  height: var(--x-control-sm);
+  align-items: center;
+  gap: var(--x-space-2);
+  padding: 0 var(--x-space-1) 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  background: var(--x-ask-bg);
+  box-shadow: inset 0 0 0 1px var(--x-hairline);
+  color: var(--x-ink-3);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  cursor: pointer;
+  transition:
+    background-color var(--x-dur-1) var(--x-ease),
+    color var(--x-dur-1) var(--x-ease);
+}
+
+.ask-trigger-label {
+  flex: 1;
+  text-align: left;
+}
+
+.ask-trigger[aria-expanded='true'] {
+  background: var(--x-ask-bg-hover);
+  color: var(--x-ink-2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ask-trigger:hover {
+    background: var(--x-ask-bg-hover);
+    color: var(--x-ink-2);
+  }
+}
+
+.ask-kbd {
+  display: inline-flex;
+  height: var(--x-space-5);
+  align-items: center;
+  padding: 0 var(--x-space-2);
+  border-radius: var(--x-radius-control);
+  background: var(--x-quiet-hover);
+  color: var(--x-ink-3);
+  font-family: var(--x-font-mono);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.ask-panel {
+  position: absolute;
+  top: calc(100% + var(--x-space-3));
+  left: 50%;
+  z-index: 30;
+  width: var(--x-ask-panel-w);
+  overflow: hidden;
+  border-radius: var(--x-radius-card);
+  background: var(--x-ask-panel);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong), var(--x-shadow-3);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  transform: translateX(-50%);
+  transform-origin: 50% 0;
+}
+
+.ask-field {
+  display: flex;
+  height: var(--x-control-lg);
+  align-items: center;
+  gap: var(--x-space-3);
+  padding: 0 var(--x-space-3) 0 var(--x-space-4);
+  border-bottom: 1px solid var(--x-hairline);
+  color: var(--x-ink-3);
+}
+
+.ask-field input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+}
+
+.ask-field input::placeholder {
+  color: var(--x-ink-3);
+}
+
+.ask-list {
+  max-height: var(--x-ask-list-h);
+  overflow-y: auto;
+  padding: var(--x-space-2);
+}
+
+.ask-group {
+  display: block;
+  padding: var(--x-space-2) var(--x-space-3) var(--x-space-1);
+  color: var(--x-ink-3);
+  font-family: var(--x-font-mono);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.ask-option {
+  display: flex;
+  height: var(--x-control-md);
+  align-items: center;
+  gap: var(--x-space-3);
+  padding: 0 var(--x-space-3);
+  border-radius: var(--x-radius-tile-sm);
+  color: var(--x-ink-1);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  cursor: pointer;
+}
+
+.ask-option[aria-selected='true'] {
+  background: var(--x-quiet-hover);
+}
+
+.ask-option-glyph {
+  display: grid;
+  width: var(--x-space-5);
+  height: var(--x-space-5);
+  flex: none;
+  place-items: center;
+  color: var(--x-ink-2);
+}
+
+.ask-option-glyph svg,
+.ask-option-glyph img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ask-option-glyph svg {
+  width: 70%;
+  height: 70%;
+}
+
+/* The product marks are drawn black; the dock turns them white the same way. */
+.ask-option-glyph img {
+  width: 80%;
+  height: 80%;
+  filter: brightness(0) invert(1);
+  opacity: 0.72;
+}
+
+.ask-option-glyph svg[fill='none'] {
+  color: var(--x-ink-3);
+}
+
+.ask-option-title {
+  flex: 1;
+}
+
+.ask-option-hint {
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  opacity: 0;
+}
+
+.ask-option[aria-selected='true'] .ask-option-hint {
+  opacity: 1;
+}
+
+.ask-empty {
+  margin: 0;
+  padding: var(--x-space-4) var(--x-space-3);
+  color: var(--x-ink-3);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+/* An answer reads like the chat: XBorg's mark and its bubbles. */
+.ask-answer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-4);
+  padding: var(--x-space-3) var(--x-space-4) var(--x-space-5);
+}
+
+.ask-answer-head {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-2);
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.ask-back {
+  display: grid;
+  width: var(--x-control-sm);
+  height: var(--x-control-sm);
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--x-radius-control);
+  background: transparent;
+  color: var(--x-ink-2);
+  cursor: pointer;
+}
+
+.ask-back:hover {
+  background: var(--x-quiet-hover);
+}
+
+.ask-answer-body {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--x-space-3);
+}
+
+.ask-avatar {
+  --cut: var(--x-cut-mark);
+  display: grid;
+  width: var(--x-control-sm);
+  height: var(--x-control-sm);
+  flex: none;
+  place-items: center;
+  background: var(--x-ink-1);
+  color: var(--x-surface-1);
+}
+
+.ask-avatar svg {
+  width: 55%;
+  height: 55%;
+}
+
+.ask-bubbles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--x-space-1);
+}
+
+.ask-bubble {
+  margin: 0;
+  padding: var(--x-space-2) var(--x-space-3);
+  border-radius: var(--x-radius-tile);
+  background: var(--x-surface-3);
+  color: var(--x-ink-1);
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+}
+
+.ask-action {
+  align-self: flex-start;
+  margin-left: calc(var(--x-control-sm) + var(--x-space-3));
+  gap: var(--x-space-2);
+}
+
+/* The connected wallet shows what it holds, then whose it is. */
+.topbar .wallet-control.is-connected {
+  gap: var(--x-space-3);
+}
+
+.wallet-balance {
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.wallet-address {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--x-space-2);
+  color: var(--x-ink-2);
+}
+
+@media (max-width: 899px) {
+  .ask {
+    display: none;
+  }
+}

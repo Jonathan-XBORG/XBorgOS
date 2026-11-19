@@ -1,0 +1,1 @@
+font-count,few-pictures,no-footage,no-real-pictures,glass,shadow,button-fx,focal-point,still-page,no-hero,body-size,covered-text,palette-purple

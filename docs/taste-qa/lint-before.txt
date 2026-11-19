@@ -1,0 +1,79 @@
+TASTESKILL · LINT   57 file(s)
+
+FAIL
+  [eyebrow] Eyebrow / kicker label above a heading.  (16×)
+      src/components/Notes.tsx:5  className="sys-kicker
+      src/components/PortalEntry.tsx:30  className="portal-kicker
+      src/components/References.tsx:7  className="sys-kicker
+      src/components/SystemSheet.tsx:121  className="sys-kicker
+      src/components/SystemSheet.tsx:396  className="portal-kicker
+      src/components/portal/HomeScreen.tsx:20  className="portal-kicker
+      … 10 more
+  [mono] Monospace type. Only literal code may be monospace.  (15×)
+      src/components/Notes.tsx:28  Geist Mono
+      src/components/SystemSheet.tsx:150  Geist Mono
+      src/styles/components.css:369  font-family: var(--x-font-mono
+      src/styles/portal.css:19  font-family: var(--font-mono
+      src/styles/portal.css:166  font-family: var(--font-mono
+      src/styles/portal.css:377  font-family: var(--font-mono
+      … 9 more
+  [numbering] Decorative index numbering (01 / 02 / 03).  (6×)
+      src/components/SystemSheet.tsx:313  >01<
+      src/conversation.ts:16  '01'
+      src/conversation.ts:29  '02'
+      src/conversation.ts:39  '03'
+      src/conversation.ts:51  '04'
+      src/conversation.ts:63  '05'
+  [emoji] Emoji used as UI.  (3×)
+      src/components/SystemSheet.tsx:498  ✓
+      src/components/portal/Portal.tsx:150  ✓
+      src/components/portal/StakeFlow.tsx:98  ✓
+  [shadow] Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may.  (61×)
+      src/styles/components.css:36  box-shadow:
+      src/styles/components.css:40  box-shadow:
+      src/styles/components.css:44  box-shadow:
+      src/styles/components.css:79  box-shadow:
+      src/styles/components.css:105  box-shadow:
+      src/styles/components.css:122  box-shadow:
+      … 55 more
+  [gradient] Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception).  (11×)
+      src/styles/components.css:119  linear-gradient(
+      src/styles/components.css:120  linear-gradient(
+      src/styles/components.css:1580  radial-gradient(
+      src/styles/tokens.css:183  linear-gradient(
+      src/styles/tokens.css:207  linear-gradient(
+      src/styles/tokens.css:217  linear-gradient(
+      … 5 more
+  [hairline] Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields.  (19×)
+      src/styles/components.css:298  border-bottom: 1px
+      src/styles/components.css:476  border-bottom: 1px
+      src/styles/components.css:1246  border-right: 1px
+      src/styles/components.css:1612  border-top: 1px
+      src/styles/components.css:1731  border-bottom: 1px
+      src/styles/components.css:1932  border-top: 1px
+      … 13 more
+
+WARN
+  [copy] Stock marketing phrase. Say the specific thing the product does.  (5×)
+      src/components/portal/ExperienceGrid.tsx:42  unlock
+      src/components/portal/HomeScreen.tsx:22  unlock
+      src/components/portal/HomeScreen.tsx:87  Unlock
+      src/components/portal/MissionCard.tsx:46  Unlock
+      src/products.ts:43  all in one
+  [glass] Backdrop blur. One sticky bar at most; glass cards are a tell.  (16×)
+      src/styles/components.css:123  backdrop-filter:
+      src/styles/components.css:124  backdrop-filter:
+      src/styles/components.css:299  backdrop-filter:
+      src/styles/components.css:300  backdrop-filter:
+      src/styles/components.css:309  backdrop-filter:
+      src/styles/components.css:310  backdrop-filter:
+      … 10 more
+  [outlined-box] A 1px outlined box. Prefer a filled surface or no box.  (5×)
+      src/styles/portal.css:415  border: 1px solid
+      src/styles/portal.css:455  border: 1px solid
+      src/styles/portal.css:677  border: 1px solid
+      src/styles/portal.css:694  border: 1px solid
+      src/styles/structure.css:392  border: 1px solid
+
+RESULT: 131 FAIL, 26 WARN — fix the FAILs before rendering.
+Interface fragments marked data-ui keep their own borders and shadows. Any other line that must keep a flagged pattern for a real reason can carry the comment taste-skill-ignore.

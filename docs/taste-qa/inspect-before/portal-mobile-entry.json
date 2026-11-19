@@ -1,0 +1,1155 @@
+{
+ "url": "http://127.0.0.1:5174/?present=1#portal-mobile-entry",
+ "at": "2026-10-15T12:23:48.794Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    1
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 283,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Enter the XBG Portal",
+     "words": 4,
+     "chars": 20,
+     "lines": 1,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.23,
+     "top": 432,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Enter the XBG Portal",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.23,
+      "top": 432,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      15,
+      32
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 68,
+     "max": {
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "text": "Enter the XBG Portal"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 3,
+     "microLabelShare": 0.013,
+     "microSamples": [
+      "XBORG",
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.15,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 437
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 747
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 1104
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1345
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 1655
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 92,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.75
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.21
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      },
+      {
+       "color": "#6f6f79",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": [
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Early access",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 28,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Connect Wallet",
+      "Connect Wallet"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 5,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "div.window-title 720px",
+      "div.window-title 560px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 6,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 900,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    1
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1024,
+     "h": 768
+    },
+    "page": {
+     "height": 768,
+     "screens": 1,
+     "words": 283,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Enter the XBG Portal",
+     "words": 4,
+     "chars": 20,
+     "lines": 1,
+     "size": 32,
+     "vw": 3.1,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.33,
+     "top": 366,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Enter the XBG Portal",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.33,
+      "top": 366,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      15,
+      32
+     ],
+     "sizeCount": 4,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 68,
+     "max": {
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "text": "Enter the XBG Portal"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 3,
+     "microLabelShare": 0.013,
+     "microSamples": [
+      "XBORG",
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.05,
+     "centerShare": 0.15,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 323
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 633
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 990
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1231
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 1541
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 74,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.75
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.21
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      },
+      {
+       "color": "#6f6f79",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": [
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Early access",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 28,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Connect Wallet",
+      "Connect Wallet"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 5,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "div.window-title 720px",
+      "div.window-title 560px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 6,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 768,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    1
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 844,
+     "screens": 1,
+     "words": 295,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 9,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "An AI startup studio.",
+     "words": 4,
+     "chars": 21,
+     "lines": 2,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Archivo",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.09,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 124,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "An AI startup studio.",
+     "words": 4,
+     "lines": 2,
+     "size": 44,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "An AI startup studio.",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.09,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 124,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Enter the XBG Portal",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 392,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 2,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.96,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.04,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      15,
+      17,
+      32,
+      44
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 46,
+     "max": {
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "text": "An AI"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 2,
+     "microLabelShare": 0.009,
+     "microSamples": [
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.04,
+     "centerShare": 0.15,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 396
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 775
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 1342
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1675
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 2077
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.7
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.25
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.03
+      },
+      {
+       "color": "#6f6f79",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": [
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Live",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      },
+      {
+       "text": "Early access",
+       "ratio": 3.2,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#6f6f79",
+       "bg": "#20202a"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Enter the XBG Portal",
+      "Connect Wallet"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 1,
+     "hairlineSamples": [
+      "div.window-title 390px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 9,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 844,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\", \"04\", \"05\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "3 tiny uppercase letter-spaced labels (e.g. \"XBORG\", \"XBORG\", \"XBG PORTAL\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "2 gradient fill(s): div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "width": 1440,
+   "message": "5 box-shadow(s) on elements at rest: button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px | button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px | span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+   "fix": "Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "2 thin rule(s)/divider line(s): div.window-title 720px | div.window-title 560px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "width": 1440,
+   "message": "3 backdrop-blur surfaces.",
+   "fix": "One blurred sticky bar at most; glass cards are a tell.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Live\" 3.2:1 needs 4.5:1; \"Live\" 3.2:1 needs 4.5:1; \"Early access\" 3.2:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15px.",
+   "fix": "Body copy 16–20px.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "3 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "focal-point",
+   "width": 1440,
+   "message": "The first screen has no dominant element: the largest type is 32px (2.2vw) and no single picture holds a third of the viewport.",
+   "fix": "Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 2 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 390,
+   "message": "2 tiny uppercase letter-spaced label(s): \"XBORG\", \"XBG PORTAL\"",
+   "fix": "Prefer sentence case at body size."
+  },
+  {
+   "level": "WARN",
+   "id": "hairline",
+   "width": 390,
+   "message": "1 thin rule(s)/divider line(s): div.window-title 390px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 390,
+   "message": "Large text lies under another element at some scroll position: \"An AI\" (screen 1, 100% hidden); \"startup studio.\" (screen 1, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/desktop-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 1024,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/tablet-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/mobile-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect/portal-mobile-entry/mobile-page-01.jpg"
+   ]
+  }
+ ]
+}

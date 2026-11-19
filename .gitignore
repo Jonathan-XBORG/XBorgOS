@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+playwright-report
+test-results
+blob-report
+src/styles/.DS_Store
+public/captures/*-full.jpg
+public/captures/trigr-app.jpg
+public/captures/trigr-marketplace.jpg
+public/captures/trigr-studio.jpg
+tests-visual/__snapshots__/
+.taste-skill/
+
+# Review evidence stays local; it is ~250 MB of screenshots.
+review-shots/

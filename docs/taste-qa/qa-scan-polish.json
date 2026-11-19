@@ -1,0 +1,8702 @@
+{
+ "set": "polish",
+ "at": "2026-10-17T16:10:44.814Z",
+ "results": [
+  {
+   "id": "workspace",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Open Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Trigr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Earn\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg on X\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg Discord\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.window-body \"Who we are You are probably here for Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "workspace",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "propr",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "fanbase",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "trigr",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-entry",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-entry",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-restricted",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Back to Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-restricted",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-no-xbg",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Buy XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-no-xbg",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-not-verified",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-verified",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-linked",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-linked",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-check-unavailable",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-check-unavailable",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-eligible",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-eligible-nft",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible-nft",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-active",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-active",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-not-earning",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-earning",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-all-pledged",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-all-pledged",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-balance-error",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-balance-error",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-upcoming",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "by": "span.window-resize.is-s"
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "by": "span.window-resize.is-s"
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "by": "span.window-resize.is-s"
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "by": "span.window-resize.is-s"
+    }
+   ],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-upcoming",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-season-closed",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-season-closed",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-history",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more…\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-history",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-positions",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"See final allocations\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Unstake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-positions-empty",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Go to rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions-empty",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-verify-email",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input.text-field",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-email",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-verify-sign",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-sign",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-verify-refused",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-refused",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-verify-done",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-done",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-amount",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-amount",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-invalid",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"400000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-invalid",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-confirm",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-confirm",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-signing",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-signing",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-rejected",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign again\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-rejected",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-submitting",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-submitting",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-done",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-done",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-lost",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Refresh and check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-lost",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-pledge-refused",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-refused",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-leaderboard",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-leaderboard",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "stake-unstake-confirm",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-unstake-confirm",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "earn",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "earn",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "system",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to pledge 250,000 XBG Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "references",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "w": 267,
+     "h": 23
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "w": 201,
+     "h": 23
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "w": 152,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "notes",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "workspace",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Open Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Trigr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Earn\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg on X\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg Discord\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.window-body \"Who we are You are probably here for Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-entry",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-restricted",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Back to Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-no-xbg",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Buy XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-verified",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-linked",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-check-unavailable",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible-nft",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-active",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-earning",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-all-pledged",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-balance-error",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-upcoming",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-season-closed",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-history",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more…\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"See final allocations\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Unstake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions-empty",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Go to rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-email",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input.text-field",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-sign",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-refused",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-done",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-amount",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-invalid",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"400000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-confirm",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-signing",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-rejected",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign again\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-submitting",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-done",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-lost",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Refresh and check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-refused",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-leaderboard",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-unstake-confirm",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "earn",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to pledge 250,000 XBG Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "w": 267,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "workspace",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "div.window-body \"XBORG An AI startup studio. We help smal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Open Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Open Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"Trigr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"Earn\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-entry",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-restricted",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Back to Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-no-xbg",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Buy XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-verified",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Verify\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-linked",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-check-unavailable",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-eligible-nft",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-active",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-not-earning",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Pledge more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-all-pledged",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-balance-error",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-upcoming",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Purchase Challenge\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Get FanBase Pro\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Re-check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"View Collection\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Open Community App\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-season-closed",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"See all boosts\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View leaderboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-history",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "th \"Season\"",
+     "by": "thead \"Season Your XBG pledged Your reward Reward pool \"",
+     "textRight": 92,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Your XBG pledged\"",
+     "by": "thead \"Season Your XBG pledged Your reward Reward pool \"",
+     "textRight": 219,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Your reward\"",
+     "by": "thead \"Season Your XBG pledged Your reward Reward pool \"",
+     "textRight": 311,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Reward pool\"",
+     "by": "thead \"Season Your XBG pledged Your reward Reward pool \"",
+     "textRight": 406,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Status\"",
+     "by": "thead \"Season Your XBG pledged Your reward Reward pool \"",
+     "textRight": 468,
+     "boxRight": 38
+    }
+   ],
+   "truncated": [],
+   "covered": [
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "by": "button \"Rewards\""
+    }
+   ],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more…\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"See final allocations\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Unstake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-positions-empty",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Positions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Go to rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-email",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input.text-field",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-sign",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-refused",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-verify-done",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-amount",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-invalid",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"400000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.amount-max \"MAX\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Next\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-confirm",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-signing",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-rejected",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Back\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Sign again\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-submitting",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-done",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Done\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-lost",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Refresh and check\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-pledge-refused",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-leaderboard",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "th \"Rank\"",
+     "by": "thead \"Rank Wallet XBG pledged Current boost Season poi\"",
+     "textRight": 53,
+     "boxRight": 1
+    },
+    {
+     "el": "th \"Wallet\"",
+     "by": "thead \"Rank Wallet XBG pledged Current boost Season poi\"",
+     "textRight": 61,
+     "boxRight": 1
+    },
+    {
+     "el": "th \"XBG pledged\"",
+     "by": "thead \"Rank Wallet XBG pledged Current boost Season poi\"",
+     "textRight": 98,
+     "boxRight": 1
+    },
+    {
+     "el": "th \"Current boost\"",
+     "by": "thead \"Rank Wallet XBG pledged Current boost Season poi\"",
+     "textRight": 103,
+     "boxRight": 1
+    },
+    {
+     "el": "th \"Season points\"",
+     "by": "thead \"Rank Wallet XBG pledged Current boost Season poi\"",
+     "textRight": 105,
+     "boxRight": 1
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Load more\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "stake-unstake-confirm",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Reject\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "earn",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to pledge 250,000 XBG Sign\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+TASTESKILL · INSPECT   http://127.0.0.1:5174/?present=1#portal-mobile-entry
+
+MEASURED (first viewport listed)
+  hero headline   "Enter the XBG Portal"  4 words · 1 line(s) · 32px (2.2vw) · Archivo 600 · tracking -0.02em · leading 1.19
+  @1024px          1 line(s) · 32px
+  @390px          2 line(s) · 44px
+  typefaces       Geist 96%, Archivo 4%
+  sizes in use    12 / 13 / 15 / 32 px   body 15px / 1.53
+  colour          page #09090d · sections #121218 · button #f4f4f7
+  page            1 screens · 283 words · 8 images · hero media none
+  headings        1 · longest 1 line(s) · median - words
+
+FAIL — fix every one of these
+  [numbering] @1440px (+1024, 390)  Decorative index numbers: "01", "02", "03", "04", "05"
+      → Remove them. If order truly matters, write it into the words ("First, …") or use a real <ol>.
+  [micro-label] @1440px (+1024)  3 tiny uppercase letter-spaced labels (e.g. "XBORG", "XBORG", "XBG PORTAL").
+      → Use sentence-case text at a readable size, or delete the label.
+  [gradient] @1440px (+1024, 390)  2 gradient fill(s): div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none
+      → Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.
+  [shadow] @1440px (+1024, 390)  5 box-shadow(s) on elements at rest: button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px | button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px | span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px
+      → Remove. Separate surfaces with a tone step or space. Shadows are for things that really float (menus, dialogs, sticky bars).
+  [button-fx] @1440px (+1024, 390)  Buttons with shadow/glow.
+      → Flat fill, one colour.
+  [hairline] @1440px (+1024)  2 thin rule(s)/divider line(s): div.window-title 720px | div.window-title 560px
+      → Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.
+  [few-pictures] @1440px  Only 0 picture(s) on the page (0 photographs, footage or raster images, 0 interface fragments). Drawings in SVG do not count.
+      → Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve.
+  [focal-point] @1440px (+1024)  The first screen has no dominant element: the largest type is 32px (2.2vw) and no single picture holds a third of the viewport.
+      → Make one thing lead: the headline at display size, or one large picture. A grid of many small pictures is not one thing; in blind tests jurors marked a first screen without a headline down every time. On the strongest studied sites the largest type has a median of 8.4vw.
+  [still-page] @1440px  Only 2 element(s) moved while the page loaded and scrolled.
+      → Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback.
+  [covered-text] @390px  Large text lies under another element at some scroll position: "An AI" (screen 1, 100% hidden); "startup studio." (screen 1, 100% hidden)
+      → Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.
+
+WARN — fix, or be able to defend
+  [glass] @1440px (+1024)  3 backdrop-blur surfaces.
+      → One blurred sticky bar at most; glass cards are a tell.
+  [contrast] @1440px (+1024, 390)  Low-contrast text: "Live" 3.2:1 needs 4.5:1; "Live" 3.2:1 needs 4.5:1; "Early access" 3.2:1 needs 4.5:1
+      → Darken or lighten the text colour.
+  [body-size] @1440px (+1024)  Body text is 15px.
+      → Body copy 16–20px.
+  [no-footage] @1440px  No video anywhere on the page.
+      → Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject.
+  [small-text] @1440px (+1024, 390)  3 text block(s) under 13px.
+      → Nothing meant to be read goes below 13px.
+  [micro-label] @390px  2 tiny uppercase letter-spaced label(s): "XBORG", "XBG PORTAL"
+      → Prefer sentence case at body size.
+  [hairline] @390px  1 thin rule(s)/divider line(s): div.window-title 390px
+      → Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.
+
+LOOK AT THE RENDER — open these with your image viewer / Read tool before saying anything about quality:
+  desktop 1440px  .taste-skill/inspect/portal-mobile-entry/desktop-fold.jpg
+                  .taste-skill/inspect/portal-mobile-entry/desktop-page-01.jpg
+  tablet 1024px   .taste-skill/inspect/portal-mobile-entry/tablet-fold.jpg
+                  .taste-skill/inspect/portal-mobile-entry/tablet-page-01.jpg
+  mobile 390px    .taste-skill/inspect/portal-mobile-entry/mobile-fold.jpg
+                  .taste-skill/inspect/portal-mobile-entry/mobile-page-01.jpg
+
+report: .taste-skill/inspect/portal-mobile-entry/report.json
+RESULT: 10 FAIL, 7 WARN — not done.

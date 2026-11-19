@@ -1,0 +1,1272 @@
+{
+ "url": "http://127.0.0.1:5174/?present=1#portal-rewards",
+ "at": "2026-10-15T12:58:29.465Z",
+ "allow": [
+  "font-count",
+  "few-pictures",
+  "no-footage",
+  "no-real-pictures",
+  "glass",
+  "shadow",
+  "button-fx",
+  "focal-point",
+  "still-page",
+  "no-hero",
+  "body-size",
+  "covered-text",
+  "palette-purple"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.98
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 380,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 12,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Your XBG rewards.",
+     "words": 3,
+     "chars": 17,
+     "lines": 1,
+     "size": 32,
+     "vw": 2.2,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.32,
+     "top": 166,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Your XBG rewards.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.32,
+      "top": 166,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.04,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      22,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "text": "Your XBG rewards."
+     },
+     "monoShare": 0.04,
+     "monoProseShare": 0.04,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "0x8f2a…c41d",
+      "4 August 2026",
+      "1,126 XBG",
+      "0x72ac…91e4",
+      "28 August 2026",
+      "500 XBG"
+     ],
+     "microLabels": 3,
+     "microLabelShare": 0.009,
+     "microSamples": [
+      "XBORG",
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.07,
+     "centerShare": 0.06,
+     "smallText": 16
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 437
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 747
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 1104
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1345
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 1655
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 92,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.68
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.21
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.1
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 28,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 1,
+     "upper": 0,
+     "heroLabels": [
+      "0x8f2a…c41d",
+      "Claim Rewards"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 5,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 6,
+     "hairlineSamples": [
+      "div.window-title 720px",
+      "div.window-title 1180px",
+      "div.portal-sidebar 200px",
+      "div 840px",
+      "div 840px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 10,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 289
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 900,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.99
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1024,
+     "h": 768
+    },
+    "page": {
+     "height": 768,
+     "screens": 1,
+     "words": 380,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 12,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "Your XBG rewards.",
+     "words": 3,
+     "chars": 17,
+     "lines": 1,
+     "size": 32,
+     "vw": 3.1,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.44,
+     "top": 164,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": null,
+    "headings": [
+     {
+      "text": "Your XBG rewards.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.44,
+      "top": 164,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.04,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      22,
+      32
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "text": "Your XBG rewards."
+     },
+     "monoShare": 0.04,
+     "monoProseShare": 0.04,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "0x8f2a…c41d",
+      "4 August 2026",
+      "1,126 XBG",
+      "0x72ac…91e4",
+      "28 August 2026",
+      "500 XBG"
+     ],
+     "microLabels": 3,
+     "microLabelShare": 0.009,
+     "microSamples": [
+      "XBORG",
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.07,
+     "centerShare": 0.06,
+     "smallText": 16
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 323
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 633
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 990
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1231
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 1541
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 74,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.68
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.21
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.1
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 28,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 1,
+     "upper": 0,
+     "heroLabels": [
+      "0x8f2a…c41d",
+      "Claim Rewards"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 5,
+     "shadowOverlay": 2,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.dock-label → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 6,
+     "hairlineSamples": [
+      "div.window-title 720px",
+      "div.window-title 1000px",
+      "div.portal-sidebar 200px",
+      "div 696px",
+      "div 696px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 3,
+     "roundedBoxes": 10,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 287
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 768,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    1
+   ],
+   "motion": {
+    "elements": 2,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 2,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 844,
+     "screens": 1,
+     "words": 393,
+     "img": 8,
+     "video": 0,
+     "canvas": 0,
+     "svg": 12,
+     "sections": 11,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": []
+    },
+    "hero": {
+     "text": "An AI startup studio.",
+     "words": 4,
+     "chars": 21,
+     "lines": 2,
+     "size": 44,
+     "vw": 11.3,
+     "font": "Archivo",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1.09,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 124,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "An AI startup studio.",
+     "words": 4,
+     "lines": 2,
+     "size": 44,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "Your XBG rewards.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 88,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "An AI startup studio.",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1.09,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 124,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "What you are earning",
+      "words": 4,
+      "chars": 20,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 338,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "1,340 XBG",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 452,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "1,250 XBG",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 452,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "0 XBG",
+      "words": 2,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 524,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "500 XBG",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 524,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "4 October 2026",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 596,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Why you are earning it",
+      "words": 5,
+      "chars": 22,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 696,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Your latest reward events",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1026,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.89,
+       "mono": false
+      },
+      {
+       "family": "Archivo",
+       "share": 0.08,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.03,
+       "mono": true
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      17,
+      22,
+      32,
+      44
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 15,
+      "leading": 1.53,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 14.7
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "text": "An AI"
+     },
+     "monoShare": 0.03,
+     "monoProseShare": 0.03,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "4 August 2026",
+      "1,126 XBG",
+      "0x72ac…91e4",
+      "28 August 2026",
+      "500 XBG",
+      "0x4bd1…c082"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.007,
+     "microSamples": [
+      "XBORG",
+      "XBG PORTAL"
+     ],
+     "upperShare": 0.06,
+     "centerShare": 0.07,
+     "smallText": 14
+    },
+    "eyebrows": [],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 396
+     },
+     {
+      "text": "02",
+      "size": 12,
+      "top": 775
+     },
+     {
+      "text": "03",
+      "size": 12,
+      "top": 1342
+     },
+     {
+      "text": "04",
+      "size": 12,
+      "top": 1675
+     },
+     {
+      "text": "05",
+      "size": 12,
+      "top": 2077
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#121218",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#1b1b23",
+       "top": 302,
+       "hsl": {
+        "h": 240,
+        "s": 0.13,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f4f4f7",
+       "share": 0.64
+      },
+      {
+       "color": "#a3a3ad",
+       "share": 0.24
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.1
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#f4f4f7",
+      "hsl": {
+       "h": 240,
+       "s": 0.16,
+       "l": 0.96
+      },
+      "fg": "#0b0b10"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 3,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Enter the XBG Portal",
+      "Claim Rewards"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 3,
+     "shadowOverlay": 1,
+     "shadowSamples": [
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px"
+     ],
+     "gradients": 2,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none"
+     ],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.window-title 390px",
+      "nav.portal-tabbar 390px",
+      "div 318px",
+      "div 318px",
+      "div 318px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 302
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 844,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: Geist Mono — e.g. \"0x8f2a…c41d\", \"4 August 2026\", \"1,126 XBG\", \"0x72ac…91e4\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\", \"02\", \"03\", \"04\", \"05\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "3 tiny uppercase letter-spaced labels (e.g. \"XBORG\", \"XBORG\", \"XBG PORTAL\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    1024
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "2 gradient fill(s): div.workspace → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "6 thin rule(s)/divider line(s): div.window-title 720px | div.window-title 1180px | div.portal-sidebar 200px | div 840px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "16 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 390,
+   "message": "2 tiny uppercase letter-spaced label(s): \"XBORG\", \"XBG PORTAL\"",
+   "fix": "Prefer sentence case at body size."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/desktop-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 1024,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/tablet-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/mobile-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/portal-rewards/mobile-page-01.jpg"
+   ]
+  }
+ ]
+}

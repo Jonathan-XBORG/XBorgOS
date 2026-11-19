@@ -1,0 +1,7385 @@
+{
+ "set": "after-defects",
+ "at": "2026-10-15T12:50:00.349Z",
+ "results": [
+  {
+   "id": "workspace",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Enter the XBG Portal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"PROPR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FANBASE\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"TRIGR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"XBG PORTAL\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg on X\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg Discord\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.window-body \"01 Who we are You are probably here for \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "workspace",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "propr",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "fanbase",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "trigr",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-entry",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-entry",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-no-xbg",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-no-xbg",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-unstaked",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-unstaked",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-stake-amount",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-amount",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-stake-preview",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-preview",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-stake-pending",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-pending",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-stake-done",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-done",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-home",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-home-quiet",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home-quiet",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-near-level",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-near-level",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-participate",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-participate-empty",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate-empty",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-network",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-network",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-rewards",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-rewards",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-season-done",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-season-done",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-legacy",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-legacy",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-mobile-entry",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-entry",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "portal-mobile-home",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-home",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "system",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Portal Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to stake 25,000 XBG Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "notes",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "references",
+   "width": 1440,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "w": 267,
+     "h": 23
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "w": 201,
+     "h": 23
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "w": 152,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "vw": 1440,
+    "vh": 900
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 1440,
+   "motion": "reduce",
+   "errors": [],
+   "reducedMotion": {
+    "running": []
+   }
+  },
+  {
+   "id": "workspace",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Enter the XBG Portal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"PROPR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FANBASE\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"TRIGR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"XBG PORTAL\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg on X\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.dock-item.dock-social \"XBorg Discord\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.window-body \"01 Who we are You are probably here for \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-entry",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-no-xbg",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-unstaked",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-amount",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-preview",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-pending",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-done",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home-quiet",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-near-level",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate-empty",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-network",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-rewards",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-season-done",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-legacy",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-entry",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-home",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Portal Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to stake 25,000 XBG Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 1024,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "w": 267,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 1024,
+    "scrollHeight": 768,
+    "vw": 1024,
+    "vh": 768
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "workspace",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "div.window-body \"XBORG An AI startup studio. We help smal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Enter the XBG Portal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"PROPR The crypto prop firm built onchain\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"FANBASE The social marketing platform fo\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.product-tile \"TRIGR The all in one platform to build, \"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"FanBase\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.inline-link \"Propr\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Enter the XBG Portal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"PROPR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"FANBASE\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.dock-product \"TRIGR\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.dock-item.is-portal \"XBG PORTAL\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "propr",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit propr.xyz\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "fanbase",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Visit fanbase.gg\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "trigr",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-primary \"Join the Trigr beta\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-entry",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-no-xbg",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-unstaked",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-amount",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "input \"25000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"5,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"25,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"50,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"75,000\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-preview",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-pending",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.portal-icon-button \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Confirm Stake\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-stake-done",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Attend private sessions with founders building w\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Join periodic discussions about ecosystem priori\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Attend private sessions with founders building w\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Join periodic discussions about ecosystem priori\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-home-quiet",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Attend private sessions with founders building w\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Join periodic discussions about ecosystem priori\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-near-level",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Attend private sessions with founders building w\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Join periodic discussions about ecosystem priori\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Invite a holder who connects a wallet, holds XBG\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "by": "button \"Home\""
+    }
+   ],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-participate-empty",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Invite a holder who connects a wallet, holds XBG\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "by": "button \"Home\""
+    }
+   ],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-network",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Invite a holder who connects a wallet, holds XBG\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "by": "button \"Home\""
+    }
+   ],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Available\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In progress\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"In review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Completed\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Locked\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Referral Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-rewards",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "th \"Date\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 76,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Source\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 140,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Amount\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 209,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Status\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 270,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Transaction\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 362,
+     "boxRight": 38
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-season-done",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "th \"Date\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 76,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Source\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 140,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Amount\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 209,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Status\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 270,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Transaction\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 362,
+     "boxRight": 38
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-legacy",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "th \"Date\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 76,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Source\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 140,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Amount\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 209,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Status\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 270,
+     "boxRight": 38
+    },
+    {
+     "el": "th \"Transaction\"",
+     "by": "thead \"Date Source Amount Status Transaction\"",
+     "textRight": 362,
+     "boxRight": 38
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.is-on \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Claim Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View Reward History\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-entry",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.btn.btn-primary \"Connect Wallet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "portal-mobile-home",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Attend private sessions with founders building w\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    },
+    {
+     "el": "p \"Join periodic discussions about ecosystem priori\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "button.is-on \"Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button \"Rewards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-primary \"Earn additional XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.text-action \"View all missions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"View Venture Briefings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Product Lab\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Founder Sessions\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Venture Discovery\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Stake More for Studio Roundtable\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-quiet \"Reset Demo State\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "system",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [
+    {
+     "el": "p \"Connect a test account, review twenty sample int\"",
+     "scrollHeight": 60,
+     "clientHeight": 40,
+     "axis": "y"
+    }
+   ],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a.btn.btn-secondary \"Homepage\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-secondary \"Portal Home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a.btn.btn-quiet \"Mobbin references\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-maximise \"Maximise\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.window-control-hit.window-close \"Close\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "button.btn.btn-secondary \"Start Mission\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "div.portal-modal-body \"Amount to stake 25,000 XBG Stake XBG\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "notes",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "article.system.notes \"Review Design notes Throwaway prototype.\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  },
+  {
+   "id": "references",
+   "width": 390,
+   "motion": "no-preference",
+   "errors": [],
+   "overflow": [],
+   "clipped": [],
+   "truncated": [],
+   "covered": [],
+   "textOverlap": [],
+   "smallTargets": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "w": 204,
+     "h": 23
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "w": 304,
+     "h": 23
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "w": 167,
+     "h": 23
+    }
+   ],
+   "contrast": [],
+   "hiddenText": [],
+   "page": {
+    "scrollWidth": 390,
+    "scrollHeight": 844,
+    "vw": 390,
+    "vh": 844
+   },
+   "keyboard": [
+    {
+     "el": "a \"Intercom, messenger thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Intercom, demo message with attachment\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, chat thread\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"WhatsApp, thread with system notes\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Uniswap, connected header\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, wallet settings\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, select account\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Laravel Cloud, connection menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Mercury, transactions summary\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Copilot Money, dark dashboard\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, project overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Base, transaction review\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, amount entry\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Kraken, confirm details\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Quicken, add holding\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Coinbase, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, projects\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, dark overview\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Supabase, copy menu\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Linear, grouped issues\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, choice cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Airbnb, filters sheet\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Vercel, project cards\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Klaviyo, success modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Shopify, completion modal\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Cofounder, connected toast\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Ferndesk, ready to audit\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Revolut, crypto\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"MoonPay, home\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    },
+    {
+     "el": "a \"Lloyds, net worth\"",
+     "ring": true,
+     "onScreen": true,
+     "onTop": true,
+     "outsideDialog": false
+    }
+   ]
+  }
+ ]
+}

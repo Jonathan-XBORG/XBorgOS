@@ -1,0 +1,190 @@
+/*
+  Desktop stage layout: the page frame, menu bar, windows, dock and review bar,
+  and how they become sheets below 900px. Values come from tokens.css.
+*/
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.workspace {
+  position: fixed;
+  inset: 0;
+  --dock-block: 124px;
+  overflow: hidden;
+}
+
+.topbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-xborg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.window-title {
+  flex: none;
+  align-items: center;
+}
+
+.window-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.window-product {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-portal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-window-body {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dock {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.mobile-hero {
+  display: none;
+}
+
+.dock-tray {
+  display: flex;
+  align-items: center;
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.dock-icon {
+  display: grid;
+  place-items: center;
+}
+
+.dock-icon img {
+  object-fit: contain;
+}
+
+.review {
+  position: fixed;
+  z-index: 20;
+  left: 12px;
+  bottom: 8px;
+  display: flex;
+  gap: var(--x-space-2);
+  align-items: center;
+}
+
+.review select {
+  width: 140px;
+}
+
+@media (max-width: 899px) {
+  .workspace {
+    --chamfer-window: 12px;
+    --chamfer-dock: 5px;
+  }
+
+  .topbar > .topbar-brand,
+  .topbar .btn-wrap,
+  .topbar .topbar-wallet {
+    display: none;
+  }
+
+  .mobile-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-hero-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--x-space-3);
+  }
+
+  .window-xborg {
+    inset: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .window-xborg::before,
+  .window-xborg::after,
+  .window-xborg .hud,
+  .window-xborg .window-title {
+    display: none;
+  }
+
+  .window-product {
+    position: fixed;
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+  }
+
+  .window-portal {
+    position: fixed;
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+  }
+
+  .dock {
+    position: fixed;
+  }
+
+  .dock-item {
+    justify-content: flex-start;
+  }
+
+  .review {
+    max-width: calc(100% - 16px);
+  }
+}

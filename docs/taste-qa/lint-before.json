@@ -1,0 +1,1261 @@
+{
+ "files": 57,
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/Notes.tsx",
+   "line": 5,
+   "match": "className=\"sys-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/components/Notes.tsx",
+   "line": 28,
+   "match": "Geist Mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/PortalEntry.tsx",
+   "line": 30,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/References.tsx",
+   "line": 7,
+   "match": "className=\"sys-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/SystemSheet.tsx",
+   "line": 121,
+   "match": "className=\"sys-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/components/SystemSheet.tsx",
+   "line": 150,
+   "match": "Geist Mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/components/SystemSheet.tsx",
+   "line": 313,
+   "match": ">01<",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/SystemSheet.tsx",
+   "line": 396,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "file": "src/components/SystemSheet.tsx",
+   "line": 498,
+   "match": "✓",
+   "message": "Emoji used as UI."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "src/components/portal/ExperienceGrid.tsx",
+   "line": 42,
+   "match": "unlock",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 20,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 22,
+   "match": "unlock",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 87,
+   "match": "Unlock",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 105,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 116,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 157,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 174,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/HomeScreen.tsx",
+   "line": 188,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "src/components/portal/MissionCard.tsx",
+   "line": 46,
+   "match": "Unlock",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/MissionsScreen.tsx",
+   "line": 28,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "file": "src/components/portal/Portal.tsx",
+   "line": 150,
+   "match": "✓",
+   "message": "Emoji used as UI."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/RewardsScreen.tsx",
+   "line": 21,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/RewardsScreen.tsx",
+   "line": 39,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/RewardsScreen.tsx",
+   "line": 56,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "file": "src/components/portal/RewardsScreen.tsx",
+   "line": 71,
+   "match": "className=\"portal-kicker",
+   "message": "Eyebrow / kicker label above a heading."
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "file": "src/components/portal/StakeFlow.tsx",
+   "line": 98,
+   "match": "✓",
+   "message": "Emoji used as UI."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/conversation.ts",
+   "line": 16,
+   "match": "'01'",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/conversation.ts",
+   "line": 29,
+   "match": "'02'",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/conversation.ts",
+   "line": 39,
+   "match": "'03'",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/conversation.ts",
+   "line": 51,
+   "match": "'04'",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "file": "src/conversation.ts",
+   "line": 63,
+   "match": "'05'",
+   "message": "Decorative index numbering (01 / 02 / 03)."
+  },
+  {
+   "level": "WARN",
+   "id": "copy",
+   "file": "src/products.ts",
+   "line": 43,
+   "match": "all in one",
+   "message": "Stock marketing phrase. Say the specific thing the product does."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 36,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 40,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 44,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 79,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 105,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/components.css",
+   "line": 119,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/components.css",
+   "line": 120,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 122,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 123,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 124,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 142,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 155,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 188,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 243,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 298,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 299,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 300,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 309,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 310,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 353,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 367,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/components.css",
+   "line": 369,
+   "match": "font-family: var(--x-font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 399,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 419,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 451,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 460,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 476,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 526,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 571,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 585,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 739,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 777,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 830,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 903,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 918,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 982,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 1000,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 1034,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 1035,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1036,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1066,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1100,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1226,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 1246,
+   "match": "border-right: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1304,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1413,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1462,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/components.css",
+   "line": 1580,
+   "match": "radial-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 1612,
+   "match": "border-top: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1642,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1649,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1653,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1680,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1691,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1727,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 1731,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1745,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1772,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1847,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1882,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 1932,
+   "match": "border-top: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1951,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 1984,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 2022,
+   "match": "height: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 2097,
+   "match": "height: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2114,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2147,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 2164,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/components.css",
+   "line": 2165,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/components.css",
+   "line": 2224,
+   "match": "border-top: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2243,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2335,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2357,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2367,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2372,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/components.css",
+   "line": 2409,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/portal.css",
+   "line": 19,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/portal.css",
+   "line": 166,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/portal.css",
+   "line": 249,
+   "match": "border-left: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/portal.css",
+   "line": 377,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "src/styles/portal.css",
+   "line": 415,
+   "match": "border: 1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "src/styles/portal.css",
+   "line": 455,
+   "match": "border: 1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/portal.css",
+   "line": 481,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/portal.css",
+   "line": 497,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/portal.css",
+   "line": 498,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "src/styles/portal.css",
+   "line": 677,
+   "match": "border: 1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "src/styles/portal.css",
+   "line": 694,
+   "match": "border: 1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/portal.css",
+   "line": 707,
+   "match": "border-left: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/portal.css",
+   "line": 711,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/portal.css",
+   "line": 726,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/portal.css",
+   "line": 891,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/portal.css",
+   "line": 899,
+   "match": "border-left: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/structure.css",
+   "line": 138,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/structure.css",
+   "line": 196,
+   "match": "height: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/structure.css",
+   "line": 373,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/structure.css",
+   "line": 374,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "file": "src/styles/structure.css",
+   "line": 392,
+   "match": "border: 1px solid",
+   "message": "A 1px outlined box. Prefer a filled surface or no box."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/structure.css",
+   "line": 393,
+   "match": "font-family: var(--font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "WARN",
+   "id": "glass",
+   "file": "src/styles/structure.css",
+   "line": 425,
+   "match": "backdrop-filter:",
+   "message": "Backdrop blur. One sticky bar at most; glass cards are a tell."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/system.css",
+   "line": 58,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/system.css",
+   "line": 76,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/system.css",
+   "line": 98,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/system.css",
+   "line": 152,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/system.css",
+   "line": 176,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/system.css",
+   "line": 195,
+   "match": "font-family: var(--x-font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/system.css",
+   "line": 260,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/system.css",
+   "line": 278,
+   "match": "border-top: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/system.css",
+   "line": 330,
+   "match": "box-shadow:",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/system.css",
+   "line": 346,
+   "match": "height: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "file": "src/styles/system.css",
+   "line": 484,
+   "match": "border-bottom: 1px",
+   "message": "Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/tokens.css",
+   "line": 35,
+   "match": "font-family: 'Geist Mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/tokens.css",
+   "line": 43,
+   "match": "font-family: 'Geist Mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/tokens.css",
+   "line": 77,
+   "match": "font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/styles/tokens.css",
+   "line": 156,
+   "match": "drop-shadow(",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 183,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 207,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 217,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 218,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 226,
+   "match": "radial-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 227,
+   "match": "radial-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 228,
+   "match": "radial-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "file": "src/styles/tokens.css",
+   "line": 229,
+   "match": "linear-gradient(",
+   "message": "Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception)."
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "file": "src/styles/tokens.css",
+   "line": 248,
+   "match": "font-mono",
+   "message": "Monospace type. Only literal code may be monospace."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/test/tokens-only.test.ts",
+   "line": 6,
+   "match": "shadow",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  },
+  {
+   "level": "FAIL",
+   "id": "shadow",
+   "file": "src/test/tokens-only.test.ts",
+   "line": 40,
+   "match": "shadow",
+   "message": "Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may."
+  }
+ ]
+}

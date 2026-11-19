@@ -1,0 +1,1732 @@
+{
+ "url": "http://127.0.0.1:5174/?present=1#system",
+ "at": "2026-10-15T12:58:47.834Z",
+ "allow": [
+  "font-count",
+  "few-pictures",
+  "no-footage",
+  "no-real-pictures",
+  "glass",
+  "shadow",
+  "button-fx",
+  "focal-point",
+  "still-page",
+  "no-hero",
+  "body-size",
+  "covered-text",
+  "palette-purple"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.21
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 900,
+     "screens": 1,
+     "words": 789,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 18,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "✓"
+     ]
+    },
+    "hero": {
+     "text": "Display",
+     "words": 1,
+     "chars": 7,
+     "lines": 1,
+     "size": 44,
+     "vw": 3.1,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.09,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.11,
+     "top": 738,
+     "tag": "span",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Design system",
+     "words": 2,
+     "lines": 1,
+     "size": 32,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "Design system",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 88,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Display",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.09,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 738,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Heading 1",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 822,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "25,000 XBG",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 32,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 1204,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.07,
+       "mono": true
+      },
+      {
+       "family": "Archivo",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      17,
+      22,
+      32,
+      44
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 13,
+      "leading": 1.54,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8
+     },
+     "measureChars": 75,
+     "max": {
+      "size": 44,
+      "vw": 3.1,
+      "font": "Archivo",
+      "text": "Display"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "0x8f2a…c41d",
+      "0x8f2a…c41d",
+      "0x8f2a…c41d"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.003,
+     "microSamples": [
+      "PROPR",
+      "FANBASE"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.07,
+     "smallText": 20
+    },
+    "eyebrows": [
+     {
+      "text": "Label",
+      "above": "25,000 XBG",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1147
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 2899
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#09090d",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 0.18,
+        "l": 0.04
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3a3ad",
+       "share": 0.5
+      },
+      {
+       "color": "#f4f4f7",
+       "share": 0.29
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.18
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      },
+      {
+       "color": "#09090d",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#25252f",
+      "hsl": {
+       "h": 240,
+       "s": 0.12,
+       "l": 0.16
+      },
+      "fg": "#f4f4f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 23,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 36,
+     "withShadow": 21,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Homepage",
+      "Portal Home"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 18,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.24) 0px 1px 2px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.3) 0px 4px 12px 0px, rgba(0, 0, 0, 0.4) 0px 24px 56px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px"
+     ],
+     "gradients": 4,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.sys-window-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.sys-dock-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+      "div.sys-window-stage.sys-modal-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a"
+     ],
+     "gradientText": 0,
+     "hairlines": 30,
+     "hairlineSamples": [
+      "header.sys-section-head 1080px",
+      "header.sys-section-head 1080px",
+      "div.sys-type-row 1080px",
+      "div.sys-type-row 1080px",
+      "div.sys-type-row 1080px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 9,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1969
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 212,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 1024,
+   "height": 768,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.23
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1024,
+     "h": 768
+    },
+    "page": {
+     "height": 768,
+     "screens": 1,
+     "words": 789,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 18,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "✓"
+     ]
+    },
+    "hero": {
+     "text": "Design system",
+     "words": 2,
+     "chars": 13,
+     "lines": 1,
+     "size": 32,
+     "vw": 3.1,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 88,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Design system",
+     "words": 2,
+     "lines": 1,
+     "size": 32,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "Design system",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 88,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Display",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 44,
+      "vw": 4.3,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.09,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 738,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Heading 1",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 822,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "25,000 XBG",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 32,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 1204,
+      "tag": "span",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.07,
+       "mono": true
+      },
+      {
+       "family": "Archivo",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      17,
+      22,
+      32,
+      44
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 13,
+      "leading": 1.54,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8
+     },
+     "measureChars": 75,
+     "max": {
+      "size": 44,
+      "vw": 4.3,
+      "font": "Archivo",
+      "text": "Display"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "0x8f2a…c41d",
+      "0x8f2a…c41d",
+      "0x8f2a…c41d"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.003,
+     "microSamples": [
+      "PROPR",
+      "FANBASE"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.07,
+     "smallText": 20
+    },
+    "eyebrows": [
+     {
+      "text": "Label",
+      "above": "25,000 XBG",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1147
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 2899
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#09090d",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 0.18,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#1b1b23",
+       "top": 4473,
+       "hsl": {
+        "h": 240,
+        "s": 0.13,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3a3ad",
+       "share": 0.5
+      },
+      {
+       "color": "#f4f4f7",
+       "share": 0.29
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.18
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      },
+      {
+       "color": "#09090d",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#25252f",
+      "hsl": {
+       "h": 240,
+       "s": 0.12,
+       "l": 0.16
+      },
+      "fg": "#f4f4f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 23,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 36,
+     "withShadow": 21,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Homepage",
+      "Portal Home"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 18,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.24) 0px 1px 2px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.3) 0px 4px 12px 0px, rgba(0, 0, 0, 0.4) 0px 24px 56px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px"
+     ],
+     "gradients": 4,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.sys-window-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.sys-dock-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+      "div.sys-window-stage.sys-modal-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a"
+     ],
+     "gradientText": 0,
+     "hairlines": 30,
+     "hairlineSamples": [
+      "header.sys-section-head 944px",
+      "header.sys-section-head 944px",
+      "div.sys-type-row 944px",
+      "div.sys-type-row 944px",
+      "div.sys-type-row 944px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 9,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 212,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 1,
+   "filled": [
+    0.48
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 844,
+     "screens": 1,
+     "words": 786,
+     "img": 3,
+     "video": 0,
+     "canvas": 0,
+     "svg": 7,
+     "sections": 18,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [
+      "✓"
+     ]
+    },
+    "hero": {
+     "text": "Design system",
+     "words": 2,
+     "chars": 13,
+     "lines": 1,
+     "size": 32,
+     "vw": 8.2,
+     "font": "Archivo",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.19,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 104,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Design system",
+     "words": 2,
+     "lines": 1,
+     "size": 32,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "Design system",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 104,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Colour",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 434,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Type",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 939,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Display",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.09,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 1076,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Heading 1",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 1176,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Heading 2 and figures",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.53,
+      "top": 1250,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "25,000 XBG",
+      "words": 2,
+      "chars": 10,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.19,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 1574,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Spacing, shape, elevation and motion",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1788,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Button",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2681,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Wallet control",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3781,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Bubble",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4431,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Window chrome",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4992,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Dock tile",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5461,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Badge",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5902,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Card and stat row",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6167,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Season 19",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6316,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "25,000 XBG",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 6388,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "1,340 XBG",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 6388,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Level 1",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 6456,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "26 days",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": -0.01,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.36,
+      "top": 6456,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Input",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7051,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Attachment",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7402,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Tabs",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7805,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Modal and toast",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7974,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Exceptions",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 1.27,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8420,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 25,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Geist Mono",
+       "share": 0.07,
+       "mono": true
+      },
+      {
+       "family": "Archivo",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 3,
+     "sizes": [
+      12,
+      13,
+      15,
+      17,
+      22,
+      32,
+      44
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 13,
+      "leading": 1.54,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 8
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "text": "Display"
+     },
+     "monoShare": 0.07,
+     "monoProseShare": 0.01,
+     "monoFamilies": [
+      "Geist Mono"
+     ],
+     "monoSamples": [
+      "0x8f2a…c41d",
+      "0x8f2a…c41d",
+      "0x8f2a…c41d"
+     ],
+     "microLabels": 2,
+     "microLabelShare": 0.003,
+     "microSamples": [
+      "PROPR",
+      "FANBASE"
+     ],
+     "upperShare": 0.01,
+     "centerShare": 0.07,
+     "smallText": 20
+    },
+    "eyebrows": [
+     {
+      "text": "Label",
+      "above": "25,000 XBG",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1517
+     }
+    ],
+    "numbered": [
+     {
+      "text": "01",
+      "size": 12,
+      "top": 4580
+     }
+    ],
+    "color": {
+     "bodyBg": "#09090d",
+     "bodyBgHsl": {
+      "h": 240,
+      "s": 0.18,
+      "l": 0.04
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#09090d",
+       "top": 0,
+       "hsl": {
+        "h": 240,
+        "s": 0.18,
+        "l": 0.04
+       }
+      },
+      {
+       "color": "#121218",
+       "top": 4556,
+       "hsl": {
+        "h": 240,
+        "s": 0.14,
+        "l": 0.08
+       }
+      },
+      {
+       "color": "#1b1b23",
+       "top": 6548,
+       "hsl": {
+        "h": 240,
+        "s": 0.13,
+        "l": 0.12
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a3a3ad",
+       "share": 0.5
+      },
+      {
+       "color": "#f4f4f7",
+       "share": 0.29
+      },
+      {
+       "color": "#8c8c96",
+       "share": 0.18
+      },
+      {
+       "color": "#0b0b10",
+       "share": 0.02
+      },
+      {
+       "color": "#09090d",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#25252f",
+      "hsl": {
+       "h": 240,
+       "s": 0.12,
+       "l": 0.16
+      },
+      "fg": "#f4f4f7"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 23,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 36,
+     "withShadow": 21,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Homepage",
+      "Portal Home"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 17,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.24) 0px 1px 2px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.28) 0px 2px 6px 0px, rgba(0, 0, 0, 0.22) 0px 8px 24px 0px",
+      "span.sys-shape.is-card → rgba(0, 0, 0, 0.3) 0px 4px 12px 0px, rgba(0, 0, 0, 0.4) 0px 24px 56px 0px",
+      "button.btn.btn-primary → rgba(255, 255, 255, 0.9) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.12) 0px -1px 0px"
+     ],
+     "gradients": 4,
+     "scrims": 0,
+     "gradientSamples": [
+      "div.sys-window-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.sys-dock-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a",
+      "div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+      "div.sys-window-stage.sys-modal-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a"
+     ],
+     "gradientText": 0,
+     "hairlines": 30,
+     "hairlineSamples": [
+      "header.sys-section-head 350px",
+      "header.sys-section-head 350px",
+      "div.sys-type-row 350px",
+      "div.sys-type-row 350px",
+      "div.sys-type-row 350px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3062
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": false,
+     "height": 290,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo",
+     "geist",
+     "geist mono"
+    ]
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Label\" above \"25,000 XBG\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "mono",
+   "width": 1440,
+   "message": "Monospace type outside code: Geist Mono — e.g. \"0x8f2a…c41d\", \"0x8f2a…c41d\", \"0x8f2a…c41d\"",
+   "fix": "Set it in the text face. Monospace is for literal code inside <pre>/<code> only.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "numbering",
+   "width": 1440,
+   "message": "Decorative index numbers: \"01\"",
+   "fix": "Remove them. If order truly matters, write it into the words (\"First, …\") or use a real <ol>.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "2 tiny uppercase letter-spaced label(s): \"PROPR\", \"FANBASE\"",
+   "fix": "Prefer sentence case at body size.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "emoji",
+   "width": 1440,
+   "message": "Emoji in the page: ✓",
+   "fix": "Remove. Use words or real imagery.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "4 gradient fill(s): div.sys-window-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | div.sys-dock-stage → radial-gradient(60% 50% at 50% 0%, rgba(133, 114, 252, 0.16), rgba(0, 0, 0, 0) 70%), radial-gradient(50% 60% a | div.portal-panel → linear-gradient(135deg, rgba(133, 114, 252, 0.14), rgba(133, 114, 252, 0.04) 60%), none",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "30 thin rule(s)/divider line(s): header.sys-section-head 1080px | header.sys-section-head 1080px | div.sys-type-row 1080px | div.sys-type-row 1080px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "20 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    1024,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/desktop-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/desktop-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "tablet",
+   "width": 1024,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/tablet-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/tablet-page-01.jpg"
+   ]
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/mobile-fold.jpg",
+   "pages": [
+    "/Users/gauthiercollas/xborg/XBG/xborg-website-prototype-v3/.taste-skill/inspect-allowed/system/mobile-page-01.jpg"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+references @1440
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"
+  small target 267x23: a "WhatsApp, thread with system notes"
+  small target 201x23: a "Uniswap, connected header"
+  small target 152x23: a "Base, wallet settings"
+references @1024
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"
+  small target 267x23: a "WhatsApp, thread with system notes"
+portal-stake-done @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Attend private sessions with founders building w"
+  clipped: p "Join periodic discussions about ecosystem priori"
+portal-home @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Attend private sessions with founders building w"
+  clipped: p "Join periodic discussions about ecosystem priori"
+portal-home-quiet @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Attend private sessions with founders building w"
+  clipped: p "Join periodic discussions about ecosystem priori"
+portal-near-level @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Attend private sessions with founders building w"
+  clipped: p "Join periodic discussions about ecosystem priori"
+portal-participate @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Invite a holder who connects a wallet, holds XBG"
+  covered: button.btn.btn-primary "Start Mission" by button "Home"
+portal-participate-empty @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Invite a holder who connects a wallet, holds XBG"
+  covered: button.btn.btn-primary "Start Mission" by button "Home"
+portal-network @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Invite a holder who connects a wallet, holds XBG"
+  covered: button.btn.btn-primary "Start Mission" by button "Home"
+portal-rewards @390
+  clipped: th "Date" by thead "Date Source Amount Status Transaction"
+  clipped: th "Source" by thead "Date Source Amount Status Transaction"
+  clipped: th "Amount" by thead "Date Source Amount Status Transaction"
+  clipped: th "Status" by thead "Date Source Amount Status Transaction"
+  clipped: th "Transaction" by thead "Date Source Amount Status Transaction"
+portal-season-done @390
+  clipped: th "Date" by thead "Date Source Amount Status Transaction"
+  clipped: th "Source" by thead "Date Source Amount Status Transaction"
+  clipped: th "Amount" by thead "Date Source Amount Status Transaction"
+  clipped: th "Status" by thead "Date Source Amount Status Transaction"
+  clipped: th "Transaction" by thead "Date Source Amount Status Transaction"
+portal-legacy @390
+  clipped: th "Date" by thead "Date Source Amount Status Transaction"
+  clipped: th "Source" by thead "Date Source Amount Status Transaction"
+  clipped: th "Amount" by thead "Date Source Amount Status Transaction"
+  clipped: th "Status" by thead "Date Source Amount Status Transaction"
+  clipped: th "Transaction" by thead "Date Source Amount Status Transaction"
+portal-mobile-home @390
+  clipped: p "Connect a test account, review twenty sample int"
+  clipped: p "Attend private sessions with founders building w"
+  clipped: p "Join periodic discussions about ecosystem priori"
+system @390
+  clipped: p "Connect a test account, review twenty sample int"
+references @390
+  small target 204x23: a "Intercom, messenger thread"
+  small target 304x23: a "Intercom, demo message with attachment"
+  small target 167x23: a "WhatsApp, chat thread"
