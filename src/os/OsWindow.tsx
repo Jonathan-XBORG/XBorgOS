@@ -5,16 +5,20 @@ export type OsWindowOrigin = { x: number; y: number } | null
 
 const MARGIN = 16
 const DOCK_SPACE = 128
+// The menu bar sits above every window.
+const MENUBAR = 32
+const TOP = MARGIN + MENUBAR
 const FULL_MS = 420
 const CASCADE = 40
 
 type Rect = { x: number; y: number; w: number; h: number | null }
 
 function fullRect(): Rect {
-  return { x: MARGIN, y: MARGIN, w: window.innerWidth - MARGIN * 2, h: window.innerHeight - MARGIN - DOCK_SPACE }
+  return { x: MARGIN, y: TOP, w: window.innerWidth - MARGIN * 2, h: window.innerHeight - TOP - DOCK_SPACE }
 }
 
-// One chrome for every XBorg OS window: icon, title, full screen and close,
+// One chrome for every XBorg OS window: icon, title and close (double click
+// the title bar to zoom),
 // dragged by its title bar, raised on click. Windows grow out of their dock
 // tile (or desktop icon) and shrink back into it, as on macOS.
 export default function OsWindow({
@@ -65,19 +69,19 @@ export default function OsWindow({
     if (!el || rect) return
     const vw = window.innerWidth
     const vh = window.innerHeight
-    const maxH = vh - DOCK_SPACE - MARGIN
+    const maxH = vh - DOCK_SPACE - TOP
     const h = height ? Math.min(height, maxH) : el.offsetHeight
     const w = Math.min(width, vw - MARGIN * 2)
     const baseX = Math.max(MARGIN, (vw - w) / 2)
     const wanted = top ?? (vh - DOCK_SPACE - h) / 2
-    const baseY = Math.max(MARGIN, Math.min(wanted, vh - DOCK_SPACE - h))
+    const baseY = Math.max(TOP, Math.min(wanted, vh - DOCK_SPACE - h))
     // Each window opened on top of others steps down and right, so the stack
     // stays readable. Near an edge the step goes the other way.
     const step = CASCADE * cascade
     const fitsX = baseX + step + w <= vw - MARGIN
     const fitsY = baseY + step + h <= vh - DOCK_SPACE
     const x = Math.max(MARGIN, fitsX ? baseX + step : baseX - step)
-    const y = Math.max(MARGIN, fitsY ? baseY + step : baseY - step)
+    const y = Math.max(TOP, fitsY ? baseY + step : baseY - step)
     setRect({ x, y, w, h: height ? h : null })
   }, [rect, top, width, height, cascade])
 
@@ -91,9 +95,9 @@ export default function OsWindow({
     const vw = window.innerWidth
     const vh = window.innerHeight
     const w = Math.min(width, vw - MARGIN * 2)
-    const h = height ? Math.min(height, vh - DOCK_SPACE - MARGIN) : null
+    const h = height ? Math.min(height, vh - DOCK_SPACE - TOP) : null
     setAnimating(!reduce)
-    setRect({ x: Math.max(MARGIN, (vw - w) / 2), y: Math.max(MARGIN, (vh - DOCK_SPACE - (h ?? 400)) / 2), w, h })
+    setRect({ x: Math.max(MARGIN, (vw - w) / 2), y: Math.max(TOP, (vh - DOCK_SPACE - (h ?? 400)) / 2), w, h })
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => setAnimating(false), reduce ? 0 : FULL_MS + 40)
   }, [width, height, rect, full, reduce])
@@ -155,7 +159,7 @@ export default function OsWindow({
     setRect({
       ...rect,
       x: Math.min(window.innerWidth - 80, Math.max(80 - el.offsetWidth, e.clientX - d.dx)),
-      y: Math.min(window.innerHeight - 80, Math.max(0, e.clientY - d.dy)),
+      y: Math.min(window.innerHeight - 80, Math.max(MENUBAR, e.clientY - d.dy)),
     })
   }
   function onPointerUp() {
@@ -197,9 +201,6 @@ export default function OsWindow({
         <h2 className="os-win-title">{title}</h2>
         {accessory}
         <div className="os-win-controls">
-          <button type="button" className="os-win-btn" aria-label={full ? 'Exit full screen' : 'Full screen'} onClick={toggleFull}>
-            <img src="/os/fullscreen.svg" alt="" width={24} height={24} />
-          </button>
           <button type="button" className="os-win-btn os-win-close" aria-label={`Close ${title}`} onClick={onClose}>
             <img src="/os/close.svg" alt="" width={24} height={24} />
           </button>

@@ -2,14 +2,15 @@ import { useRef, useState, type CSSProperties, type KeyboardEvent, type PointerE
 
 export type DesktopItemKind = 'docs' | 'changelog' | 'readme'
 
-type Sheet = { src: string; left: number; top: number; w: number; h: number; rotate: number }
+type Sheet = { src: string; left: number; top: number; w: number; h: number; rotate: number; card?: boolean }
 
 // Paper sheets peeking out of each folder, placed as in the Figma file.
 const SHEETS: Record<'docs' | 'changelog', Sheet[]> = {
   docs: [
-    { src: '/os/docs-sheet-1.svg', left: 23, top: -20, w: 62.469, h: 75.61, rotate: -13.92 },
-    { src: '/os/docs-sheet-2.svg', left: 58.23, top: 1.81, w: 54.25, h: 70.395, rotate: 5.64 },
-    { src: '/os/docs-sheet-3.svg', left: 81.23, top: -13.19, w: 61.32, h: 74.928, rotate: 12.68 },
+    // Clients: three logo cards, as in the Figma file.
+    { src: '/os/client-card-1.svg', left: 8, top: 7, w: 54.614, h: 54.614, rotate: -8.57, card: true },
+    { src: '/os/client-card-2.svg', left: 55, top: -8, w: 55.916, h: 55.916, rotate: 10.46, card: true },
+    { src: '/os/client-card-3.svg', left: 99, top: -1, w: 62.985, h: 62.985, rotate: 23.1, card: true },
   ],
   changelog: [
     { src: '/os/changelog-sheet-1.svg', left: 76, top: -4, w: 61.55, h: 75.066, rotate: 12.93 },
@@ -113,8 +114,8 @@ export default function DesktopIcon({
               className="os-folder-sheet"
               style={{ left: s.left, top: s.top, width: s.w, height: s.h, ['--r' as string]: `${s.rotate}deg` }}
             >
-              <span className="os-sheet-paper">
-                <img src={s.src} alt="" width={64} height={82} draggable={false} />
+              <span className={`os-sheet-paper${s.card ? ' is-card' : ''}`}>
+                <img src={s.src} alt="" width={s.card ? 48 : 64} height={s.card ? 48 : 82} draggable={false} />
               </span>
             </span>
           ))}

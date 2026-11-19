@@ -1,6 +1,6 @@
-import { Fragment } from 'react'
-import type { OsProduct } from './data'
-import { README_LINES } from './data'
+import { Fragment, useEffect, useState } from 'react'
+import type { OsProduct, OsWallpaper } from './data'
+import { CLIENTS_INTRO, OS_CLIENTS, OS_WALLPAPERS, README_LINES, STAKE_PAGE, STAKE_URL } from './data'
 
 export function DiscoverButton({ product }: { product: OsProduct }) {
   return (
@@ -63,6 +63,86 @@ export function FolderContent() {
   return (
     <div className="os-folder-empty">
       <p>This folder is empty for now.</p>
+    </div>
+  )
+}
+
+// Clients: same reading layout as about_us.txt, then the logos.
+export function ClientsContent() {
+  return (
+    <div className="os-readme os-clients">
+      {CLIENTS_INTRO.map((line) => (
+        <p key={line}>{withLinks(line)}</p>
+      ))}
+      <ul className="os-client-grid">
+        {OS_CLIENTS.map((c) => (
+          <li key={c.id} className="os-client">
+            <span className="os-client-logo">
+              <img src={c.logo} alt="" loading="lazy" />
+            </span>
+            <span className="os-client-text">
+              <span className="os-client-name">{c.name}</span>
+              <span className="os-client-note">{c.note}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+// Preferences: pick one of the desktop wallpapers. The choice is remembered.
+export function PreferencesContent({ value, onChange }: { value: string; onChange: (w: OsWallpaper) => void }) {
+  return (
+    <div className="os-prefs">
+      <h3 className="os-prefs-title">Wallpaper</h3>
+      <div className="os-prefs-grid" role="radiogroup" aria-label="Wallpaper">
+        {OS_WALLPAPERS.map((w) => (
+          <button
+            key={w.id}
+            type="button"
+            role="radio"
+            aria-checked={w.id === value}
+            className={`os-prefs-option${w.id === value ? ' is-selected' : ''}`}
+            onClick={() => onChange(w)}
+          >
+            <span className="os-prefs-thumb" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, ${1 - w.opacity}), rgba(0, 0, 0, ${1 - w.opacity})), url('${w.thumb}')` }} />
+            <span className="os-prefs-name">{w.name}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// Stake is the live rewards page from xborg.com, embedded.
+export function StakeContent() {
+  const [loaded, setLoaded] = useState(false)
+  const [slow, setSlow] = useState(false)
+  useEffect(() => {
+    const t = window.setTimeout(() => setSlow(true), 8000)
+    return () => window.clearTimeout(t)
+  }, [])
+  return (
+    <div className="os-stake">
+      <iframe
+        className={`os-stake-frame${loaded ? ' is-loaded' : ''}`}
+        src={STAKE_URL}
+        title="XBorg Stake"
+        allow="clipboard-write; web-share"
+        onLoad={() => setLoaded(true)}
+      />
+      {loaded ? null : (
+        <div className="os-stake-loading" role="status">
+          <span className="os-spinner" aria-hidden="true" />
+          <span>{slow ? 'Stake is taking a while to load.' : 'Loading Stake…'}</span>
+          {slow ? (
+            <a href={STAKE_PAGE} target="_blank" rel="noreferrer">
+              Open xborg.com/earn in a new tab
+            </a>
+          ) : null}
+        </div>
+      )}
     </div>
   )
 }

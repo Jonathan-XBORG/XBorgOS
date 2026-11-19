@@ -10,30 +10,35 @@ export type OsDockApp = 'all' | DockAppId
 export default function OsDock({
   running,
   missionOpen,
+  messagesOpen,
   onAll,
   onOpen,
+  onMessages,
 }: {
   running: DockAppId[]
   missionOpen: boolean
+  messagesOpen: boolean
   onAll: () => void
   onOpen: (id: DockAppId) => void
+  onMessages: () => void
 }) {
-  const item = (id: DockAppId, label: string, content: ReactNode) => (
+  const tile = (id: string, label: string, content: ReactNode, open: boolean, onClick: () => void) => (
     <li key={id}>
       <button
         type="button"
-        className={`os-dock-item${running.includes(id) ? ' is-running' : ''}`}
+        className={`os-dock-item${open ? ' is-running' : ''}`}
         data-dock={id}
         aria-label={label}
-        aria-current={running.includes(id) ? 'true' : undefined}
-        onClick={() => onOpen(id)}
+        aria-current={open ? 'true' : undefined}
+        onClick={onClick}
       >
         {content}
         <span className="os-dock-label">{label}</span>
-        {running.includes(id) ? <span className="os-dock-dot" aria-hidden="true" /> : null}
+        {open ? <span className="os-dock-dot" aria-hidden="true" /> : null}
       </button>
     </li>
   )
+  const item = (id: DockAppId, label: string, content: ReactNode) => tile(id, label, content, running.includes(id), () => onOpen(id))
 
   return (
     <nav className="os-dock" aria-label="XBorg products">
@@ -66,6 +71,13 @@ export default function OsDock({
           </span>,
         )}
         {item('earn', 'Earn', <img src="/os/button-earn.svg" alt="" width={48} height={48} draggable={false} />)}
+        {tile(
+          'chat',
+          'Messages',
+          <img src="/os/button-messages.svg" alt="" width={48} height={48} draggable={false} />,
+          messagesOpen,
+          onMessages,
+        )}
         <li className="os-dock-rule" aria-hidden="true" />
         <li>
           <a className="os-dock-item" href={LINKS.x} target="_blank" rel="noreferrer" aria-label="XBorg on X">

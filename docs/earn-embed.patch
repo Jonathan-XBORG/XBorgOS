@@ -1,0 +1,45 @@
+diff --git a/app/earn/RewardsPage.tsx b/app/earn/RewardsPage.tsx
+index 98516e7..37d1ac9 100644
+--- a/app/earn/RewardsPage.tsx
++++ b/app/earn/RewardsPage.tsx
+@@ -61,6 +61,12 @@ import { toSeasonRankView } from './transparency-formatting'
+ 
+ export default function RewardsPage() {
+   const searchParams = useSearchParams()
++  /*
++    ?embed=1 is the XBorg OS Stake window (an iframe on the OS desktop). The
++    desktop already has its own chrome, so the site navigation and footer step
++    aside and only the wallet control stays, in a slim bar.
++  */
++  const embedded = searchParams.get('embed') === '1'
+   const { address: connectedAddress } = useAccount()
+   const [program, setProgram] = useState<Program>('rewards')
+   const [lockFlowOpen, setLockFlowOpen] = useState(false)
+@@ -171,9 +177,15 @@ export default function RewardsPage() {
+     <>
+       <style>{CSS}</style>
+       <TestEnvironmentBanner />
+-      <Navigation rightSlot={
+-        <HeaderWallet connected={connected} walletXbg={walletXbg} stakedXbg={stakedXbg} address={effectiveAddress} />
+-      } />
++      {embedded ? (
++        <div className="rw-embed-bar" style={{ display: 'flex', justifyContent: 'flex-end', padding: '12px 16px' }}>
++          <HeaderWallet connected={connected} walletXbg={walletXbg} stakedXbg={stakedXbg} address={effectiveAddress} />
++        </div>
++      ) : (
++        <Navigation rightSlot={
++          <HeaderWallet connected={connected} walletXbg={walletXbg} stakedXbg={stakedXbg} address={effectiveAddress} />
++        } />
++      )}
+ 
+       <main className="theme-light rw-main">
+         <div className="rw-shell">
+@@ -260,7 +272,7 @@ export default function RewardsPage() {
+         />
+       )}
+ 
+-      <Footer />
++      {embedded ? null : <Footer />}
+     </>
+   )
+ }

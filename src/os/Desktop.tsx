@@ -1,12 +1,12 @@
 import { AnimatePresence } from 'motion/react'
-import { Suspense, lazy, useEffect, useRef, useState, type CSSProperties } from 'react'
+import { Suspense, lazy, useEffect, useState, type CSSProperties } from 'react'
 import type { DockAppId } from '../components/Dock'
-import Stake from '../components/stake/Stake'
-import StakeEntry from '../components/StakeEntry'
-import { SCREENS, isStakeScreen, type NavigationSource, type ProductId, type ScreenId, type StakeScreenId } from '../screens'
-import { isStakeEntry, type WalletState } from '../wallet'
-import { FolderContent, ProductContent, ReadmeContent } from './Contents'
-import { osProduct } from './data'
+import { isStakeScreen, type NavigationSource, type ProductId, type ScreenId } from '../screens'
+import type { WalletState } from '../wallet'
+import { ClientsContent, FolderContent, PreferencesContent, ProductContent, ReadmeContent, StakeContent } from './Contents'
+import { OS_WALLPAPERS, STAKE_PAGE, osProduct, type OsWallpaper } from './data'
+import MessagesApp from './MessagesApp'
+import MenuBar from './MenuBar'
 import DesktopIcon, { type DesktopItemKind } from './DesktopIcon'
 import MissionControl from './MissionControl'
 import Notifications from './Notifications'
@@ -17,7 +17,7 @@ import './os.css'
 
 const Cursor3D = lazy(() => import('./Cursor3D'))
 
-type AppWin = 'stake' | 'earn'
+type AppWin = 'stake' | 'earn' | 'prefs' | 'chat'
 type WinId = ProductId | DesktopItemKind | AppWin
 type OpenWin = { id: WinId; origin: OsWindowOrigin; cascade: number }
 
@@ -26,22 +26,35 @@ const isProduct = (id: string): id is ProductId => (PRODUCT_IDS as string[]).inc
 const isDesktopItem = (id: string): id is DesktopItemKind => id === 'readme' || id === 'docs' || id === 'changelog'
 
 const ICONS: { kind: DesktopItemKind; label: string; position: CSSProperties }[] = [
-  { kind: 'changelog', label: 'Changelog', position: { left: 140, top: 333 } },
-  { kind: 'docs', label: 'Docs', position: { left: 82, top: 558 } },
-  { kind: 'readme', label: 'Readme.txt', position: { right: 81, bottom: 143 } },
+  { kind: 'docs', label: 'Clients', position: { left: 82, top: 558 } },
+  { kind: 'readme', label: 'about_us.txt', position: { right: 81, bottom: 143 } },
 ]
 
 const WINDOW_META: Record<DesktopItemKind, { title: string; width: number; top?: number }> = {
-  readme: { title: 'Readme.txt', width: 760, top: 150 },
-  docs: { title: 'Docs', width: 560 },
+  readme: { title: 'about_us.txt', width: 760, top: 150 },
+  docs: { title: 'Clients', width: 760, top: 120 },
   changelog: { title: 'Changelog', width: 560 },
 }
 
 // Where a window grows from: its dock tile, or its desktop icon.
+const WALLPAPER_KEY = 'xborg-os-wallpaper'
+
+function savedWallpaper(): string {
+  try {
+    const id = window.localStorage.getItem(WALLPAPER_KEY)
+    if (id && OS_WALLPAPERS.some((w) => w.id === id)) return id
+  } catch {
+    // Storage blocked: use the default.
+  }
+  return OS_WALLPAPERS[0].id
+}
+
 function originOf(id: WinId): OsWindowOrigin {
   const el = isDesktopItem(id)
     ? document.querySelector<HTMLElement>(`[data-desktop-item="${id}"]`)
-    : document.querySelector<HTMLElement>(`[data-dock="${id}"]`)
+    : id === 'prefs'
+      ? document.querySelector<HTMLElement>('.os-menubar-logo')
+      : document.querySelector<HTMLElement>(`[data-dock="${id}"]`)
   if (!el) return null
   const r = el.getBoundingClientRect()
   return { x: r.left + r.width / 2, y: r.top + r.height / 2 }
@@ -49,27 +62,37 @@ function originOf(id: WinId): OsWindowOrigin {
 
 export default function Desktop({
   screen,
-  navigationSource,
   wallet,
   onGo,
-  onConnectWallet,
-  onResetDemo,
 }: {
   screen: ScreenId
-  navigationSource: NavigationSource
+  navigationSource?: NavigationSource
   wallet: WalletState
   onGo: (id: ScreenId) => void
-  onConnectWallet: () => void
-  onResetDemo: () => void
+  onConnectWallet?: () => void
+  onResetDemo?: () => void
 }) {
-  const [windows, setWindows] = useState<OpenWin[]>([])
+  // Messages is already open when the desktop appears (not on phones, where a
+  // window would cover the whole screen).
+  const [windows, setWindows] = useState<OpenWin[]>(() =>
+    typeof window !== 'undefined' && window.innerWidth >= 900 ? [{ id: 'chat', origin: null, cascade: 0 }] : [],
+  )
   const [mission, setMission] = useState(false)
   const [selected, setSelected] = useState<DesktopItemKind | null>(null)
   const [moved, setMoved] = useState<Record<string, { x: number; y: number }>>({})
-  const lastStakeScreen = useRef<ScreenId>('stake-not-verified')
+  const [wallpaper, setWallpaper] = useState(savedWallpaper)
   const stakeOpen = isStakeScreen(screen)
   const earnOpen = screen === 'earn'
-  const entry = isStakeEntry(screen)
+  const paper = OS_WALLPAPERS.find((w) => w.id === wallpaper) ?? OS_WALLPAPERS[0]
+
+  function chooseWallpaper(w: OsWallpaper) {
+    setWallpaper(w.id)
+    try {
+      window.localStorage.setItem(WALLPAPER_KEY, w.id)
+    } catch {
+      // Not remembered, still applied.
+    }
+  }
 
   function openWindow(id: WinId) {
     setMission(false)
@@ -81,7 +104,7 @@ export default function Desktop({
   }
 
   function closeWindow(id: WinId) {
-    if (id === 'stake' || id === 'earn') onGo('workspace')
+    if ((id === 'stake' && stakeOpen) || (id === 'earn' && earnOpen)) onGo('workspace')
     else setWindows((list) => list.filter((w) => w.id !== id))
   }
 
@@ -89,10 +112,9 @@ export default function Desktop({
     setWindows((list) => (list[list.length - 1]?.id === id ? list : [...list.filter((w) => w.id !== id), list.find((w) => w.id === id)!]))
   }
 
+  // Stake is the live xborg.com/earn page in a window.
   function openStake() {
-    setMission(false)
-    if (stakeOpen) focusWindow('stake')
-    else onGo(wallet === 'connected' ? lastStakeScreen.current : 'stake-entry')
+    openWindow('stake')
   }
 
   function openApp(id: DockAppId) {
@@ -109,7 +131,7 @@ export default function Desktop({
     if (isProduct(screen)) openWindow(screen)
   }, [screen])
 
-  // Stake and Earn follow the address, so every review state still has a link.
+  // Links such as #stake or #earn open that window too.
   useEffect(() => {
     for (const [id, open] of [
       ['stake', stakeOpen],
@@ -124,11 +146,6 @@ export default function Desktop({
     }
   }, [stakeOpen, earnOpen])
 
-  useEffect(() => {
-    if (!stakeOpen || entry) return
-    if (SCREENS.find((s) => s.id === screen)?.group === 'Stake') lastStakeScreen.current = screen
-  }, [stakeOpen, entry, screen])
-
   // Escape closes All apps first, then the window in front.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -142,7 +159,7 @@ export default function Desktop({
     return () => window.removeEventListener('keydown', onKey)
   })
 
-  const running = windows.map((w) => w.id).filter((id): id is DockAppId => !isDesktopItem(id))
+  const running = windows.map((w) => w.id).filter((id): id is DockAppId => !isDesktopItem(id) && id !== 'prefs' && id !== 'chat')
   const frontId = windows[windows.length - 1]?.id
 
   function renderWindow(w: OpenWin, i: number) {
@@ -174,24 +191,52 @@ export default function Desktop({
               <img src="/os/stake-icon.svg" alt="" width={14} height={15} />
             </span>
           }
-          width={entry ? 720 : 1180}
-          height={entry ? 760 : 760}
+          width={1180}
+          height={820}
           className="os-win-app os-win-stake"
-          accessory={<span className="os-demo-badge">Demo data</span>}
+          accessory={
+            <a className="os-win-open-out" href={STAKE_PAGE} target="_blank" rel="noreferrer" aria-label="Open Stake in a new tab" title="Open in a new tab">
+              <img src="/os/arrow-out.svg" alt="" width={12} height={12} />
+            </a>
+          }
         >
-          <div className="portal-window-body">
-            {stakeOpen && entry ? (
-              <StakeEntry
-                connecting={wallet === 'connecting'}
-                restricted={screen === 'stake-restricted'}
-                onHome={() => onGo('workspace')}
-                onConnect={onConnectWallet}
-              />
-            ) : null}
-            {stakeOpen && !entry ? (
-              <Stake screen={screen as StakeScreenId} navigationSource={navigationSource} onGo={onGo} onReset={onResetDemo} />
-            ) : null}
-          </div>
+          <StakeContent />
+        </OsWindow>
+      )
+    }
+    if (w.id === 'chat') {
+      return (
+        <OsWindow
+          key={w.id}
+          {...common}
+          title="Messages"
+          icon={
+            <img src="/os/button-messages.svg" alt="" width={32} height={32} />
+          }
+          width={640}
+          height={580}
+          top={170}
+          className="os-win-app os-win-chat"
+        >
+          <MessagesApp onOpenApp={openApp} />
+        </OsWindow>
+      )
+    }
+    if (w.id === 'prefs') {
+      return (
+        <OsWindow
+          key={w.id}
+          {...common}
+          title="Preferences"
+          icon={
+            <span className="os-win-tile">
+              <img src="/os/stake-icon.svg" alt="" width={14} height={15} />
+            </span>
+          }
+          width={640}
+          className="os-win-app os-win-prefs"
+        >
+          <PreferencesContent value={paper.id} onChange={chooseWallpaper} />
         </OsWindow>
       )
     }
@@ -218,7 +263,7 @@ export default function Desktop({
         width={meta.width}
         top={meta.top}
       >
-        {w.id === 'readme' ? <ReadmeContent /> : <FolderContent />}
+        {w.id === 'readme' ? <ReadmeContent /> : w.id === 'docs' ? <ClientsContent /> : <FolderContent />}
       </OsWindow>
     )
   }
@@ -231,11 +276,29 @@ export default function Desktop({
         if (!(e.target as Element).closest('.os-icon')) setSelected(null)
       }}
     >
-      <div className="os-wallpaper" aria-hidden="true" />
+      <div
+        className="os-wallpaper"
+        aria-hidden="true"
+        style={
+          {
+            '--os-wallpaper': `url('${paper.src}')`,
+            '--os-wallpaper-small': `url('${paper.small}')`,
+            '--os-wallpaper-opacity': paper.opacity,
+          } as CSSProperties
+        }
+      />
       <h1 className="sr-only">XBorg</h1>
 
+      <MenuBar
+        onOpenApp={openApp}
+        onAbout={() => openWindow('readme')}
+        onClients={() => openWindow('docs')}
+        onMessages={() => openWindow('chat')}
+        onPreferences={() => openWindow('prefs')}
+      />
+
       <Notifications onOpen={(id) => openWindow(id)} />
-      <XbgWidget wallet={wallet} onWallet={openStake} />
+      <XbgWidget wallet={wallet} onStake={openStake} />
 
       {ICONS.map((icon) => {
         const m = moved[icon.kind] ?? { x: 0, y: 0 }
@@ -267,7 +330,14 @@ export default function Desktop({
         {mission ? <MissionControl onOpen={(id) => openWindow(id)} onClose={() => setMission(false)} /> : null}
       </AnimatePresence>
 
-      <OsDock running={running} missionOpen={mission} onAll={() => setMission((m) => !m)} onOpen={openApp} />
+      <OsDock
+        running={running}
+        missionOpen={mission}
+        messagesOpen={windows.some((w) => w.id === 'chat')}
+        onAll={() => setMission((m) => !m)}
+        onOpen={openApp}
+        onMessages={() => openWindow('chat')}
+      />
       <Suspense fallback={null}>
         <Cursor3D />
       </Suspense>

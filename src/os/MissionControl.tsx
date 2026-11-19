@@ -59,9 +59,6 @@ export default function MissionControl({
               </span>
               <h2 className="os-win-title">{p.name}</h2>
               <div className="os-win-controls">
-                <button type="button" className="os-win-btn" aria-label={`Open ${p.name}`} onClick={() => onOpen(p.id)}>
-                  <img src="/os/fullscreen.svg" alt="" width={24} height={24} />
-                </button>
                 <button type="button" className="os-win-btn" aria-label="Close all apps" onClick={onClose}>
                   <img src="/os/close.svg" alt="" width={24} height={24} />
                 </button>
