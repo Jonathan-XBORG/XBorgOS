@@ -1,45 +1,90 @@
 import { animate, motion, useMotionValue, useReducedMotion, useTransform } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { WalletState } from '../wallet'
 import { XBG_COINGECKO_ID, XBG_TOKEN_ICON, XBG_WIDGET } from './data'
+import XbgChart, { formatPrice, type PricePoint } from './XbgChart'
 
 const DESIGN_CHANGE = Number.parseFloat(XBG_WIDGET.change)
-const PRICE_URL = `https://api.coingecko.com/api/v3/simple/price?ids=${XBG_COINGECKO_ID}&vs_currencies=usd&include_24hr_change=true`
-const REFRESH_MS = 120_000
+const API = 'https://api.coingecko.com/api/v3'
+const PRICE_URL = `${API}/simple/price?ids=${XBG_COINGECKO_ID}&vs_currencies=usd&include_24hr_change=true`
+const CHART_URL = `${API}/coins/${XBG_COINGECKO_ID}/market_chart?vs_currency=usd&days=1`
+// The price is polled every 15 seconds (CoinGecko refreshes its public price
+// about once a minute); the full 24h curve is reloaded every 5 minutes and
+// each new price is appended to it in between.
+const PRICE_MS = 15_000
+const CHART_MS = 300_000
+const DAY_MS = 86_400_000
 
 type Quote = { price: number | null; change: number }
 
-function formatPrice(v: number) {
-  const digits = v >= 1 ? 2 : v >= 0.01 ? 4 : 6
-  return `$${v.toFixed(digits)}`
-}
-
-// Live XBG price and 24h change from CoinGecko, refreshed every two minutes.
-// Until it answers (or if it can't be reached) the design's values show.
-function useXbgQuote(): Quote {
+// Live XBG price, 24h change and 24h curve from CoinGecko. Until it answers
+// (or if it can't be reached) the design's values and curve show.
+function useXbgMarket(): { quote: Quote; points: PricePoint[] | null } {
   const [quote, setQuote] = useState<Quote>({ price: XBG_WIDGET.fallbackPrice, change: DESIGN_CHANGE })
+  const [points, setPoints] = useState<PricePoint[] | null>(null)
   useEffect(() => {
     let alive = true
-    const load = async () => {
+    const loadPrice = async () => {
+      if (document.hidden) return
       try {
         const res = await fetch(PRICE_URL)
         if (!res.ok) return
         const data = (await res.json()) as Record<string, { usd?: number; usd_24h_change?: number }>
         const row = data[XBG_COINGECKO_ID]
         if (!alive || typeof row?.usd !== 'number') return
-        setQuote({ price: row.usd, change: typeof row.usd_24h_change === 'number' ? row.usd_24h_change : DESIGN_CHANGE })
+        const price = row.usd
+        setQuote({ price, change: typeof row.usd_24h_change === 'number' ? row.usd_24h_change : DESIGN_CHANGE })
+        setPoints((list) => {
+          if (!list) return list
+          const now = Date.now()
+          const last = list[list.length - 1]
+          if (last && last[1] === price && now - last[0] < 60_000) return list
+          return [...list.filter(([t]) => t >= now - DAY_MS), [now, price]]
+        })
       } catch {
         // Offline or rate limited: keep what is on screen.
       }
     }
-    load()
-    const timer = window.setInterval(load, REFRESH_MS)
+    const loadChart = async () => {
+      if (document.hidden) return
+      try {
+        const res = await fetch(CHART_URL)
+        if (!res.ok) return
+        const data = (await res.json()) as { prices?: PricePoint[] }
+        const prices = (data.prices ?? []).filter((p) => Number.isFinite(p[0]) && Number.isFinite(p[1]))
+        if (alive && prices.length > 1) setPoints(prices)
+      } catch {
+        // Keep the design curve.
+      }
+    }
+    loadChart().then(loadPrice)
+    const priceTimer = window.setInterval(loadPrice, PRICE_MS)
+    const chartTimer = window.setInterval(loadChart, CHART_MS)
+    const onVisible = () => {
+      if (!document.hidden) loadPrice()
+    }
+    document.addEventListener('visibilitychange', onVisible)
     return () => {
       alive = false
-      window.clearInterval(timer)
+      window.clearInterval(priceTimer)
+      window.clearInterval(chartTimer)
+      document.removeEventListener('visibilitychange', onVisible)
     }
   }, [])
-  return quote
+  return { quote, points }
+}
+
+// Flashes green or red for a moment when the price moves.
+function usePriceTick(price: number | null) {
+  const prev = useRef(price)
+  const [tick, setTick] = useState<{ dir: 'up' | 'down'; n: number } | null>(null)
+  useEffect(() => {
+    const before = prev.current
+    prev.current = price
+    if (before === null || price === null || before === price) return
+    setTick((t) => ({ dir: price > before ? 'up' : 'down', n: (t?.n ?? 0) + 1 }))
+  }, [price])
+  return tick
 }
 
 // The XBG widget in the top right corner. It floats in, the change counts up
@@ -52,7 +97,8 @@ export default function XbgWidget({
   onStake: () => void
 }) {
   const reduce = useReducedMotion()
-  const quote = useXbgQuote()
+  const { quote, points } = useXbgMarket()
+  const tick = usePriceTick(quote.price)
   const value = useMotionValue(reduce ? quote.change : 0)
   const text = useTransform(value, (v) => `${Math.abs(v).toFixed(2)}%`)
   const down = quote.change < 0
@@ -93,7 +139,11 @@ export default function XbgWidget({
             />
             {XBG_WIDGET.label}
           </p>
-          {quote.price !== null ? <p className="os-widget-price">{formatPrice(quote.price)}</p> : null}
+          {quote.price !== null ? (
+            <p key={tick?.n ?? 0} className={`os-widget-price${tick ? ` is-${tick.dir}` : ''}`}>
+              {formatPrice(quote.price)}
+            </p>
+          ) : null}
         </div>
         <div className={`os-widget-change${down ? ' is-down' : ''}`}>
           <motion.img
@@ -110,11 +160,17 @@ export default function XbgWidget({
           <p className="os-widget-period">{XBG_WIDGET.period}</p>
         </div>
       </div>
-      <div className="os-widget-chart" aria-hidden="true">
-        <img src="/os/chart-1.svg" alt="" className="os-chart-low" />
-        <img src="/os/chart-2.svg" alt="" className="os-chart-high" />
-        <img src="/os/chart-3.svg" alt="" className="os-chart-low" />
-        <img src="/os/chart-4.svg" alt="" className="os-chart-high" />
+      <div className="os-widget-chart">
+        {points ? (
+          <XbgChart points={points} />
+        ) : (
+          <>
+            <img src="/os/chart-1.svg" alt="" className="os-chart-low" />
+            <img src="/os/chart-2.svg" alt="" className="os-chart-high" />
+            <img src="/os/chart-3.svg" alt="" className="os-chart-low" />
+            <img src="/os/chart-4.svg" alt="" className="os-chart-high" />
+          </>
+        )}
       </div>
       <button type="button" className="os-widget-wallet" onClick={onStake} disabled={wallet === 'connecting'}>
         <span>{wallet === 'connecting' ? 'Connecting' : XBG_WIDGET.stake}</span>

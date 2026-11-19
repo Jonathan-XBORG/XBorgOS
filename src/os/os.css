@@ -318,7 +318,8 @@
 }
 
 .os-widget-wallet {
-  align-self: flex-start;
+  align-self: stretch;
+  justify-content: center;
   height: 60px;
   padding: 14px 30px;
   border-radius: 30px;
@@ -788,10 +789,21 @@
   gap: 16px;
   padding: 8px;
   border-radius: 24px;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+}
+
+/* The dock's glass sits on a pseudo element: a blur on the dock itself would
+   stop the search panel inside it from blurring what is behind. */
+.os-dock::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
   background: var(--os-glass);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+  pointer-events: none;
 }
 
 .os-dock-apps {
@@ -828,6 +840,18 @@
   transform: translateY(-3px) scale(1.05);
 }
 
+/* White inner highlight along the top edge of every app icon (Figma 36:99:
+   inner shadow 0 1px, white 25%), on top of the icon's own artwork. */
+.os-dock-item::after,
+.os-win-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
 .os-dock-item:active {
   transform: translateY(-1px) scale(1.02);
 }
@@ -861,11 +885,12 @@
   width: 48px;
   height: 48px;
   border-radius: 16px;
-  background: #171717;
+  background: rgba(15, 15, 15, 0.3);
   box-shadow: inset 0 -3px 8px 0 rgba(0, 0, 0, 0.25);
 }
 
-.os-dock-stake img {
+.os-dock-stake img,
+.os-dock-stake svg {
   display: block;
   margin-bottom: -1px;
 }
@@ -953,7 +978,8 @@
   height: 44px;
   padding: 0 12px 0 16px;
   border-radius: 16px;
-  background: var(--os-glass);
+  /* Light field, as in Figma 36:209. */
+  background: rgba(213, 213, 211, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: var(--os-highlight);
@@ -975,16 +1001,17 @@
   border: 0;
   outline: none;
   background: transparent;
-  color: var(--os-ink);
+  color: #181617;
+  caret-color: #181617;
   font: 500 15px 'Geist', system-ui, sans-serif;
 }
 
 .os-search-field input::placeholder {
-  color: var(--os-ink-3);
+  color: #848381;
 }
 
 .os-search-field:focus-within {
-  box-shadow: var(--os-highlight), 0 0 0 1px rgba(255, 255, 255, 0.28);
+  box-shadow: var(--os-highlight), 0 0 0 2px rgba(255, 255, 255, 0.45);
 }
 
 .os-search-panel {
@@ -996,9 +1023,9 @@
   overflow: auto;
   padding: 8px;
   border-radius: 20px;
-  background: rgba(16, 16, 20, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(16, 16, 20, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--os-highlight), 0 24px 48px rgba(0, 0, 0, 0.35);
   transform-origin: 30% 100%;
 }
@@ -1345,6 +1372,7 @@
 }
 
 .os-win-tile {
+  position: relative;
   width: 32px;
   height: 32px;
   border-radius: 10.667px;
@@ -1378,7 +1406,8 @@
 
 /* ---------- Widget entrance ---------- */
 
-.os-widget-chart img {
+.os-widget-chart img,
+.os-chart-live svg {
   clip-path: inset(0 100% 0 0);
   animation: os-chart-draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.55s forwards;
 }
@@ -1493,7 +1522,9 @@
 
 /* The dock slides up when the desktop opens. */
 .os-dock {
-  animation: os-dock-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  /* backwards, not both: a finished animation must not linger, or the dock
+     stays a backdrop root and the search panel loses its blur. */
+  animation: os-dock-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s backwards;
 }
 
 @keyframes os-dock-in {
@@ -1529,13 +1560,22 @@
   font-size: 13px;
   font-weight: 500;
   color: #fff;
-  background: rgba(10, 12, 24, 0.38);
-  backdrop-filter: blur(24px) saturate(1.6);
-  -webkit-backdrop-filter: blur(24px) saturate(1.6);
   box-shadow: inset 0 -0.5px 0 rgba(255, 255, 255, 0.12);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   white-space: nowrap;
-  animation: os-menubar-in 0.5s var(--os-ease) both;
+  animation: os-menubar-in 0.5s var(--os-ease) backwards;
+}
+
+/* Same trick as the dock, so the XBorg menu can blur the desktop. */
+.os-menubar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(10, 12, 24, 0.38);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  pointer-events: none;
 }
 
 @keyframes os-menubar-in {
@@ -1607,16 +1647,17 @@
   padding: 6px;
   /* Same surface and hover as the dock search panel. */
   border-radius: 16px;
-  background: rgba(16, 16, 20, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(16, 16, 20, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--os-highlight), 0 24px 48px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
   text-shadow: none;
 }
 
-.os-menubar-dropdown button {
+.os-menubar-dropdown button,
+.os-menubar-dropdown a {
   height: 34px;
   padding: 0 12px;
   border-radius: 10px;
@@ -1625,8 +1666,16 @@
   color: var(--os-ink);
 }
 
+.os-menubar-dropdown a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .os-menubar-dropdown button:hover,
-.os-menubar-dropdown button:focus-visible {
+.os-menubar-dropdown button:focus-visible,
+.os-menubar-dropdown a:hover,
+.os-menubar-dropdown a:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   outline: none;
 }
@@ -1766,7 +1815,7 @@
 }
 
 .os-prefs-option.is-selected .os-prefs-thumb {
-  box-shadow: 0 0 0 3px #0a1bd6, 0 0 0 5px rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 2px #fff;
 }
 
 .os-prefs-option:focus-visible {
@@ -1787,6 +1836,10 @@
 }
 
 /* ---------- Stake (live xborg.com/earn) ---------- */
+
+.os-win.os-win-stake {
+  padding-bottom: 0;
+}
 
 .os-win-stake .os-win-body {
   padding: 0;
@@ -1849,18 +1902,7 @@
 }
 
 .os-win-open-out {
-  width: 28px;
-  height: 28px;
-  margin-left: auto;
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0.08);
-  transition: background 0.15s;
-}
-
-.os-win-open-out:hover {
-  background: rgba(255, 255, 255, 0.16);
+  flex: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2043,7 +2085,7 @@
 }
 
 .os-chat-row.is-grouped {
-  margin-top: -4px;
+  margin-top: -6px;
 }
 
 .os-chat-row.is-me {
@@ -2065,13 +2107,26 @@
   -webkit-user-select: text;
 }
 
-.os-chat-row.is-them .os-chat-bubble {
-  border-bottom-left-radius: 6px;
-}
-
 .os-chat-row.is-me .os-chat-bubble {
   background: #695dd4;
-  border-bottom-right-radius: 6px;
+}
+
+/* Corners as in Messenger: a run of bubbles from the same sender is round
+   at its top and bottom and squared where the bubbles meet. */
+.os-chat-row.is-them.is-grouped .os-chat-bubble {
+  border-top-left-radius: 5px;
+}
+
+.os-chat-row.is-them.is-continued .os-chat-bubble {
+  border-bottom-left-radius: 5px;
+}
+
+.os-chat-row.is-me.is-grouped .os-chat-bubble {
+  border-top-right-radius: 5px;
+}
+
+.os-chat-row.is-me.is-continued .os-chat-bubble {
+  border-bottom-right-radius: 5px;
 }
 
 .os-chat-bubble p {
@@ -2135,25 +2190,43 @@
 
 .os-chat-choices {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.os-chat-choices-title {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: var(--os-ink-3);
+}
+
+.os-chat-choices-list {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px;
-  margin-top: 6px;
 }
 
 .os-chat-choice {
   padding: 8px 14px;
   border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* Same fill as the message field below. */
+  background: rgba(255, 255, 255, 0.07);
   font-size: 13px;
   font-weight: 600;
   color: #fff;
-  box-shadow: inset 0 0 0 1.5px rgba(150, 140, 240, 0.9);
-  background: rgba(105, 93, 212, 0.2);
-  transition: background 0.15s, transform 0.15s var(--os-ease);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s var(--os-ease);
 }
 
-.os-chat-choice:hover {
-  background: rgba(105, 93, 212, 0.45);
+.os-chat-choice:hover,
+.os-chat-choice:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  outline: none;
   transform: translateY(-1px);
 }
 
@@ -2178,6 +2251,16 @@
   color: #fff;
   font: inherit;
   font-size: 14px;
+}
+
+.os-chat-composer input:focus,
+.os-chat-composer input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.os-chat-composer:focus-within {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.22);
 }
 
 .os-chat-composer input::placeholder {
@@ -2232,6 +2315,222 @@
 
 @media (prefers-reduced-motion: reduce) {
   .os-chat-dots i {
+    animation: none;
+  }
+}
+
+
+/* ---------- Phone tweaks ---------- */
+
+@media (max-width: 899px) {
+  /* No notifications and no All apps on phones. */
+  .os-notifs,
+  .os-dock-apps > li:has(> .os-dock-all) {
+    display: none;
+  }
+  /* Every tile keeps the same corner ratio as the 48px icons (16/48). */
+  .os-dock-all,
+  .os-dock-stake,
+  .os-dock-item {
+    border-radius: 33.333%;
+  }
+  /* Smaller type inside windows. */
+  .os-win-bar {
+    padding: 20px;
+  }
+  .os-win-title {
+    font-size: 16px;
+  }
+  .os-win-body {
+    padding: 0 20px;
+  }
+  .os-win {
+    padding-bottom: 20px;
+    border-radius: 24px;
+  }
+  .os-lead,
+  .os-lead-sm {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .os-proof,
+  .os-readme {
+    font-size: 15px;
+  }
+  .os-product {
+    gap: 20px;
+  }
+  .os-product-copy {
+    gap: 20px;
+  }
+  .os-cta {
+    height: 48px;
+    padding: 0 22px;
+    font-size: 14px;
+  }
+  .os-mc-card {
+    padding-bottom: 20px;
+  }
+  .os-mc-body {
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .os-mc-copy {
+    min-height: 0;
+    gap: 20px;
+  }
+}
+
+/* ---------- Custom scrollbar (ScrollArea) ---------- */
+
+.os-scroll {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+html .os .os-scroll-view {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+html .os .os-scroll-view::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.os-scroll-track {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 6px;
+  width: 10px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Shown while the pointer is over the window (or the bar is held). */
+.os-win:hover .os-scroll-track,
+.os-scroll.is-dragging .os-scroll-track {
+  opacity: 1;
+}
+
+.os-scroll-thumb {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.28);
+  transition: background 0.15s, left 0.15s, right 0.15s;
+  touch-action: none;
+}
+
+.os-scroll-track:hover .os-scroll-thumb,
+.os-scroll.is-dragging .os-scroll-thumb {
+  left: 1px;
+  right: 1px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+@media (hover: none) {
+  .os-scroll-track {
+    display: none;
+  }
+}
+
+/* ---------- Live XBG curve ---------- */
+
+.os-chart-live {
+  position: absolute;
+  inset: 0;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+
+.os-chart-live svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.os-chart-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5), 0 0 10px currentColor;
+  pointer-events: none;
+}
+
+.os-chart-tip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(16, 16, 20, 0.86);
+  box-shadow: var(--os-highlight), 0 6px 16px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.os-chart-tip strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.os-chart-tip span {
+  color: var(--os-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.os-chart-tip.is-right {
+  transform: translateX(-12px);
+}
+
+.os-chart-tip.is-left {
+  transform: translateX(calc(-100% + 12px));
+}
+
+.os-widget-price.is-up {
+  animation: os-tick-up 0.9s ease-out;
+}
+
+.os-widget-price.is-down {
+  animation: os-tick-down 0.9s ease-out;
+}
+
+@keyframes os-tick-up {
+  from {
+    color: var(--os-green);
+  }
+}
+
+@keyframes os-tick-down {
+  from {
+    color: #ff6b6b;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-chart-live svg {
+    animation: none;
+    clip-path: none;
+  }
+  .os-widget-price.is-up,
+  .os-widget-price.is-down {
     animation: none;
   }
 }

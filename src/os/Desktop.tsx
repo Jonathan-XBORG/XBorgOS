@@ -82,7 +82,6 @@ export default function Desktop({
   const [moved, setMoved] = useState<Record<string, { x: number; y: number }>>({})
   const [wallpaper, setWallpaper] = useState(savedWallpaper)
   const stakeOpen = isStakeScreen(screen)
-  const earnOpen = screen === 'earn'
   const paper = OS_WALLPAPERS.find((w) => w.id === wallpaper) ?? OS_WALLPAPERS[0]
 
   function chooseWallpaper(w: OsWallpaper) {
@@ -104,7 +103,7 @@ export default function Desktop({
   }
 
   function closeWindow(id: WinId) {
-    if ((id === 'stake' && stakeOpen) || (id === 'earn' && earnOpen)) onGo('workspace')
+    if (id === 'stake' && stakeOpen) onGo('workspace')
     else setWindows((list) => list.filter((w) => w.id !== id))
   }
 
@@ -119,11 +118,18 @@ export default function Desktop({
 
   function openApp(id: DockAppId) {
     if (id === 'stake') openStake()
-    else if (id === 'earn') {
-      setMission(false)
-      if (earnOpen) focusWindow('earn')
-      else onGo('earn')
-    } else openWindow(id)
+    else if (id !== 'earn') openWindow(id)
+  }
+
+  // Dock: a click opens the app, brings it to the front if another window
+  // covers it, and closes it when it is already the window in front.
+  function toggleWindow(id: WinId, open: () => void) {
+    const top = windows[windows.length - 1]?.id
+    if (top === id && !mission) closeWindow(id)
+    else open()
+  }
+  function toggleApp(id: DockAppId) {
+    toggleWindow(id, () => openApp(id))
   }
 
   // Review links such as #propr open that window on the desktop.
@@ -131,11 +137,10 @@ export default function Desktop({
     if (isProduct(screen)) openWindow(screen)
   }, [screen])
 
-  // Links such as #stake or #earn open that window too.
+  // Links such as #stake open that window too.
   useEffect(() => {
     for (const [id, open] of [
       ['stake', stakeOpen],
-      ['earn', earnOpen],
     ] as const) {
       setWindows((list) => {
         const has = list.some((w) => w.id === id)
@@ -144,7 +149,7 @@ export default function Desktop({
         return list
       })
     }
-  }, [stakeOpen, earnOpen])
+  }, [stakeOpen])
 
   // Escape closes All apps first, then the window in front.
   useEffect(() => {
@@ -195,8 +200,11 @@ export default function Desktop({
           height={820}
           className="os-win-app os-win-stake"
           accessory={
-            <a className="os-win-open-out" href={STAKE_PAGE} target="_blank" rel="noreferrer" aria-label="Open Stake in a new tab" title="Open in a new tab">
-              <img src="/os/arrow-out.svg" alt="" width={12} height={12} />
+            <a className="os-win-btn os-win-open-out" href={STAKE_PAGE} target="_blank" rel="noreferrer" aria-label="Open Stake in a new tab" title="Open in a new tab">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M8 16 16 8" />
+                <path d="M9 8h7v7" />
+              </svg>
             </a>
           }
         >
@@ -240,13 +248,7 @@ export default function Desktop({
         </OsWindow>
       )
     }
-    if (w.id === 'earn') {
-      return (
-        <OsWindow key={w.id} {...common} title="Earn" icon={<img src="/os/button-earn.svg" alt="" width={32} height={32} />} width={760} height={520} className="os-win-app">
-          <div className="os-earn-body" />
-        </OsWindow>
-      )
-    }
+    if (w.id === 'earn') return null
     const meta = WINDOW_META[w.id]
     return (
       <OsWindow
@@ -335,8 +337,8 @@ export default function Desktop({
         missionOpen={mission}
         messagesOpen={windows.some((w) => w.id === 'chat')}
         onAll={() => setMission((m) => !m)}
-        onOpen={openApp}
-        onMessages={() => openWindow('chat')}
+        onOpen={toggleApp}
+        onMessages={() => toggleWindow('chat', () => openWindow('chat'))}
       />
       <Suspense fallback={null}>
         <Cursor3D />

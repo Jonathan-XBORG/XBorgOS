@@ -96,7 +96,6 @@ export default function MenuBar({
   const apps: { id: DockAppId; label: string }[] = [
     ...OS_PRODUCTS.map((p) => ({ id: p.id as DockAppId, label: p.name })),
     { id: 'stake', label: 'Stake' },
-    { id: 'earn', label: 'Earn' },
   ]
 
   return (
@@ -133,9 +132,22 @@ export default function MenuBar({
                 <button type="button" role="menuitem" onClick={run(onClients)}>
                   Clients
                 </button>
+                <span className="os-menubar-sep" role="separator" />
                 <button type="button" role="menuitem" onClick={run(onMessages)}>
                   Messages
                 </button>
+                {apps.map((a) => (
+                  <button key={a.id} type="button" role="menuitem" onClick={run(() => onOpenApp(a.id))}>
+                    {a.label}
+                  </button>
+                ))}
+                <span className="os-menubar-sep" role="separator" />
+                <a role="menuitem" href={LINKS.x} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
+                  X
+                </a>
+                <a role="menuitem" href={LINKS.discord} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
+                  Discord
+                </a>
                 <span className="os-menubar-sep" role="separator" />
                 <button type="button" role="menuitem" onClick={run(onPreferences)}>
                   Preferences…
@@ -145,23 +157,6 @@ export default function MenuBar({
           </AnimatePresence>
         </div>
         <span className="os-menubar-brand">XBorg</span>
-        <nav className="os-menubar-apps" aria-label="Quick access">
-          <button type="button" className="os-menubar-item" onClick={onMessages}>
-            Messages
-          </button>
-          {apps.map((a) => (
-            <button key={a.id} type="button" className="os-menubar-item" onClick={() => onOpenApp(a.id)}>
-              {a.label}
-            </button>
-          ))}
-          <span className="os-menubar-divider" aria-hidden="true" />
-          <a className="os-menubar-item" href={LINKS.x} target="_blank" rel="noreferrer">
-            X
-          </a>
-          <a className="os-menubar-item" href={LINKS.discord} target="_blank" rel="noreferrer">
-            Discord
-          </a>
-        </nav>
       </div>
       <div className="os-menubar-status">
         {city ? (

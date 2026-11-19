@@ -5,7 +5,7 @@ import OsSearch from './OsSearch'
 
 export type OsDockApp = 'all' | DockAppId
 
-// The dock: search, All apps, the three products, Stake and Earn, then the
+// The dock: search, All apps, the three products, Stake and Messages, then the
 // two external links. A dot sits under every app with an open window.
 export default function OsDock({
   running,
@@ -70,11 +70,14 @@ export default function OsDock({
             <img src="/os/stake-icon.svg" alt="" width={20} height={22} draggable={false} />
           </span>,
         )}
-        {item('earn', 'Earn', <img src="/os/button-earn.svg" alt="" width={48} height={48} draggable={false} />)}
         {tile(
           'chat',
           'Messages',
-          <img src="/os/button-messages.svg" alt="" width={48} height={48} draggable={false} />,
+          <span className="os-dock-stake os-dock-messages" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+              <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.47 1.17 4.7 3.05 6.3L4.3 21.4a.5.5 0 0 0 .7.56l3.9-1.8c.98.25 2.02.38 3.1.38 5.52 0 10-3.94 10-8.8S17.52 3 12 3Z" />
+            </svg>
+          </span>,
           messagesOpen,
           onMessages,
         )}

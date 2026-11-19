@@ -65,9 +65,9 @@ export const ASK_ITEMS: AskItem[] = [
   {
     kind: 'question',
     id: 'trigr',
-    title: 'What is Tradr?',
+    title: 'What is Trigr?',
     answer: [product('trigr').lead],
-    action: { label: 'Open Tradr', app: 'trigr' },
+    action: { label: 'Open Trigr', app: 'trigr' },
     keywords: 'tradr trigr strategies automate trade build beta',
   },
   {
@@ -80,8 +80,7 @@ export const ASK_ITEMS: AskItem[] = [
   { kind: 'app', id: 'app-stake', app: 'stake', title: 'Stake', hint: 'Pledge XBG for rewards', keywords: 'stake pledge xbg wallet rewards' },
   { kind: 'app', id: 'app-propr', app: 'propr', title: 'Propr', hint: 'App', keywords: 'propr' },
   { kind: 'app', id: 'app-fanbase', app: 'fanbase', title: 'FanBase', hint: 'App', keywords: 'fanbase' },
-  { kind: 'app', id: 'app-trigr', app: 'trigr', title: 'Tradr', hint: 'App', keywords: 'tradr trigr' },
-  { kind: 'app', id: 'app-earn', app: 'earn', title: 'Earn', hint: 'App', keywords: 'earn' },
+  { kind: 'app', id: 'app-trigr', app: 'trigr', title: 'Trigr', hint: 'App', keywords: 'tradr trigr' },
 ]
 
 for (const item of ASK_ITEMS) {

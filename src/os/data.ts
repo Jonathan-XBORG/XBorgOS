@@ -18,7 +18,7 @@ export type OsProduct = {
   href: string
 }
 
-const NAMES: Record<ProductId, string> = { propr: 'Propr', fanbase: 'FanBase', trigr: 'Tradr' }
+const NAMES: Record<ProductId, string> = { propr: 'Propr', fanbase: 'FanBase', trigr: 'Trigr' }
 const ICONS: Record<ProductId, { dock: string; small: string; shot: string }> = {
   propr: { dock: '/os/button-propr.svg', small: '/os/icon-propr-32.svg', shot: '/os/shot-propr.webp' },
   fanbase: { dock: '/os/button-fanbase.svg', small: '/os/icon-fanbase-32.svg', shot: '/os/shot-fanbase.webp' },
@@ -27,7 +27,7 @@ const ICONS: Record<ProductId, { dock: string; small: string; shot: string }> = 
 const ACTIONS: Record<ProductId, string> = {
   propr: 'Discover Propr',
   fanbase: 'Discover FanBase',
-  trigr: 'Join the Tradr beta',
+  trigr: 'Join the Trigr beta',
 }
 
 export const OS_PRODUCTS: OsProduct[] = PRODUCTS.map((p) => ({

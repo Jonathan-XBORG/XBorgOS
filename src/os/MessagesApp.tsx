@@ -1,6 +1,8 @@
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { useEffect, useLayoutEffect, useRef, useState, type FormEvent } from 'react'
 import type { DockAppId } from '../components/Dock'
+import { playMessageSound } from './chatSound'
+import ScrollArea from './ScrollArea'
 import { CHAT_CONTACTS, answerFor, type ChatAction, type ChatContact, type ChatMessage } from './messagesData'
 
 type Thread = { shown: ChatMessage[]; pending: ChatMessage[]; picked: string[]; started: boolean }
@@ -101,6 +103,14 @@ export default function Chat({ onOpenApp }: { onOpenApp: (id: DockAppId) => void
     }
   }, [next, activeId, reduce, first])
 
+  // A sound for every new message (not for the history shown on reopen).
+  const heard = useRef(thread.shown.length)
+  useEffect(() => {
+    const n = thread.shown.length
+    if (n > heard.current) playMessageSound(thread.shown[n - 1].from === 'me' ? 'out' : 'in')
+    heard.current = n
+  }, [thread.shown])
+
   // Keep the latest message in view.
   const mounted = useRef(false)
   useLayoutEffect(() => {
@@ -145,16 +155,20 @@ export default function Chat({ onOpenApp }: { onOpenApp: (id: DockAppId) => void
           </span>
         </header>
 
-        <div className="os-chat-scroll" ref={scrollRef} aria-live="polite">
+        <ScrollArea className="os-chat-scroll" viewRef={scrollRef} aria-live="polite">
           <p className="os-chat-day">Today</p>
           <AnimatePresence initial={false}>
             {thread.shown.map((m, i) => {
               const prev = thread.shown[i - 1]
               const grouped = prev?.from === m.from
+              // Messenger style corners: the side facing the sender is
+              // squared where a bubble touches another one from them.
+              const nextFrom = thread.shown[i + 1]?.from ?? (typing ? 'them' : undefined)
+              const continues = nextFrom === m.from
               return (
                 <motion.div
                   key={`${activeId}-${i}`}
-                  className={`os-chat-row is-${m.from}${grouped ? ' is-grouped' : ''}`}
+                  className={`os-chat-row is-${m.from}${grouped ? ' is-grouped' : ''}${continues ? ' is-continued' : ''}`}
                   initial={reduce ? false : { opacity: 0, y: 10, scale: 0.97 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 0.28, ease: [0.2, 0.8, 0.2, 1] }}
@@ -172,7 +186,7 @@ export default function Chat({ onOpenApp }: { onOpenApp: (id: DockAppId) => void
             {typing ? (
               <motion.div
                 key="typing"
-                className="os-chat-row is-them is-typing"
+                className={`os-chat-row is-them is-typing${thread.shown[thread.shown.length - 1]?.from === 'them' ? ' is-grouped' : ''}`}
                 initial={reduce ? false : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, transition: { duration: 0.1 } }}
@@ -198,14 +212,17 @@ export default function Chat({ onOpenApp }: { onOpenApp: (id: DockAppId) => void
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
             >
+              <p className="os-chat-choices-title">Suggested replies</p>
+              <div className="os-chat-choices-list">
               {choices.map((c) => (
                 <button key={c.id} type="button" className="os-chat-choice" onClick={() => pick(c.id)}>
                   {c.label}
                 </button>
               ))}
+              </div>
             </motion.div>
           ) : null}
-        </div>
+        </ScrollArea>
 
         <form className="os-chat-composer" onSubmit={send}>
           <input

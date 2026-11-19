@@ -230,7 +230,7 @@ export default function OsSearch({ onOpenApp }: { onOpenApp: (app: DockAppId) =>
         ) : null}
       </AnimatePresence>
       <label className="os-search-field">
-        <img src="/os/search-icon.svg" alt="" width={14} height={14} />
+        <img src="/os/search-icon-dark.svg" alt="" width={14} height={14} />
         <input
           ref={inputRef}
           type="text"
