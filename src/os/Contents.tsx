@@ -76,14 +76,8 @@ export function ClientsContent() {
       ))}
       <ul className="os-client-grid">
         {OS_CLIENTS.map((c) => (
-          <li key={c.id} className="os-client">
-            <span className="os-client-logo">
-              <img src={c.logo} alt="" loading="lazy" />
-            </span>
-            <span className="os-client-text">
-              <span className="os-client-name">{c.name}</span>
-              <span className="os-client-note">{c.note}</span>
-            </span>
+          <li key={c.id} className="os-client" title={c.name}>
+            <img src={c.logo} alt={c.name} loading="lazy" />
           </li>
         ))}
       </ul>
