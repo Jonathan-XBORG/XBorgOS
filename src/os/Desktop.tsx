@@ -72,11 +72,8 @@ export default function Desktop({
   onConnectWallet?: () => void
   onResetDemo?: () => void
 }) {
-  // Messages is already open when the desktop appears (not on phones, where a
-  // window would cover the whole screen).
-  const [windows, setWindows] = useState<OpenWin[]>(() =>
-    typeof window !== 'undefined' && window.innerWidth >= 900 ? [{ id: 'chat', origin: null, cascade: 0 }] : [],
-  )
+  // Messages is already open when the desktop appears, on every screen size.
+  const [windows, setWindows] = useState<OpenWin[]>([{ id: 'chat', origin: null, cascade: 0 }])
   const [mission, setMission] = useState(false)
   const [selected, setSelected] = useState<DesktopItemKind | null>(null)
   const [moved, setMoved] = useState<Record<string, { x: number; y: number }>>({})

@@ -1328,12 +1328,19 @@
     overflow: auto;
     padding: 16px 16px 200px;
   }
+  /* Phones: every window sits just under the menu bar, 8px from both
+     edges, and stops above the dock. */
   .os-win {
+    top: 44px !important;
     left: 8px !important;
-    right: 8px;
+    right: 8px !important;
     width: auto !important;
-    max-height: calc(100vh - 180px);
+    max-width: none;
+    max-height: calc(100dvh - 44px - 150px);
     overflow: auto;
+  }
+  .os-win.has-height {
+    height: calc(100dvh - 44px - 150px) !important;
   }
 }
 
@@ -2283,8 +2290,8 @@
 }
 
 @media (max-width: 899px) {
-  .os-chat {
-    flex-direction: column;
+  .os-chat-pane {
+    min-height: 0;
   }
   .os-chat-list {
     width: auto;
@@ -2532,5 +2539,20 @@ html .os .os-scroll-view::-webkit-scrollbar {
   .os-widget-price.is-up,
   .os-widget-price.is-down {
     animation: none;
+  }
+}
+
+/* iOS zooms into any field under 16px when it gets focus: keep them at 16. */
+@media (max-width: 899px) {
+  .os-search-field input,
+  .os-chat-composer input {
+    font-size: 16px;
+  }
+}
+
+/* No hover on touch screens: dock labels would stay stuck after a tap. */
+@media (hover: none) {
+  .os-dock-label {
+    display: none;
   }
 }
