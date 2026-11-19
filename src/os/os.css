@@ -76,8 +76,15 @@
   content: '';
   position: absolute;
   inset: 0;
+  /* 3840 x 2160 for large and high density screens, 1920 x 1080 otherwise. */
   background: url('/os/wallpaper.webp') center / cover no-repeat;
   opacity: 0.4;
+}
+
+@media (max-width: 1280px) and (max-resolution: 1.5dppx) {
+  .os-wallpaper::before {
+    background-image: url('/os/wallpaper-1920.webp');
+  }
 }
 
 /* ---------- 3D cursor ---------- */
