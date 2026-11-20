@@ -141,6 +141,7 @@ export default function Cursor3D() {
     let hovering = false
     let overText = false
 
+    let lastFrameMsg = 0
     const onMove = (e: PointerEvent) => {
       if (e.pointerType === 'touch') return
       target.x = e.clientX
@@ -151,11 +152,44 @@ export default function Cursor3D() {
         visible = true
       }
       const el = e.target instanceof Element ? e.target : null
+      // Entering an iframe (the Stake window): the page stops getting pointer
+      // events. Hide the glass cursor unless the framed page reports the
+      // pointer itself (see onFrame); its own cursor shows in the meantime.
+      if (el instanceof HTMLIFrameElement) {
+        if (performance.now() - lastFrameMsg > 250) visible = false
+        return
+      }
       hovering = Boolean(el?.closest(INTERACTIVE))
       overText = Boolean(el?.closest(TEXT))
     }
+    // xborg.com/earn?embed=1 posts its pointer to the desktop, so the 3D
+    // cursor keeps flying over the Stake window.
+    const onFrame = (e: MessageEvent) => {
+      const data = e.data as { type?: string; kind?: string; x?: number; y?: number; down?: boolean; interactive?: boolean; text?: boolean }
+      if (!data || data.type !== 'xborg-os:pointer' || typeof data.x !== 'number' || typeof data.y !== 'number') return
+      const frame = Array.from(document.querySelectorAll('iframe')).find((f) => f.contentWindow === e.source)
+      if (!frame) return
+      lastFrameMsg = performance.now()
+      if (data.kind === 'leave') return
+      const rect = frame.getBoundingClientRect()
+      target.x = rect.left + data.x
+      target.y = rect.top + data.y
+      if (!visible) {
+        pos.x = target.x
+        pos.y = target.y
+        visible = true
+      }
+      pressed = Boolean(data.down)
+      hovering = Boolean(data.interactive)
+      overText = !hovering && Boolean(data.text)
+    }
     const onLeave = () => {
       visible = false
+    }
+    // The pointer moves from the page into an iframe: no more pointer events
+    // reach us, so hide the glass cursor unless the frame reports its own.
+    const onOut = (e: PointerEvent) => {
+      if (e.relatedTarget instanceof HTMLIFrameElement && performance.now() - lastFrameMsg > 250) visible = false
     }
     const onDown = () => {
       pressed = true
@@ -164,6 +198,8 @@ export default function Cursor3D() {
       pressed = false
     }
     window.addEventListener('pointermove', onMove, { passive: true })
+    window.addEventListener('message', onFrame)
+    window.addEventListener('pointerout', onOut)
     window.addEventListener('pointerdown', onDown)
     window.addEventListener('pointerup', onUp)
     document.documentElement.addEventListener('pointerleave', onLeave)
@@ -215,6 +251,8 @@ export default function Cursor3D() {
       disposed = true
       cancelAnimationFrame(raf)
       window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('message', onFrame)
+      window.removeEventListener('pointerout', onOut)
       window.removeEventListener('pointerdown', onDown)
       window.removeEventListener('pointerup', onUp)
       document.documentElement.removeEventListener('pointerleave', onLeave)

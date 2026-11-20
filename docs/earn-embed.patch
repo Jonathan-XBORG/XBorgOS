@@ -1,8 +1,85 @@
+diff --git a/app/earn/EmbedPointerBridge.tsx b/app/earn/EmbedPointerBridge.tsx
+new file mode 100644
+index 0000000..f457424
+--- /dev/null
++++ b/app/earn/EmbedPointerBridge.tsx
+@@ -0,0 +1,63 @@
++'use client'
++
++import { useEffect } from 'react'
++
++/*
++  XBorg OS draws its own 3D cursor. Inside the Stake window this page is a
++  cross-origin iframe, so the desktop never sees the pointer while it is over
++  the page. In embed mode the page hides its own cursor and reports the
++  pointer to the desktop, which keeps drawing the 3D cursor over it.
++  Only positions and button state are sent, nothing about the visitor.
++*/
++
++const INTERACTIVE = 'a, button, [role="button"], input, select, textarea, label, summary'
++const TEXT = 'p, h1, h2, h3, h4, li, span'
++
++export default function EmbedPointerBridge() {
++  useEffect(() => {
++    if (window.parent === window) return
++    const style = document.createElement('style')
++    style.textContent = '@media (hover: hover) and (pointer: fine) { *, *::before, *::after { cursor: none !important; } }'
++    document.head.appendChild(style)
++
++    let down = false
++    const send = (e: PointerEvent, kind: 'move' | 'leave') => {
++      if (e.pointerType === 'touch') return
++      const el = e.target instanceof Element ? e.target : null
++      window.parent.postMessage(
++        {
++          type: 'xborg-os:pointer',
++          kind,
++          x: e.clientX,
++          y: e.clientY,
++          down,
++          interactive: Boolean(el?.closest(INTERACTIVE)),
++          text: Boolean(el?.closest(TEXT)),
++        },
++        '*',
++      )
++    }
++    const onMove = (e: PointerEvent) => send(e, 'move')
++    const onDown = (e: PointerEvent) => {
++      down = true
++      send(e, 'move')
++    }
++    const onUp = (e: PointerEvent) => {
++      down = false
++      send(e, 'move')
++    }
++    const onLeave = (e: PointerEvent) => send(e, 'leave')
++    window.addEventListener('pointermove', onMove, { passive: true })
++    window.addEventListener('pointerdown', onDown, { passive: true })
++    window.addEventListener('pointerup', onUp, { passive: true })
++    document.documentElement.addEventListener('pointerleave', onLeave)
++    return () => {
++      style.remove()
++      window.removeEventListener('pointermove', onMove)
++      window.removeEventListener('pointerdown', onDown)
++      window.removeEventListener('pointerup', onUp)
++      document.documentElement.removeEventListener('pointerleave', onLeave)
++    }
++  }, [])
++  return null
++}
 diff --git a/app/earn/RewardsPage.tsx b/app/earn/RewardsPage.tsx
-index 98516e7..37d1ac9 100644
+index 98516e7..b9d2198 100644
 --- a/app/earn/RewardsPage.tsx
 +++ b/app/earn/RewardsPage.tsx
-@@ -61,6 +61,12 @@ import { toSeasonRankView } from './transparency-formatting'
+@@ -20,6 +20,7 @@ import {
+   useSeasonLeaderboard,
+ } from './transparency-dialogs'
+ import { toSeasonRankView } from './transparency-formatting'
++import EmbedPointerBridge from './EmbedPointerBridge'
+ 
+ /**
+  * /staking — the rewards page, against real wallet state.
+@@ -61,6 +62,12 @@ import { toSeasonRankView } from './transparency-formatting'
  
  export default function RewardsPage() {
    const searchParams = useSearchParams()
@@ -15,7 +92,7 @@ index 98516e7..37d1ac9 100644
    const { address: connectedAddress } = useAccount()
    const [program, setProgram] = useState<Program>('rewards')
    const [lockFlowOpen, setLockFlowOpen] = useState(false)
-@@ -171,9 +177,15 @@ export default function RewardsPage() {
+@@ -171,9 +178,15 @@ export default function RewardsPage() {
      <>
        <style>{CSS}</style>
        <TestEnvironmentBanner />
@@ -34,12 +111,13 @@ index 98516e7..37d1ac9 100644
  
        <main className="theme-light rw-main">
          <div className="rw-shell">
-@@ -260,7 +272,7 @@ export default function RewardsPage() {
+@@ -260,7 +273,8 @@ export default function RewardsPage() {
          />
        )}
  
 -      <Footer />
 +      {embedded ? null : <Footer />}
++      {embedded ? <EmbedPointerBridge /> : null}
      </>
    )
  }
