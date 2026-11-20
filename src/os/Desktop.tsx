@@ -7,6 +7,7 @@ import { ClientsContent, FolderContent, PreferencesContent, ProductContent, Read
 import { OS_WALLPAPERS, STAKE_PAGE, osProduct, type OsWallpaper } from './data'
 import MessagesApp from './MessagesApp'
 import MenuBar from './MenuBar'
+import WallpaperWave from './WallpaperWave'
 import DesktopIcon, { type DesktopItemKind } from './DesktopIcon'
 import MissionControl from './MissionControl'
 import Notifications from './Notifications'
@@ -285,7 +286,9 @@ export default function Desktop({
             '--os-wallpaper-opacity': paper.opacity,
           } as CSSProperties
         }
-      />
+      >
+        <WallpaperWave src={paper.src} small={paper.small} opacity={paper.opacity} />
+      </div>
       <h1 className="sr-only">XBorg</h1>
 
       <MenuBar
