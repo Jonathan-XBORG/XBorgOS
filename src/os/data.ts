@@ -111,6 +111,8 @@ export const OS_WALLPAPERS: OsWallpaper[] = [
   wallpaper('wave', 'Blue Wave', 0.4),
   wallpaper('glass', 'Glass', 1),
   wallpaper('glow', 'Glow', 1),
+  // Drawn live in a canvas from the XBG price (LiveWallpaper.tsx).
+  { id: 'live', name: 'Live XBG', src: '', small: '', thumb: '/os/wallpaper-live-thumb.svg', opacity: 1 },
 ]
 
 // The Stake app is the live rewards page. ?embed=1 asks it to drop the site
@@ -127,3 +129,86 @@ export const XBG_TOKEN_ICON = 'https://files.swissborg.com/product/wealth-app/as
 
 CLIENTS_INTRO.forEach(assertPublicCopy)
 for (const c of OS_CLIENTS) [c.name, c.note].forEach(assertPublicCopy)
+
+// XBG contract addresses, from the buy venues the site already lists
+// (src/components/stake/config.ts BUY_VENUES). Check them before launch.
+export const XBG_CONTRACTS = [
+  { network: 'Arbitrum', address: '0x93fa0b88c0c78e45980fa74cdd87469311b7b3e4' },
+  { network: 'Solana', address: 'XBGdqJ9P175hCC1LangCEyXWNeCPHaKWA17tymz2PrY' },
+]
+export const XBG_CHART_URL = 'https://www.coingecko.com/en/coins/xborg'
+
+// Get Info rows for each app. Figures come from the site's existing copy.
+// `launched` and `stack` are left empty until someone fills them in; empty
+// rows are not shown.
+export type InfoRow = { label: string; value: string }
+export type AppInfo = { kind: string; rows: InfoRow[] }
+
+const who = BEATS.find((b) => b.id === 'who')?.messages ?? []
+
+export const APP_INFO: Record<string, AppInfo> = {
+  propr: {
+    kind: 'Application',
+    rows: [
+      { label: 'What', value: osProduct('propr').lead },
+      { label: 'Revenue', value: 'Over $1.6M' },
+      { label: 'Traders', value: '4,200+ paid traders' },
+      { label: 'Launched', value: '' },
+      { label: 'Stack', value: '' },
+    ],
+  },
+  fanbase: {
+    kind: 'Application',
+    rows: [
+      { label: 'What', value: osProduct('fanbase').lead },
+      { label: 'Clients', value: 'Fan apps for Team Liquid, G2 and Cloud9' },
+      { label: 'Launched', value: '' },
+      { label: 'Stack', value: '' },
+    ],
+  },
+  trigr: {
+    kind: 'Application',
+    rows: [
+      { label: 'What', value: osProduct('trigr').lead },
+      { label: 'Status', value: 'Beta' },
+      { label: 'Launched', value: '' },
+      { label: 'Stack', value: '' },
+    ],
+  },
+  stake: {
+    kind: 'Application',
+    rows: [
+      { label: 'What', value: 'Pledge XBG and earn seasonal rewards' },
+      { label: 'Holders', value: 'Around 24,000' },
+      { label: 'Runs on', value: 'xborg.com/earn' },
+    ],
+  },
+  chat: {
+    kind: 'Application',
+    rows: [{ label: 'What', value: 'A conversation with the XBorg team' }],
+  },
+  readme: {
+    kind: 'Plain text document',
+    rows: [
+      { label: 'Size', value: `${new TextEncoder().encode(README_LINES.join('\n')).length.toLocaleString('en-GB')} bytes` },
+      { label: 'Lines', value: String(README_LINES.length) },
+    ],
+  },
+  docs: {
+    kind: 'Folder',
+    rows: [{ label: 'Contents', value: '7 client logos' }],
+  },
+  secret: {
+    kind: 'Hidden file',
+    rows: [{ label: 'Size', value: '' }],
+  },
+}
+
+// About this OS. Figures from the site's existing copy (conversation.ts).
+export const OS_STATS: InfoRow[] = [
+  { label: 'XBG holders', value: who[4]?.startsWith('Around 24,000') ? 'Around 24,000' : '24,000' },
+  { label: 'Paid traders', value: '4,200+ on Propr' },
+  { label: 'Revenue', value: 'Over $1.6M on Propr' },
+]
+
+export const SECRET_TEXT = '↑ ↑ ↓ ↓ ← → ← → B A'

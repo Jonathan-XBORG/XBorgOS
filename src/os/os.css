@@ -1278,7 +1278,7 @@
     left: 4px !important;
     transform-origin: left bottom;
   }
-  .os-icon[data-desktop-item='changelog'] {
+  .os-icon[data-desktop-item='secret'] {
     left: calc(50% - 93px) !important;
     transform-origin: center bottom;
   }
@@ -2552,6 +2552,342 @@ html .os .os-scroll-view::-webkit-scrollbar {
 /* No hover on touch screens: dock labels would stay stuck after a tap. */
 @media (hover: none) {
   .os-dock-label {
+    display: none;
+  }
+}
+
+/* ---------- Boot screen ---------- */
+
+.os-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #000;
+  color: #fff;
+}
+
+.os-boot-logo {
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.25));
+}
+
+.os-boot-bar {
+  width: 180px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.os-boot-bar span {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border-radius: inherit;
+  transform-origin: left center;
+  transition: transform 0.25s ease-out;
+}
+
+/* ---------- Context menus ---------- */
+
+.os {
+  -webkit-touch-callout: none;
+}
+
+.os-ctx {
+  position: fixed;
+  min-width: 220px;
+  padding: 5px;
+  border-radius: 12px;
+  /* Same frosted glass as the windows. */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight), 0 0 0 0.5px rgba(255, 255, 255, 0.12), 0 16px 40px rgba(0, 0, 0, 0.35);
+  color: var(--os-ink);
+  font-size: 13px;
+  outline: none;
+  transform-origin: top left;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.os-ctx-item {
+  height: 28px;
+  padding: 0 10px 0 6px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.os-ctx-item.is-active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.os-ctx-item.is-disabled {
+  opacity: 0.4;
+}
+
+.os-ctx-check {
+  width: 16px;
+  flex: none;
+  text-align: center;
+  font-size: 12px;
+}
+
+.os-ctx-label {
+  flex: 1;
+  padding-right: 24px;
+}
+
+.os-ctx-key {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--os-ink-3);
+  text-align: right;
+}
+
+.os-ctx-item.is-active .os-ctx-key {
+  color: var(--os-ink-2);
+}
+
+.os-ctx-more {
+  color: var(--os-ink-2);
+  flex: none;
+}
+
+.os-ctx-sep {
+  height: 1px;
+  margin: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (hover: none) {
+  .os-ctx-key {
+    display: none;
+  }
+  .os-ctx-item {
+    height: 36px;
+  }
+}
+
+/* ---------- Toast ---------- */
+
+.os-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 140px;
+  z-index: 950;
+  translate: -50% 0;
+  padding: 9px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--os-ink);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ---------- Get Info / About this OS / .secret ---------- */
+
+.os-info,
+.os-about {
+  padding: 0 8px 8px;
+  color: var(--os-ink);
+}
+
+.os-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.os-info-icon {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  display: grid;
+  place-items: center;
+}
+
+.os-info-tile {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.os-info-name {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.os-info-kind {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--os-ink-3);
+}
+
+.os-info-rows {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+}
+
+.os-info-rows dt {
+  color: var(--os-ink-3);
+  text-align: right;
+}
+
+.os-info-rows dd {
+  margin: 0;
+  color: var(--os-ink);
+}
+
+.os-mono {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+
+.os-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.os-about-logo {
+  color: #fff;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.2));
+}
+
+.os-about-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.os-about-version {
+  margin: 4px 0 18px;
+  font-size: 13px;
+  color: var(--os-ink-3);
+}
+
+.os-about .os-info-rows {
+  width: 100%;
+  text-align: left;
+}
+
+.os-secret {
+  padding: 8px 8px 20px;
+  text-align: center;
+}
+
+.os-secret p {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--os-ink);
+}
+
+.os-icon.is-hidden-file,
+img.is-hidden-file {
+  opacity: 0.45;
+}
+
+/* Clean Up: icons glide back to their places. */
+.os.is-tidying .os-icon {
+  transition: left 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+    right 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), bottom 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---------- Live XBG wallpaper ---------- */
+
+.os-wallpaper.is-live::before {
+  display: none;
+}
+
+.os-wallpaper-live {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- CRT mode (Konami code) ---------- */
+
+.os.is-crt {
+  filter: grayscale(1) sepia(1) hue-rotate(68deg) saturate(3.2) brightness(0.92) contrast(1.15);
+  animation: os-crt-on 0.45s ease-out;
+}
+
+.os.is-crt,
+.os.is-crt * {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+}
+
+.os.is-crt * {
+  text-shadow: 0 0 6px rgba(120, 255, 140, 0.55) !important;
+}
+
+.os-crt {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0, rgba(0, 0, 0, 0.28) 1px, transparent 1px, transparent 3px),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.6) 100%);
+  animation: os-crt-flicker 0.12s steps(2) infinite;
+}
+
+@keyframes os-crt-flicker {
+  50% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes os-crt-on {
+  0% {
+    transform: scaleY(0.004) scaleX(0.6);
+    filter: brightness(3) grayscale(1);
+  }
+  40% {
+    transform: scaleY(0.004) scaleX(1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-crt,
+  .os.is-crt {
+    animation: none;
+  }
+}
+
+/* Full screen makes no sense on a phone, where windows already fill it. */
+@media (max-width: 899px) {
+  .os-win-full {
     display: none;
   }
 }

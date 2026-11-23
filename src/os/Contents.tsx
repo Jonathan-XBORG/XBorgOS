@@ -1,6 +1,6 @@
-import { Fragment, useEffect, useState } from 'react'
-import type { OsProduct, OsWallpaper } from './data'
-import { CLIENTS_INTRO, OS_CLIENTS, OS_WALLPAPERS, README_LINES, STAKE_PAGE, STAKE_URL } from './data'
+import { Fragment, useEffect, useState, type ReactNode } from 'react'
+import type { InfoRow, OsProduct, OsWallpaper } from './data'
+import { CLIENTS_INTRO, OS_CLIENTS, OS_STATS, OS_WALLPAPERS, README_LINES, SECRET_TEXT, STAKE_PAGE, STAKE_URL } from './data'
 
 export function DiscoverButton({ product }: { product: OsProduct }) {
   return (
@@ -137,6 +137,84 @@ export function StakeContent() {
           ) : null}
         </div>
       )}
+    </div>
+  )
+}
+
+// Get Info for an app or a file: icon, name, kind, then label / value rows.
+export function InfoContent({ icon, name, kind, rows }: { icon: ReactNode; name: string; kind: string; rows: InfoRow[] }) {
+  return (
+    <div className="os-info">
+      <div className="os-info-head">
+        <span className="os-info-icon">{icon}</span>
+        <span>
+          <span className="os-info-name">{name}</span>
+          <span className="os-info-kind">{kind}</span>
+        </span>
+      </div>
+      <dl className="os-info-rows">
+        {rows
+          .filter((r) => r.value)
+          .map((r) => (
+            <Fragment key={r.label}>
+              <dt>{r.label}</dt>
+              <dd>{r.value}</dd>
+            </Fragment>
+          ))}
+      </dl>
+    </div>
+  )
+}
+
+// Time since the visitor arrived, ticking every second.
+const ARRIVED = Date.now()
+function useSession() {
+  const [now, setNow] = useState(Date.now)
+  useEffect(() => {
+    const t = window.setInterval(() => setNow(Date.now()), 1000)
+    return () => window.clearInterval(t)
+  }, [])
+  const s = Math.floor((now - ARRIVED) / 1000)
+  const h = Math.floor(s / 3600)
+  const m = Math.floor((s % 3600) / 60)
+  const sec = s % 60
+  return h ? `${h}h ${String(m).padStart(2, '0')}m` : m ? `${m}m ${String(sec).padStart(2, '0')}s` : `${sec}s`
+}
+
+// About this OS (desktop right click, Get Info).
+export function AboutOsContent() {
+  const session = useSession()
+  return (
+    <div className="os-about">
+      <svg className="os-about-logo" width="56" height="59" viewBox="0 0 19 20" fill="currentColor" aria-hidden="true">
+        <path d="M18.54.06c.19-.14.46 0 .46.23V5.1c0 .28-.13.54-.34.7l-4.8 3.67a.83.83 0 0 1-.52.18H5.66a.83.83 0 0 1-.52-.18L.34 5.8A.88.88 0 0 1 0 5.1V.29C0 .05.27-.09.46.06l8.87 6.71c.1.08.24.08.34 0L18.54.06Z" />
+        <path d="M18.54 19.94c.19.15.46.01.46-.23V14.9a.88.88 0 0 0-.34-.7l-4.8-3.67a.83.83 0 0 0-.52-.18H5.66a.83.83 0 0 0-.52.18L.34 14.2a.88.88 0 0 0-.34.7v4.81c0 .24.27.38.46.23l8.87-6.71c.1-.08.24-.08.34 0l8.87 6.71Z" />
+      </svg>
+      <p className="os-about-name">XBorg OS</p>
+      <p className="os-about-version">Version 1.0</p>
+      <dl className="os-info-rows">
+        <dt>Build</dt>
+        <dd className="os-mono">
+          {__BUILD_HASH__} · {__BUILD_DATE__}
+        </dd>
+        <dt>Your session</dt>
+        <dd className="os-mono">{session}</dd>
+        {OS_STATS.map((r) => (
+          <Fragment key={r.label}>
+            <dt>{r.label}</dt>
+            <dd>{r.value}</dd>
+          </Fragment>
+        ))}
+      </dl>
+    </div>
+  )
+}
+
+// .secret, shown with "Show Hidden Files": the only hint for the Konami code.
+export function SecretContent() {
+  return (
+    <div className="os-secret">
+      <p className="os-mono">{SECRET_TEXT}</p>
     </div>
   )
 }

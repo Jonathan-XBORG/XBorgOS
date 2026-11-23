@@ -1,6 +1,6 @@
 import { useRef, useState, type CSSProperties, type KeyboardEvent, type PointerEvent } from 'react'
 
-export type DesktopItemKind = 'docs' | 'changelog' | 'readme'
+export type DesktopItemKind = 'docs' | 'changelog' | 'readme' | 'secret'
 
 type Sheet = { src: string; left: number; top: number; w: number; h: number; rotate: number; card?: boolean }
 
@@ -39,13 +39,13 @@ export default function DesktopIcon({
   onMove: (dx: number, dy: number) => void
   onBlur: () => void
 }) {
-  const start = useRef<{ x: number; y: number; moved: boolean } | null>(null)
+  const start = useRef<{ x: number; y: number; moved: boolean; t: number } | null>(null)
   const [dragging, setDragging] = useState(false)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
 
   function onPointerDown(e: PointerEvent<HTMLButtonElement>) {
     if (e.button !== 0) return
-    start.current = { x: e.clientX, y: e.clientY, moved: false }
+    start.current = { x: e.clientX, y: e.clientY, moved: false, t: performance.now() }
     e.currentTarget.setPointerCapture(e.pointerId)
     onSelect()
   }
@@ -67,7 +67,8 @@ export default function DesktopIcon({
       onMove(e.clientX - s.x, e.clientY - s.y)
       setOffset({ x: 0, y: 0 })
       setDragging(false)
-    } else if (e.pointerType === 'touch') {
+    } else if (e.pointerType === 'touch' && performance.now() - s.t < 450) {
+      // A long press opens the context menu instead (see Desktop).
       onOpen()
     }
   }
@@ -81,7 +82,7 @@ export default function DesktopIcon({
   return (
     <button
       type="button"
-      className={`os-icon${selected ? ' is-selected' : ''}${dragging ? ' is-dragging' : ''}`}
+      className={`os-icon${selected ? ' is-selected' : ''}${dragging ? ' is-dragging' : ''}${kind === 'secret' ? ' is-hidden-file' : ''}`}
       style={{ ...position, transform: `translate(${offset.x}px, ${offset.y}px)` }}
       aria-label={`Open ${label}`}
       data-desktop-item={kind}
@@ -99,7 +100,7 @@ export default function DesktopIcon({
       onFocus={onSelect}
       onBlur={onBlur}
     >
-      {kind === 'readme' ? (
+      {kind === 'readme' || kind === 'secret' ? (
         <span className="os-file" aria-hidden="true">
           <span className="os-sheet-paper">
             <img src="/os/readme-file.svg" alt="" width={64} height={82} draggable={false} />

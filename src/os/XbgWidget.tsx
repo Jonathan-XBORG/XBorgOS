@@ -1,78 +1,9 @@
 import { animate, motion, useMotionValue, useReducedMotion, useTransform } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
 import type { WalletState } from '../wallet'
-import { XBG_COINGECKO_ID, XBG_TOKEN_ICON, XBG_WIDGET } from './data'
-import XbgChart, { formatPrice, type PricePoint } from './XbgChart'
-
-const DESIGN_CHANGE = Number.parseFloat(XBG_WIDGET.change)
-const API = 'https://api.coingecko.com/api/v3'
-const PRICE_URL = `${API}/simple/price?ids=${XBG_COINGECKO_ID}&vs_currencies=usd&include_24hr_change=true`
-const CHART_URL = `${API}/coins/${XBG_COINGECKO_ID}/market_chart?vs_currency=usd&days=1`
-// The price is polled every 15 seconds (CoinGecko refreshes its public price
-// about once a minute); the full 24h curve is reloaded every 5 minutes and
-// each new price is appended to it in between.
-const PRICE_MS = 15_000
-const CHART_MS = 300_000
-const DAY_MS = 86_400_000
-
-type Quote = { price: number | null; change: number }
-
-// Live XBG price, 24h change and 24h curve from CoinGecko. Until it answers
-// (or if it can't be reached) the design's values and curve show.
-function useXbgMarket(): { quote: Quote; points: PricePoint[] | null } {
-  const [quote, setQuote] = useState<Quote>({ price: XBG_WIDGET.fallbackPrice, change: DESIGN_CHANGE })
-  const [points, setPoints] = useState<PricePoint[] | null>(null)
-  useEffect(() => {
-    let alive = true
-    const loadPrice = async () => {
-      if (document.hidden) return
-      try {
-        const res = await fetch(PRICE_URL)
-        if (!res.ok) return
-        const data = (await res.json()) as Record<string, { usd?: number; usd_24h_change?: number }>
-        const row = data[XBG_COINGECKO_ID]
-        if (!alive || typeof row?.usd !== 'number') return
-        const price = row.usd
-        setQuote({ price, change: typeof row.usd_24h_change === 'number' ? row.usd_24h_change : DESIGN_CHANGE })
-        setPoints((list) => {
-          if (!list) return list
-          const now = Date.now()
-          const last = list[list.length - 1]
-          if (last && last[1] === price && now - last[0] < 60_000) return list
-          return [...list.filter(([t]) => t >= now - DAY_MS), [now, price]]
-        })
-      } catch {
-        // Offline or rate limited: keep what is on screen.
-      }
-    }
-    const loadChart = async () => {
-      if (document.hidden) return
-      try {
-        const res = await fetch(CHART_URL)
-        if (!res.ok) return
-        const data = (await res.json()) as { prices?: PricePoint[] }
-        const prices = (data.prices ?? []).filter((p) => Number.isFinite(p[0]) && Number.isFinite(p[1]))
-        if (alive && prices.length > 1) setPoints(prices)
-      } catch {
-        // Keep the design curve.
-      }
-    }
-    loadChart().then(loadPrice)
-    const priceTimer = window.setInterval(loadPrice, PRICE_MS)
-    const chartTimer = window.setInterval(loadChart, CHART_MS)
-    const onVisible = () => {
-      if (!document.hidden) loadPrice()
-    }
-    document.addEventListener('visibilitychange', onVisible)
-    return () => {
-      alive = false
-      window.clearInterval(priceTimer)
-      window.clearInterval(chartTimer)
-      document.removeEventListener('visibilitychange', onVisible)
-    }
-  }, [])
-  return { quote, points }
-}
+import { XBG_TOKEN_ICON, XBG_WIDGET } from './data'
+import XbgChart, { formatPrice } from './XbgChart'
+import { useXbgMarket } from './xbgMarket'
 
 // Flashes green or red for a moment when the price moves.
 function usePriceTick(price: number | null) {

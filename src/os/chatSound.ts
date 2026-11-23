@@ -26,10 +26,10 @@ if (typeof window !== 'undefined') {
   window.addEventListener('keydown', unlock, true)
 }
 
-function tone(a: AudioContext, freq: number, to: number, start: number, length: number, gain: number) {
+function tone(a: AudioContext, freq: number, to: number, start: number, length: number, gain: number, type: OscillatorType = 'sine') {
   const osc = a.createOscillator()
   const amp = a.createGain()
-  osc.type = 'sine'
+  osc.type = type
   osc.frequency.setValueAtTime(freq, start)
   osc.frequency.exponentialRampToValueAtTime(to, start + length)
   amp.gain.setValueAtTime(0.0001, start)
@@ -51,5 +51,21 @@ export function playMessageSound(kind: 'in' | 'out') {
     tone(a, 1110, 1130, t + 0.07, 0.14, 0.06)
   } else {
     tone(a, 1320, 980, t, 0.08, 0.045)
+  }
+}
+
+// Retro terminal beeps for the CRT mode (square waves, very short).
+export function beep(kind: 'on' | 'off' | 'click') {
+  const a = audio()
+  if (!a || a.state !== 'running') return
+  const t = a.currentTime + 0.01
+  if (kind === 'on') {
+    tone(a, 440, 440, t, 0.08, 0.03, 'square')
+    tone(a, 880, 880, t + 0.09, 0.12, 0.03, 'square')
+  } else if (kind === 'off') {
+    tone(a, 880, 880, t, 0.08, 0.03, 'square')
+    tone(a, 330, 330, t + 0.09, 0.14, 0.03, 'square')
+  } else {
+    tone(a, 1200, 1200, t, 0.025, 0.018, 'square')
   }
 }
