@@ -1,0 +1,281 @@
+@font-face {
+  font-family: 'Archivo';
+  src: url('/V2/fonts/archivo-wdth-wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/V2/fonts/geist-sans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/V2/fonts/geist-sans-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  /* V2: every bold weight of Geist renders as Medium. */
+  src: url('/V2/fonts/geist-sans-500.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/V2/fonts/geist-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/V2/fonts/geist-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+  XBorg design system tokens, Direction A (Calm), chosen 24 September 2026.
+  Components read the --x tokens only. The short names below are aliases kept for the legacy layer.
+*/
+:root {
+  /* Colour: six neutrals, one accent, three quiet semantic tones. */
+  --x-canvas: #09090d;
+  --x-surface-1: #121218;
+  --x-surface-2: #1b1b23;
+  --x-surface-3: #25252f;
+  --x-hairline: rgb(255 255 255 / 6%);
+  --x-hairline-strong: rgb(255 255 255 / 10%);
+  --x-ink-1: #f4f4f7;
+  --x-ink-2: #a3a3ad;
+  --x-ink-3: #8c8c96;
+  --x-accent: #8572fc;
+  --x-accent-soft: rgb(133 114 252 / 16%);
+  --x-success: #72c79c;
+  --x-warning: #d9ae6a;
+  --x-error: #e98b8b;
+  --x-warning-soft: rgb(217 174 106 / 8%);
+  --x-scrim: rgb(9 9 13 / 78%);
+  --x-focus: var(--x-accent);
+
+  /* Type: seven sizes, each with a fixed line height. */
+  --x-font-display: 'Archivo', sans-serif;
+  --x-font-body: 'Geist', sans-serif;
+  --x-font-mono: 'Geist Mono', ui-monospace, monospace;
+  --x-t1: 44px;
+  --x-l1: 48px;
+  --x-t2: 32px;
+  --x-l2: 38px;
+  --x-t3: 22px;
+  --x-l3: 28px;
+  --x-t4: 17px;
+  --x-l4: 26px;
+  --x-t5: 15px;
+  --x-l5: 23px;
+  --x-t6: 13px;
+  --x-l6: 20px;
+  --x-t7: 12px;
+  --x-l7: 16px;
+  --x-display-weight: 600;
+  --x-display-stretch: 112%;
+  --x-display-wdth: 112;
+  --x-display-tracking: -0.02em;
+  --x-figure-font: 'Archivo', sans-serif;
+  --x-figure-weight: 600;
+  --x-figure-tracking: -0.01em;
+  --x-label-font: 'Geist', sans-serif;
+  --x-label-tracking: 0;
+  --x-label-case: none;
+
+  /* Spacing: one 4px based scale. */
+  --x-space-1: 4px;
+  --x-space-2: 8px;
+  --x-space-3: 12px;
+  --x-space-4: 16px;
+  --x-space-5: 20px;
+  --x-space-6: 24px;
+  --x-space-8: 32px;
+  --x-space-10: 40px;
+  --x-space-12: 48px;
+  --x-space-16: 64px;
+  --x-space-20: 80px;
+  --x-space-30: 120px;
+
+  /* Shape: radius only. */
+  --x-radius-hairline: 6px;
+  --x-radius-badge: 999px;
+  --x-radius-control: 999px;
+  --x-radius-control-lg: 12px;
+  --x-radius-card: 14px;
+  --x-radius-tile-sm: 8px;
+  --x-radius-tile: 12px;
+  --x-radius-dock: 20px;
+  --x-radius-window: 16px;
+  --x-radius-mark: 0px;
+  --x-radius-mark-lg: 0px;
+  --x-radius-glyph: 2px;
+  --x-glyph-stroke: inset 0 0 0 1.5px currentcolor;
+  --x-glyph-corner: inset 1.5px -1.5px 0 0 currentcolor;
+  --x-glyph-line: 1.5px;
+  --x-radius-dot: 999px;
+  --x-cut-xs: 0px;
+  --x-cut-sm: 0px;
+  --x-cut-card: 0px;
+  --x-cut-dock: 0px;
+  --x-cut-window: 0px;
+  --x-cut-bubble: 0px;
+  --x-cut-mark: 5px;
+  --x-clip-control: none;
+  --x-clip-badge: none;
+  --x-clip-card: none;
+  --x-clip-tile: none;
+  --x-clip-dock: none;
+  --x-clip-window: none;
+  --x-clip-mark: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+  --x-clip-mark-lg: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+
+  /* Elevation: tone first, then soft layered shadow. */
+  --x-shadow-1: 0 1px 2px rgb(0 0 0 / 24%);
+  --x-shadow-2: 0 2px 6px rgb(0 0 0 / 28%), 0 8px 24px rgb(0 0 0 / 22%);
+  --x-shadow-3: 0 4px 12px rgb(0 0 0 / 30%), 0 24px 56px rgb(0 0 0 / 40%);
+  --x-window-shadow: 0 2px 4px rgb(0 0 0 / 18%), 0 12px 32px rgb(0 0 0 / 34%), 0 40px 96px rgb(0 0 0 / 46%);
+  --x-window-shadow-filter: none;
+  --x-dock-shadow-filter: drop-shadow(0 12px 28px rgb(0 0 0 / 40%));
+  --x-window-highlight: rgb(255 255 255 / 5%);
+
+  /* Motion: quick and quiet. */
+  --x-dur-1: 120ms;
+  --x-dur-2: 180ms;
+  --x-dur-3: 320ms;
+  --x-dur-sky: 900ms;
+  --x-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Round 5 keeps every control at 180ms or less. */
+  --x-dur-lift: 180ms;
+
+  /* Components. */
+  --x-control-sm: 28px;
+  --x-control-md: 36px;
+  --x-control-lg: 44px;
+  --x-media-min: 140px;
+  --x-titlebar: 40px;
+  --x-portal-tabbar: 64px;
+  --x-titlebar-bg: transparent;
+  --x-primary: var(--x-ink-1);
+  --x-primary-hover: #ffffff;
+  --x-primary-pressed: #dcdce3;
+  --x-on-primary: #0b0b10;
+  --x-secondary: var(--x-surface-3);
+  --x-secondary-hover: #2e2e39;
+  --x-secondary-edge: inset 0 0 0 1px var(--x-hairline);
+  --x-quiet-hover: rgb(255 255 255 / 6%);
+
+  /* Glass edge around the main calls to action. */
+  --x-glass-gap: 4px;
+  --x-glass-fill: linear-gradient(180deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%));
+  --x-glass-ring: rgb(255 255 255 / 10%);
+  --x-glass-ring-top: rgb(255 255 255 / 22%);
+  --x-glass-ring-hover: rgb(255 255 255 / 18%);
+  --x-glass-blur: none;
+  --x-primary-bevel: inset 0 1px 0 rgb(255 255 255 / 90%), inset 0 -1px 0 rgb(0 0 0 / 12%);
+  --x-primary-lift: 0 1px 2px rgb(0 0 0 / 36%), 0 10px 24px -12px rgb(0 0 0 / 80%);
+  --x-focus-width: 2px;
+  --x-focus-offset: 2px;
+  --x-wallet-bg: var(--x-surface-3);
+  --x-wallet-bg-hover: #2e2e39;
+  --x-wallet-edge: inset 0 0 0 1px var(--x-hairline-strong);
+  --x-wallet-ink: var(--x-ink-1);
+  /* The menu bar is always a bar: faint at rest, firmer once the chat scrolls under it. */
+  --x-menubar-rest: rgb(12 12 17 / 32%);
+  --x-menubar-scrolled: rgb(12 12 17 / 72%);
+
+  /* Round 6: the Ask field in the menu bar and its panel. */
+  --x-ask-bg: rgb(255 255 255 / 4%);
+  --x-ask-bg-hover: rgb(255 255 255 / 8%);
+  --x-ask-panel: #16161d;
+  --x-ask-w: 264px;
+  --x-ask-panel-w: 520px;
+  --x-ask-list-h: 400px;
+  --x-tooltip-bg: #2b2b36;
+  --x-tooltip-edge: inset 0 0 0 1px rgb(255 255 255 / 10%), 0 6px 18px rgb(0 0 0 / 40%);
+  --x-tile-lift-shadow: inset 0 0 0 1px rgb(255 255 255 / 10%), inset 0 1px 0 rgb(255 255 255 / 12%), 0 4px 12px rgb(0 0 0 / 35%);
+  --x-bubble-bg: #20202a;
+  --x-bubble-edge: inset 0 1px 0 rgb(255 255 255 / 4%);
+  --x-bubble-max: 75%;
+  --x-bubble-pad-y: 10px;
+  --x-bubble-pad-x: 14px;
+  --x-bubble-gap: 3px;
+  --x-bubble-r-single: 18px;
+  --x-bubble-r-first: 18px 18px 18px 6px;
+  --x-bubble-r-middle: 6px 18px 18px 6px;
+  --x-bubble-r-last: 6px 18px 18px 18px;
+  --x-attachment-bg: linear-gradient(135deg, rgb(133 114 252 / 14%), rgb(133 114 252 / 4%) 60%), #20202a;
+  --x-sender-gutter: 40px;
+  --x-mark-glyph: url('/V2/icons/xborg-mark.svg');
+  --x-mark-tile: var(--x-ink-1);
+  --x-card-bg: var(--x-surface-2);
+  --x-card-edge: inset 0 1px 0 rgb(255 255 255 / 3%);
+  --x-badge-bg: rgb(255 255 255 / 6%);
+  --x-nav-on: rgb(255 255 255 / 7%);
+  --x-sidebar-bg: transparent;
+  --x-input-bg: var(--x-surface-1);
+  --x-tile-bg: linear-gradient(180deg, #2a2a35, #1f1f28);
+  --x-tile-bg-hover: linear-gradient(180deg, #33333f, #262630);
+  --x-tile-edge: inset 0 0 0 1px rgb(255 255 255 / 8%), inset 0 1px 0 rgb(255 255 255 / 8%);
+  --x-dock-bg: rgb(20 20 27 / 70%);
+  --x-indicator: var(--x-ink-1);
+  --x-indicator-w: 4px;
+
+  /* Wallpaper: a calm field of light over the base tone, with fine grain. */
+  --x-wallpaper:
+    radial-gradient(60% 50% at 50% 0%, rgb(133 114 252 / 16%), transparent 70%),
+    radial-gradient(50% 60% at 88% 100%, rgb(133 114 252 / 10%), transparent 70%),
+    radial-gradient(40% 50% at 8% 90%, rgb(92 128 180 / 8%), transparent 70%),
+    linear-gradient(180deg, #0c0c12 0%, #09090d 100%);
+  --x-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* Layout. */
+  --menu-bar: 44px;
+  --chat-height: min(72vh, calc(100dvh - 176px));
+
+  /* Aliases for the legacy layer. */
+  --accent: var(--x-accent);
+  --base: var(--x-canvas);
+  --surface: var(--x-surface-1);
+  --surface-raised: var(--x-surface-2);
+  --line: var(--x-hairline);
+  --line-strong: var(--x-hairline-strong);
+  --ink: var(--x-ink-1);
+  --muted: var(--x-ink-2);
+  --muted-dim: var(--x-ink-3);
+  --font-display: var(--x-font-display);
+  --font-body: var(--x-font-body);
+  --font-mono: var(--x-font-mono);
+  --ease: var(--x-ease);
+  --chamfer-tile: 6px;
+  --chamfer-btn: 10px;
+  --chamfer-window: 24px;
+  --chamfer-dock: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

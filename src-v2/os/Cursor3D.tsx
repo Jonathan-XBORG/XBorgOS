@@ -1,0 +1,297 @@
+import { useEffect, useRef, useState } from 'react'
+import {
+  NoToneMapping,
+  Group,
+  Mesh,
+  MeshStandardMaterial,
+  PerspectiveCamera,
+  PMREMGenerator,
+  Quaternion,
+  Scene,
+  SRGBColorSpace,
+  Vector3,
+  WebGLRenderer,
+  type Object3D,
+} from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
+
+// The floating 3D cursor. The model, its colours and its camera come
+// straight from CursorV2.blend (exported to /V2/os/cursor.glb). It replaces the system pointer on devices with a fine pointer,
+// and steps aside for touch screens, reduced motion and browsers without WebGL.
+
+const ZOOM = 0.76
+// Clockwise turn around the tip, in degrees: the model points left in its
+// camera, this lines it up like a classic pointer (tip up and to the left).
+const ROTATE = 50
+const SIZE = 80 // CSS px of the square canvas (the arrow itself is about 60px)
+const INTERACTIVE = 'a, button, input, textarea, select, label, [role="button"], [role="option"], [data-cursor="hover"]'
+const TEXT = 'input[type="text"], input:not([type]), textarea'
+
+function canUse3dCursor() {
+  if (typeof window === 'undefined') return false
+  if (!window.matchMedia('(pointer: fine)').matches) return false
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
+  if (new URLSearchParams(window.location.search).get('cursor') === 'off') return false
+  try {
+    const c = document.createElement('canvas')
+    return Boolean(c.getContext('webgl2') || c.getContext('webgl'))
+  } catch {
+    return false
+  }
+}
+
+export default function Cursor3D() {
+  const [enabled] = useState(canUse3dCursor)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    if (!enabled) return
+    const wrap = wrapRef.current!
+    const canvas = canvasRef.current!
+    document.documentElement.classList.add('has-3d-cursor')
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true, premultipliedAlpha: true })
+    renderer.setPixelRatio(dpr)
+    renderer.setSize(SIZE, SIZE, false)
+    renderer.outputColorSpace = SRGBColorSpace
+    // The .blend renders with the Standard view transform: no tone mapping.
+    renderer.toneMapping = NoToneMapping
+
+    const scene = new Scene()
+    const pmrem = new PMREMGenerator(renderer)
+    const envTex = pmrem.fromScene(new RoomEnvironment(), 0.03).texture
+    scene.environment = envTex
+
+    let camera = new PerspectiveCamera(30, 1, 0.1, 100)
+    let pivot: Object3D | null = null
+    // Where the tip of the arrow sits in the canvas, in CSS px. The canvas is
+    // placed so this point is exactly under the real pointer.
+    const hotspot = { x: SIZE * 0.14, y: SIZE * 0.45 }
+    let disposed = false
+
+    // CursorV2.blend: a white body with a black edge, both matte (roughness
+    // 0.5), lit by a studio environment. The colours come from the file.
+    const materials: MeshStandardMaterial[] = []
+
+    new GLTFLoader().load('/V2/os/cursor.glb', (gltf) => {
+      if (disposed) return
+      const glCam = gltf.cameras[0] as PerspectiveCamera | undefined
+      const meshes: Mesh[] = []
+      gltf.scene.traverse((node) => {
+        const mesh = node as Mesh
+        if (!mesh.isMesh) return
+        meshes.push(mesh)
+        const from = mesh.material as MeshStandardMaterial
+        const dark = from.color.getHSL({ h: 0, s: 0, l: 0 }).l < 0.5
+        const material = new MeshStandardMaterial({
+          color: from.color,
+          metalness: 0,
+          roughness: from.roughness ?? 0.5,
+          // The studio light in the .blend is softer than three's room on the
+          // black face: set per material (scene.environment ignores this).
+          envMap: envTex,
+          envMapIntensity: dark ? 0.3 : 1,
+        })
+        from.dispose()
+        mesh.material = material
+        materials.push(material)
+      })
+      scene.add(gltf.scene)
+      gltf.scene.updateMatrixWorld(true)
+      if (glCam) {
+        camera = glCam
+        camera.aspect = 1
+        // Leave room around the arrow so the tilt never clips at the canvas edge.
+        camera.zoom = ZOOM
+        camera.updateProjectionMatrix()
+        camera.updateMatrixWorld(true)
+      }
+
+      // The cursor object (one mesh per material, under the same node).
+      const body = (gltf.scene.getObjectByName('Cursor') ?? meshes[0]) as Object3D
+
+      // The tip is the vertex furthest up and left on screen. The canvas is
+      // placed so the tip sits exactly under the real pointer.
+      const v = new Vector3()
+      const tip = new Vector3()
+      let best = Infinity
+      for (const mesh of meshes) {
+        const attr = mesh.geometry.attributes.position
+        for (let i = 0; i < attr.count; i++) {
+          v.fromBufferAttribute(attr, i).applyMatrix4(mesh.matrixWorld)
+          const projected = v.clone().project(camera)
+          const score = projected.x - projected.y
+          if (score < best) {
+            best = score
+            tip.copy(v)
+            hotspot.x = ((projected.x + 1) / 2) * SIZE
+            hotspot.y = ((1 - projected.y) / 2) * SIZE
+          }
+        }
+      }
+
+      // Tilt around the tip, so the point never drifts off the pointer.
+      const group = new Group()
+      group.position.copy(tip)
+      scene.add(group)
+      group.updateMatrixWorld(true)
+      group.attach(body)
+      group.updateMatrixWorld(true)
+      pivot = group
+    })
+
+    const camRight = new Vector3()
+    const camUp = new Vector3()
+    const qa = new Quaternion()
+    const qb = new Quaternion()
+    const target = { x: -200, y: -200 }
+    const pos = { x: -200, y: -200 }
+    const vel = { x: 0, y: 0 }
+    let scale = 1
+    let scaleTarget = 1
+    let visible = false
+    let pressed = false
+    let hovering = false
+    let overText = false
+
+    let lastFrameMsg = 0
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType === 'touch') return
+      target.x = e.clientX
+      target.y = e.clientY
+      if (!visible) {
+        pos.x = target.x
+        pos.y = target.y
+        visible = true
+      }
+      const el = e.target instanceof Element ? e.target : null
+      // Entering an iframe (the Stake window): the page stops getting pointer
+      // events. Hide the glass cursor unless the framed page reports the
+      // pointer itself (see onFrame); its own cursor shows in the meantime.
+      if (el instanceof HTMLIFrameElement) {
+        if (performance.now() - lastFrameMsg > 250) visible = false
+        return
+      }
+      hovering = Boolean(el?.closest(INTERACTIVE))
+      overText = Boolean(el?.closest(TEXT))
+    }
+    // xborg.com/earn?embed=1 posts its pointer to the desktop, so the 3D
+    // cursor keeps flying over the Stake window.
+    const onFrame = (e: MessageEvent) => {
+      const data = e.data as { type?: string; kind?: string; x?: number; y?: number; down?: boolean; interactive?: boolean; text?: boolean }
+      if (!data || data.type !== 'xborg-os:pointer' || typeof data.x !== 'number' || typeof data.y !== 'number') return
+      const frame = Array.from(document.querySelectorAll('iframe')).find((f) => f.contentWindow === e.source)
+      if (!frame) return
+      lastFrameMsg = performance.now()
+      if (data.kind === 'leave') return
+      const rect = frame.getBoundingClientRect()
+      target.x = rect.left + data.x
+      target.y = rect.top + data.y
+      if (!visible) {
+        pos.x = target.x
+        pos.y = target.y
+        visible = true
+      }
+      pressed = Boolean(data.down)
+      hovering = Boolean(data.interactive)
+      overText = !hovering && Boolean(data.text)
+    }
+    const onLeave = () => {
+      visible = false
+    }
+    // The pointer moves from the page into an iframe: no more pointer events
+    // reach us, so hide the glass cursor unless the frame reports its own.
+    const onOut = (e: PointerEvent) => {
+      if (e.relatedTarget instanceof HTMLIFrameElement && performance.now() - lastFrameMsg > 250) visible = false
+    }
+    const onDown = () => {
+      pressed = true
+    }
+    const onUp = () => {
+      pressed = false
+    }
+    window.addEventListener('pointermove', onMove, { passive: true })
+    window.addEventListener('message', onFrame)
+    window.addEventListener('pointerout', onOut)
+    window.addEventListener('pointerdown', onDown)
+    window.addEventListener('pointerup', onUp)
+    document.documentElement.addEventListener('pointerleave', onLeave)
+    window.addEventListener('blur', onLeave)
+
+    let raf = 0
+    let last = performance.now()
+    let opacity = 0
+    const tick = (now: number) => {
+      const dt = Math.min(0.05, (now - last) / 1000)
+      last = now
+      const t = now / 1000
+
+      // The tip sits exactly on the pointer; only the glass itself floats.
+      const px = pos.x
+      const py = pos.y
+      pos.x = target.x
+      pos.y = target.y
+      vel.x += ((pos.x - px) / Math.max(dt, 0.001) - vel.x) * 0.2
+      vel.y += ((pos.y - py) / Math.max(dt, 0.001) - vel.y) * 0.2
+
+      scaleTarget = pressed ? 0.86 : hovering ? 1.12 : overText ? 0.8 : 1
+      scale += (scaleTarget - scale) * (1 - Math.exp(-dt * 18))
+      opacity += ((visible ? 1 : 0) - opacity) * (1 - Math.exp(-dt * 14))
+
+      const bob = Math.sin(t * 2.2) * 2.5
+      const lift = 22 + bob
+      wrap.style.opacity = opacity.toFixed(3)
+      wrap.style.transform = `translate3d(${pos.x - hotspot.x}px, ${pos.y - hotspot.y}px, 0)`
+      canvas.style.transform = `rotate(${ROTATE}deg) scale(${scale.toFixed(3)})`
+      canvas.style.transformOrigin = `${hotspot.x}px ${hotspot.y}px`
+      wrap.style.filter = `drop-shadow(0px ${lift.toFixed(1)}px 9px rgba(0, 0, 0, 0.25))`
+
+      if (pivot) {
+        // Speed in the model's own frame: the canvas is turned ROTATE degrees
+        // clockwise, so turn the screen velocity back by the same angle.
+        const a = (ROTATE * Math.PI) / 180
+        const mx = vel.x * Math.cos(a) + vel.y * Math.sin(a)
+        const my = -vel.x * Math.sin(a) + vel.y * Math.cos(a)
+        // Tilt around the camera's own axes, so the lean follows the motion
+        // on screen whatever the angle of the Blender camera.
+        const tiltY = Math.max(-0.5, Math.min(0.5, mx / 2400)) + Math.cos(t * 1.1) * 0.05
+        const tiltX = Math.max(-0.5, Math.min(0.5, my / 2400)) + Math.sin(t * 1.3) * 0.04
+        camRight.setFromMatrixColumn(camera.matrixWorld, 0)
+        camUp.setFromMatrixColumn(camera.matrixWorld, 1)
+        qa.setFromAxisAngle(camUp, tiltY)
+        qb.setFromAxisAngle(camRight, tiltX)
+        pivot.quaternion.copy(qa).multiply(qb)
+      }
+      renderer.render(scene, camera)
+      raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+
+    return () => {
+      disposed = true
+      cancelAnimationFrame(raf)
+      window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('message', onFrame)
+      window.removeEventListener('pointerout', onOut)
+      window.removeEventListener('pointerdown', onDown)
+      window.removeEventListener('pointerup', onUp)
+      document.documentElement.removeEventListener('pointerleave', onLeave)
+      window.removeEventListener('blur', onLeave)
+      document.documentElement.classList.remove('has-3d-cursor')
+      envTex.dispose()
+      pmrem.dispose()
+      materials.forEach((m) => m.dispose())
+      renderer.dispose()
+    }
+  }, [enabled])
+
+  if (!enabled) return null
+  return (
+    <div className="os-cursor" ref={wrapRef} aria-hidden="true">
+      <canvas ref={canvasRef} width={SIZE} height={SIZE} style={{ width: SIZE, height: SIZE }} />
+    </div>
+  )
+}

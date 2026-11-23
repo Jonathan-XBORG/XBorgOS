@@ -3,5 +3,15 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist",
-  "crons": []
+  "crons": [],
+  "rewrites": [
+    {
+      "source": "/V2",
+      "destination": "/V2/index.html"
+    },
+    {
+      "source": "/v2",
+      "destination": "/V2/index.html"
+    }
+  ]
 }

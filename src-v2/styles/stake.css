@@ -1,0 +1,938 @@
+/*
+  Stake: the pledge, positions and history views, their dialogs and the demo
+  wallet. Built from the Portal structure and components, tokens only.
+*/
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--x-space-2);
+  margin-top: var(--x-space-4);
+}
+
+.portal-page-heading > p:not(.portal-kicker) {
+  max-width: 660px;
+  margin: 0;
+  color: var(--x-ink-2);
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+  text-wrap: pretty;
+}
+
+.status-badge.is-error::before {
+  background: var(--x-error);
+}
+
+.status-badge.is-error {
+  color: var(--x-ink-2);
+}
+
+/* Lead card: the pledged figure leads, the action sits beside it. */
+.lead-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--x-space-6);
+}
+
+.lead-figure-block {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--x-space-2);
+}
+
+.lead-label {
+  margin: 0;
+  color: var(--x-ink-2);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 500;
+}
+
+.lead-figure {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t1);
+  line-height: var(--x-l1);
+  font-weight: var(--x-figure-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  letter-spacing: var(--x-figure-tracking);
+  font-variant-numeric: tabular-nums;
+  color: var(--x-ink-1);
+}
+
+.lead-figure span {
+  color: var(--x-ink-2);
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t4);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.lead-status,
+.lead-line,
+.section-note,
+.field-meta {
+  margin: 0;
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.lead-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--x-space-2);
+}
+
+.lead-status .status-dot {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--x-ink-3);
+}
+
+.lead-status.is-earning .status-dot {
+  background: var(--x-success);
+  box-shadow: none;
+}
+
+.lead-line strong {
+  color: var(--x-ink-1);
+  font-weight: 600;
+}
+
+.lead-action {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--x-space-2);
+}
+
+.lead-card .season-progress {
+  margin-top: var(--x-space-6);
+}
+
+/* A pledge that is not earning shows its state on the card edge. */
+.lead-card.is-inactive {
+  box-shadow: inset 0 0 0 1px var(--x-error);
+}
+
+.balance-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--x-space-2) var(--x-space-6);
+  margin: var(--x-space-5) 0 0;
+  padding-top: var(--x-space-4);
+  border-top: 1px solid var(--x-hairline);
+}
+
+.balance-row > div {
+  display: flex;
+  gap: var(--x-space-2);
+}
+
+.balance-row dt,
+.balance-row p {
+  margin: 0;
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.balance-row dd {
+  margin: 0;
+  color: var(--x-ink-1);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.balance-row p {
+  margin-left: auto;
+}
+
+/* Requirement cards. */
+.requirement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--x-space-3);
+}
+
+.requirement-card,
+.multiplier-card,
+.position-card,
+.how-list {
+  border-radius: var(--x-radius-card);
+  background: var(--x-card-bg);
+  box-shadow: var(--x-card-edge);
+}
+
+.requirement-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-2);
+  padding: var(--x-space-5);
+}
+
+.requirement-card h3,
+.position-head h3 {
+  margin: 0;
+  font-family: var(--x-font-body);
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+  font-weight: 600;
+}
+
+.requirement-card p {
+  margin: 0;
+  flex: 1;
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.requirement-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--x-space-2);
+  margin-top: var(--x-space-3);
+}
+
+/* Multiplier. */
+.multiplier-card {
+  padding: var(--x-space-6);
+}
+
+.multiplier-card .section-heading-row {
+  align-items: flex-start;
+}
+
+.section-heading-row .section-note {
+  margin-top: var(--x-space-1);
+}
+
+.multiplier-value {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t2);
+  line-height: var(--x-l2);
+  font-weight: var(--x-figure-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  font-variant-numeric: tabular-nums;
+}
+
+.list-heading {
+  margin: var(--x-space-5) 0 var(--x-space-2);
+  color: var(--x-ink-3);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  font-weight: 500;
+}
+
+.boost-list {
+  display: flex;
+  margin: 0 0 var(--x-space-4);
+  padding: 0;
+  flex-direction: column;
+  list-style: none;
+}
+
+.boost-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--x-space-4);
+  padding: var(--x-space-3) 0;
+}
+
+.boost-list li + li {
+  border-top: 1px solid var(--x-hairline);
+}
+
+.boost-list li:not(:has(.btn)) {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.boost-list li > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.boost-list strong {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+}
+
+.boost-list li > div span {
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.boost-value {
+  color: var(--x-ink-1);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.multiplier-card .section-note + .text-action,
+.multiplier-card .boost-list + .text-action {
+  margin-top: var(--x-space-1);
+}
+
+.multiplier-card .section-note {
+  margin-bottom: var(--x-space-3);
+}
+
+/* Season figures and the leaderboard link. */
+.stats-title {
+  margin: 0 0 var(--x-space-3);
+}
+
+.stats-card .season-metrics {
+  margin-top: 0;
+}
+
+.season-metrics .text-action {
+  align-self: flex-start;
+  margin-top: var(--x-space-1);
+  padding: 0;
+  font-size: var(--x-t7);
+}
+
+.how-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--x-space-6);
+  margin: 0;
+  padding: var(--x-space-6);
+  list-style: none;
+  counter-reset: how;
+}
+
+.how-list li {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--x-space-1);
+  counter-increment: how;
+}
+
+.how-list li::before {
+  content: '0' counter(how);
+  margin-bottom: var(--x-space-1);
+  color: var(--x-ink-3);
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.how-list strong {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+}
+
+.how-list span {
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+/* Positions. */
+.allocation-card {
+  margin-bottom: var(--x-space-10);
+}
+
+.allocation-card .section-note {
+  text-align: right;
+}
+
+.position-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--x-space-3);
+}
+
+.position-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--x-space-5);
+}
+
+.position-card.is-withdrawn .position-head strong,
+.position-card.is-withdrawn .position-head h3,
+.position-card.is-withdrawn .position-meta dd {
+  color: var(--x-ink-2);
+}
+
+.position-card.is-withdrawn .season-progress span {
+  background: var(--x-ink-3);
+}
+
+.position-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--x-space-3);
+}
+
+.position-head strong {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  font-weight: var(--x-figure-weight);
+  font-variant-numeric: tabular-nums;
+}
+
+.position-meta {
+  display: flex;
+  gap: var(--x-space-6);
+  margin: var(--x-space-4) 0 0;
+}
+
+.position-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-1);
+}
+
+.position-meta dt {
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.position-meta dd {
+  margin: 0;
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+}
+
+.position-card .season-panel-footer {
+  flex-wrap: wrap;
+  gap: var(--x-space-1) var(--x-space-3);
+}
+
+.position-card .btn,
+.unstake-control {
+  margin-top: var(--x-space-4);
+}
+
+.unstake-control {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--x-space-2);
+}
+
+.unstake-control .btn {
+  margin-top: 0;
+}
+
+.success-line {
+  margin: var(--x-space-4) 0 0;
+  color: var(--x-ink-1);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+}
+
+.history-more {
+  margin-top: var(--x-space-4);
+}
+
+.reward-table-wrap tr.is-you td {
+  background: var(--x-accent-soft);
+  color: var(--x-ink-1);
+}
+
+/* A busy button keeps its words, with a small spinner in front. */
+.btn.is-pending {
+  gap: var(--x-space-2);
+}
+
+.btn.is-pending::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  flex: none;
+  border: 2px solid currentcolor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: x-spin 700ms linear infinite;
+}
+
+/* Dialog parts. */
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--x-space-3);
+}
+
+.amount-max {
+  flex: none;
+  height: var(--x-control-sm);
+  padding: 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  background: var(--x-surface-3);
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t7);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-field {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--x-space-4);
+  border: 0;
+  border-radius: var(--x-radius-control-lg);
+  outline: 0;
+  background: var(--x-input-bg);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong);
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t5);
+}
+
+.text-field:focus {
+  box-shadow: inset 0 0 0 1.5px var(--x-accent);
+}
+
+.text-field.is-error {
+  box-shadow: inset 0 0 0 1.5px var(--x-error);
+}
+
+/* A field in error keeps a visible focus ring inside its error edge. */
+.text-field.is-error:focus,
+.amount-field.is-error:focus-within {
+  box-shadow: inset 0 0 0 1.5px var(--x-error), inset 0 0 0 3.5px var(--x-accent);
+}
+
+.stake-step .form-error {
+  margin: 0;
+}
+
+.pending-box,
+.notice-box {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--x-space-3);
+  padding: var(--x-space-3) var(--x-space-4);
+  border-radius: var(--x-radius-control-lg);
+  background: var(--x-surface-2);
+}
+
+.pending-box > div,
+.notice-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-1);
+}
+
+.pending-box strong,
+.notice-box strong {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+}
+
+.pending-box span,
+.notice-box span {
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.pending-spinner {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  margin-top: var(--x-space-1);
+  border: 2px solid var(--x-accent);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: x-spin 700ms linear infinite;
+}
+
+.notice-box.is-warning {
+  background: var(--x-warning-soft);
+  box-shadow: inset 2px 0 0 var(--x-warning);
+}
+
+.notice-box.is-error {
+  box-shadow: inset 2px 0 0 var(--x-error);
+}
+
+.stake-complete .modal-lead strong {
+  color: var(--x-ink-1);
+}
+
+.confirmation-mark svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* The demo wallet stands in for a browser extension, so it reads as a
+   separate surface inside the dialog. */
+.demo-wallet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-3);
+  padding: var(--x-space-4);
+  border-radius: var(--x-radius-card);
+  background: var(--x-surface-3);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong);
+}
+
+.demo-wallet-head {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-3);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.demo-wallet .confirmation-list {
+  background: var(--x-surface-2);
+}
+
+.demo-wallet-message {
+  margin: 0;
+  padding: var(--x-space-3);
+  border-radius: var(--x-radius-tile-sm);
+  background: var(--x-surface-1);
+  color: var(--x-ink-2);
+  font-family: var(--x-font-mono);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.demo-wallet-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--x-space-2);
+}
+
+.your-rank {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--x-space-1) var(--x-space-3);
+  padding: var(--x-space-3) var(--x-space-4);
+  border-radius: var(--x-radius-control-lg);
+  background: var(--x-accent-soft);
+}
+
+.your-rank span {
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.your-rank strong {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--x-space-4);
+  margin: 0;
+}
+
+.summary-strip div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--x-space-1);
+}
+
+.summary-strip dt {
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+}
+
+.summary-strip dd {
+  margin: 0;
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.venue-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: var(--x-space-2);
+  list-style: none;
+}
+
+.venue-list a {
+  display: flex;
+  min-height: var(--x-control-lg);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-3);
+  padding: var(--x-space-3) var(--x-space-4);
+  border-radius: var(--x-radius-control-lg);
+  background: var(--x-surface-2);
+  color: var(--x-ink-1);
+  text-decoration: none;
+}
+
+.venue-list a span {
+  color: var(--x-ink-3);
+  font-size: var(--x-t7);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .venue-list a:hover {
+    background: var(--x-surface-3);
+  }
+}
+
+[data-input='keyboard'] .venue-list a:focus-visible,
+[data-input='keyboard'] .amount-max:focus-visible {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: 2px;
+}
+
+.portal-modal.table-modal {
+  width: min(100%, 880px);
+}
+
+.portal-modal-body {
+  container: modal-body / inline-size;
+}
+
+.table-modal .reward-table-wrap table {
+  min-width: 640px;
+}
+
+/* Visitor view of Stake. */
+.portal-entry.stake-entry {
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+.stake-entry > * {
+  flex-shrink: 0;
+}
+
+.stake-entry .portal-entry-content {
+  min-height: 0;
+  padding-bottom: var(--x-space-6);
+}
+
+.entry-estimate {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--x-space-2);
+  margin-top: var(--x-space-6);
+  text-align: center;
+}
+
+.entry-estimate .portal-primary-action {
+  margin-top: var(--x-space-3);
+}
+
+.entry-more {
+  width: min(100% - 48px, 640px);
+  margin: 0 auto;
+  padding-bottom: var(--x-space-10);
+}
+
+.entry-more .how-list {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stake-entry .season-metrics {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stake-entry .season-metrics > div:nth-child(odd) {
+  padding-left: 0;
+  box-shadow: none;
+}
+
+.stake-entry .chip-row {
+  justify-content: center;
+  margin: 0;
+}
+
+/* Earn has no content yet. */
+.earn-body {
+  background: var(--x-surface-1);
+}
+
+@container portal-body (max-width: 760px) {
+  .requirement-grid,
+  .how-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@container portal-body (max-width: 560px) {
+  .lead-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lead-action {
+    align-items: stretch;
+  }
+
+  .lead-action .btn {
+    width: 100%;
+  }
+
+  .allocation-card .section-note {
+    text-align: left;
+  }
+
+  .requirement-grid,
+  .how-list {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-row p {
+    margin-left: 0;
+  }
+
+  .boost-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .boost-list li .btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* Tables in dialogs stack on narrow screens, one labelled line per cell. */
+@container modal-body (max-width: 600px) {
+  .table-modal .reward-table-wrap table,
+  .table-modal .reward-table-wrap tbody {
+    display: block;
+    min-width: 0;
+  }
+
+  .table-modal .reward-table-wrap thead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .table-modal .reward-table-wrap thead tr,
+  .table-modal .reward-table-wrap th {
+    display: block;
+  }
+
+  .table-modal .reward-table-wrap tr {
+    display: block;
+    padding: var(--x-space-2) var(--x-space-3);
+    border-bottom: 1px solid var(--x-hairline);
+  }
+
+  .table-modal .reward-table-wrap td {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--x-space-3);
+    padding: var(--x-space-1) 0;
+    border: 0;
+    text-align: right;
+  }
+
+  .table-modal .reward-table-wrap td::before {
+    content: attr(data-label);
+    color: var(--x-ink-3);
+    font-family: var(--x-font-body);
+  }
+
+  .summary-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 899px) {
+  .entry-more {
+    width: min(100% - 24px, 620px);
+    padding-bottom: var(--x-space-30);
+  }
+
+  .lead-figure {
+    font-size: var(--x-t2);
+    line-height: var(--x-l2);
+  }
+
+  .portal-app .amount-max {
+    height: var(--x-control-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.is-pending::before,
+  .pending-spinner {
+    animation: none;
+  }
+}
+
+/* Figures in Stake tables use the text face with tabular figures. Mono stays
+   for wallet addresses. */
+.stake-table td,
+.history-page .reward-table-wrap td {
+  font-family: var(--x-font-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.stake-table .tx-hash {
+  font-family: var(--x-font-mono);
+}
+
+/* Five apps share the phone dock, down to a 320px screen. */
+@media (max-width: 899px) {
+  .dock-item {
+    width: auto;
+    min-width: 0;
+    flex: 0 1 64px;
+  }
+}

@@ -1,0 +1,2514 @@
+/*
+  XBorg design system components. They read the --x tokens in tokens.css.
+  Remaining literal values are listed as exceptions on the #system screen.
+*/
+
+
+body {
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus: keyboard only, visible on every surface. */
+:focus-visible,
+.btn:focus-visible,
+.window-control-hit:focus-visible,
+.window-body:focus-visible,
+.dock-item:focus-visible,
+.product-tile:focus-visible,
+.portal-tabs button:focus-visible,
+.portal-tabbar button:focus-visible,
+.text-action:focus-visible,
+.stake-presets button:focus-visible,
+.mission-filters button:focus-visible,
+.portal-icon-button:focus-visible {
+  outline: none;
+}
+
+.btn-wrap:focus-within {
+  outline: none;
+}
+
+/* The current build draws focus as an inset shadow. Directions use the outline only. */
+.btn:focus-visible,
+.window-control-hit:focus-visible {
+  box-shadow: none;
+}
+
+.btn-secondary:focus-visible {
+  box-shadow: var(--x-secondary-edge);
+}
+
+.window-body:focus-visible {
+  box-shadow: none;
+}
+
+[data-input='keyboard'] :is(
+    a,
+    button,
+    select,
+    [tabindex]:not([tabindex='-1']),
+    .window-body
+  ):focus-visible {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: var(--x-focus-offset);
+}
+
+/* Scroll areas the browser makes focusable draw the ring inside, where their own edge cannot clip it. */
+[data-input='keyboard'] :is(.system, .portal-modal-body):focus-visible {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: calc(var(--x-focus-width) * -1);
+}
+
+/* The chat body ring sits inside the window so the window edge never clips it. */
+[data-input='keyboard'] .window-frame .window-body:focus-visible {
+  outline-offset: -3px;
+}
+
+/* One button family. Primary, secondary and quiet, in three sizes. */
+.btn {
+  --cut: var(--x-cut-sm);
+  justify-content: center;
+  height: var(--x-control-md);
+  min-height: 0;
+  padding: 0 var(--x-space-4);
+  gap: var(--x-space-2);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  clip-path: var(--x-clip-control);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  letter-spacing: 0;
+  box-shadow: none;
+  transform: none;
+  transition:
+    background-color var(--x-dur-1) var(--x-ease),
+    color var(--x-dur-1) var(--x-ease),
+    transform var(--x-dur-1) var(--x-ease),
+    box-shadow var(--x-dur-1) var(--x-ease);
+}
+
+.btn.btn-sm {
+  height: var(--x-control-sm);
+  padding: 0 var(--x-space-3);
+}
+
+.btn.btn-lg,
+.portal-primary-action {
+  height: var(--x-control-lg);
+  min-height: 0;
+  padding: 0 var(--x-space-5);
+}
+
+.btn-primary {
+  position: relative;
+  isolation: isolate;
+  background: var(--x-primary);
+  color: var(--x-on-primary);
+  box-shadow: var(--x-primary-bevel), var(--x-primary-lift);
+}
+
+/* Glass edge: a frosted ring a few pixels outside the main calls to action. */
+.btn-primary::before,
+.wallet-control:not(.is-connected, .is-connecting)::before {
+  content: '';
+  position: absolute;
+  inset: calc(var(--x-glass-gap) * -1);
+  z-index: -1;
+  padding: var(--x-glass-gap);
+  border-radius: inherit;
+  background: var(--x-glass-fill);
+  /* Only the ring outside the button is frosted; the button face stays solid. */
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  box-shadow: inset 0 0 0 1px var(--x-glass-ring), inset 0 1px 0 var(--x-glass-ring-top);
+  backdrop-filter: var(--x-glass-blur);
+  -webkit-backdrop-filter: var(--x-glass-blur);
+  pointer-events: none;
+  transition: box-shadow var(--x-dur-1) var(--x-ease);
+}
+
+.wallet-control:not(.is-connected, .is-connecting)::before {
+  inset: -3px;
+  padding: var(--x-space-1);
+}
+
+.btn-primary:disabled::before,
+.btn-primary.is-disabled::before,
+.btn-primary.is-loading::before {
+  display: none;
+}
+
+.btn-primary.is-hover::before,
+.wallet-control.is-hover::before {
+  box-shadow: inset 0 0 0 1px var(--x-glass-ring-hover), inset 0 1px 0 var(--x-glass-ring-top);
+}
+
+[data-input='keyboard'] .btn-primary:focus-visible,
+.btn-primary.is-focus {
+  outline-offset: calc(var(--x-glass-gap) + 2px);
+}
+
+.btn-secondary,
+.portal-app .btn-secondary {
+  border: 0;
+  background: var(--x-secondary);
+  color: var(--x-ink-1);
+  box-shadow: var(--x-secondary-edge);
+}
+
+.btn-quiet,
+.text-action {
+  display: inline-flex;
+  height: var(--x-control-md);
+  min-height: 0;
+  align-items: center;
+  padding: 0 var(--x-space-2);
+  margin: 0 calc(var(--x-space-2) * -1);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  background: transparent;
+  color: var(--x-ink-2);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--x-dur-1) var(--x-ease), background-color var(--x-dur-1) var(--x-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    background: var(--x-primary-hover);
+    color: var(--x-on-primary);
+    transform: none;
+  }
+
+  .btn-primary:hover::before,
+  .wallet-control:hover::before {
+    box-shadow: inset 0 0 0 1px var(--x-glass-ring-hover), inset 0 1px 0 var(--x-glass-ring-top);
+  }
+
+  .btn-secondary:hover,
+  .portal-app .btn-secondary:hover {
+    background: var(--x-secondary-hover);
+    border-color: transparent;
+  }
+
+  .btn-quiet:hover,
+  .text-action:hover {
+    color: var(--x-ink-1);
+    background: var(--x-quiet-hover);
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+}
+
+.btn-primary.is-hover {
+  background: var(--x-primary-hover);
+}
+
+.btn-secondary.is-hover {
+  background: var(--x-secondary-hover);
+}
+
+.btn-quiet.is-hover {
+  color: var(--x-ink-1);
+  background: var(--x-quiet-hover);
+}
+
+.btn.is-pressed {
+  transform: scale(0.98);
+}
+
+.btn-primary.is-pressed {
+  background: var(--x-primary-pressed);
+}
+
+.btn-secondary.is-pressed {
+  background: var(--x-surface-3);
+}
+
+.btn.is-focus,
+.btn-quiet.is-focus {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: var(--x-focus-offset);
+}
+
+.btn:disabled,
+.btn.is-disabled {
+  background: var(--x-surface-3);
+  color: var(--x-ink-3);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-quiet:disabled {
+  background: transparent;
+}
+
+.btn.is-loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn.is-loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentcolor;
+  border-color: var(--x-on-primary) transparent var(--x-on-primary) var(--x-on-primary);
+  border-radius: 50%;
+  animation: x-spin 700ms linear infinite;
+}
+
+.btn-secondary.is-loading::after,
+.btn-quiet.is-loading::after {
+  border-color: var(--x-ink-1) transparent var(--x-ink-1) var(--x-ink-1);
+}
+
+@keyframes x-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Desktop canvas. Each direction supplies its own wallpaper layers. */
+.workspace {
+  background: var(--x-wallpaper);
+}
+
+.workspace::after {
+  background: var(--x-grain);
+  background-size: 180px 180px;
+  opacity: 1;
+}
+
+/* Menu bar. */
+.topbar {
+  height: var(--menu-bar);
+  padding: 0 var(--x-space-4);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition:
+    background-color var(--x-dur-2) var(--x-ease),
+    border-color var(--x-dur-2) var(--x-ease);
+}
+
+.topbar[data-scrolled='true'] {
+  background: var(--x-menubar-scrolled);
+  border-bottom-color: var(--x-hairline);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+}
+
+.topbar-brand {
+  gap: var(--x-space-3);
+}
+
+.topbar .topbar-mark,
+.topbar-mark {
+  --cut: var(--x-cut-mark);
+  width: 24px;
+  height: 24px;
+  border-radius: var(--x-radius-mark);
+}
+
+.topbar .topbar-mark svg {
+  width: 13px;
+  height: 13px;
+}
+
+.topbar .wordmark,
+.wordmark {
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: 0.14em;
+}
+
+/* Wallet control, sized to the menu bar. */
+.wallet-control,
+.topbar .btn.wallet-control,
+.topbar-wallet.wallet-control {
+  --cut: var(--x-cut-sm);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  height: var(--x-control-sm);
+  align-items: center;
+  gap: var(--x-space-2);
+  padding: 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  clip-path: var(--x-clip-control);
+  background: var(--x-wallet-bg);
+  box-shadow: var(--x-wallet-edge);
+  color: var(--x-wallet-ink);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  letter-spacing: 0;
+  cursor: pointer;
+  transform: none;
+}
+
+.wallet-control.is-connected,
+.topbar-wallet.wallet-control {
+  background: var(--x-surface-2);
+  box-shadow: var(--x-secondary-edge);
+  color: var(--x-ink-1);
+  font-family: var(--x-font-mono);
+  font-size: var(--x-t7);
+  font-weight: 500;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .topbar .btn.wallet-control:hover {
+    background: var(--x-wallet-bg-hover);
+    color: var(--x-wallet-ink);
+    transform: none;
+  }
+}
+
+.wallet-control.is-hover {
+  background: var(--x-wallet-bg-hover);
+}
+
+.btn.wallet-control.is-pressed {
+  background: var(--x-wallet-bg-hover);
+  color: var(--x-wallet-ink);
+  transform: scale(0.98);
+}
+
+.wallet-control.is-focus {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: var(--x-focus-offset);
+}
+
+.wallet-control.is-connecting {
+  background: var(--x-surface-2);
+  box-shadow: var(--x-secondary-edge);
+  color: var(--x-ink-2);
+}
+
+.wallet-control .wallet-spinner {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid var(--x-ink-2);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: x-spin 700ms linear infinite;
+}
+
+.topbar-wallet-dot,
+.wallet-dot {
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--x-success);
+  box-shadow: none;
+}
+
+/* Windows: one chrome everywhere. */
+.window-xborg,
+.window-product,
+.window-portal {
+  background: transparent;
+  clip-path: none;
+  filter: var(--x-window-shadow-filter);
+}
+
+.window-xborg::before,
+.window-product::before,
+.window-portal::before,
+.window-xborg::after,
+.window-product::after,
+.window-portal::after {
+  display: none;
+}
+
+.window-frame {
+  --cut: var(--x-cut-window);
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--x-radius-window);
+  clip-path: var(--x-clip-window);
+  background: var(--x-surface-1);
+  box-shadow: var(--x-window-shadow);
+}
+
+.window-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong), inset 0 1px 0 var(--x-window-highlight);
+  pointer-events: none;
+}
+
+.hud,
+.bracket,
+.window-state,
+.window-title-spacer {
+  display: none;
+}
+
+.window-title {
+  height: var(--x-titlebar);
+  grid-template-columns: 1fr auto 1fr;
+  padding: 0 var(--x-space-2) 0 var(--x-space-4);
+  gap: var(--x-space-3);
+  border-bottom: 1px solid var(--x-hairline);
+  background: var(--x-titlebar-bg);
+  color: var(--x-ink-2);
+}
+
+.window-name {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: var(--x-font-display);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-variation-settings: 'wdth' 112;
+  letter-spacing: 0.14em;
+  color: var(--x-ink-1);
+}
+
+.window-controls {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  gap: 0;
+}
+
+.window-xborg .window-controls {
+  visibility: hidden;
+}
+
+.window-control-hit {
+  --cut: var(--x-cut-sm);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--x-radius-control);
+  clip-path: var(--x-clip-control);
+  color: var(--x-ink-2);
+  transition: background-color var(--x-dur-1) var(--x-ease), color var(--x-dur-1) var(--x-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .window-control-hit:hover {
+    background: var(--x-quiet-hover);
+    color: var(--x-ink-1);
+  }
+}
+
+.window-control {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  color: inherit;
+}
+
+.window-maximise {
+  order: 1;
+}
+
+.window-close {
+  order: 2;
+}
+
+.window-control.is-close::before,
+.window-control.is-close::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: auto;
+  height: var(--x-glyph-line);
+  margin-top: calc(var(--x-glyph-line) / -2);
+  background: currentcolor;
+  opacity: 1;
+  border-radius: var(--x-radius-glyph);
+}
+
+.window-control.is-close::before {
+  transform: rotate(45deg);
+}
+
+.window-control.is-close::after {
+  transform: rotate(-45deg);
+}
+
+.window-control.is-tertiary {
+  width: 11px;
+  height: 11px;
+}
+
+.window-control.is-tertiary::after {
+  inset: 0;
+  border-radius: var(--x-radius-glyph);
+  background: transparent;
+  box-shadow: var(--x-glyph-stroke);
+  opacity: 1;
+}
+
+/* Restore: two offset squares. */
+.window-control.is-tertiary.is-restore::after {
+  inset: 3px 3px 0 0;
+}
+
+.window-control.is-tertiary.is-restore::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 3px 3px;
+  border-radius: var(--x-radius-glyph);
+  box-shadow: var(--x-glyph-corner);
+}
+
+/* Move and resize. */
+.window-title {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.window.is-interacting {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.window.is-interacting .window-frame {
+  pointer-events: none;
+}
+
+.window-resize {
+  position: absolute;
+  z-index: 6;
+  touch-action: none;
+}
+
+.window-resize.is-n,
+.window-resize.is-s {
+  left: var(--x-space-3);
+  right: var(--x-space-3);
+  height: var(--x-space-2);
+  cursor: ns-resize;
+}
+
+.window-resize.is-n {
+  top: calc(var(--x-space-1) * -1);
+}
+
+.window-resize.is-s {
+  bottom: calc(var(--x-space-1) * -1);
+}
+
+.window-resize.is-e,
+.window-resize.is-w {
+  top: var(--x-space-3);
+  bottom: var(--x-space-3);
+  width: var(--x-space-2);
+  cursor: ew-resize;
+}
+
+.window-resize.is-e {
+  right: calc(var(--x-space-1) * -1);
+}
+
+.window-resize.is-w {
+  left: calc(var(--x-space-1) * -1);
+}
+
+.window-resize.is-ne,
+.window-resize.is-nw,
+.window-resize.is-se,
+.window-resize.is-sw {
+  width: var(--x-space-4);
+  height: var(--x-space-4);
+}
+
+.window-resize.is-ne {
+  top: calc(var(--x-space-1) * -1);
+  right: calc(var(--x-space-1) * -1);
+  cursor: nesw-resize;
+}
+
+.window-resize.is-nw {
+  top: calc(var(--x-space-1) * -1);
+  left: calc(var(--x-space-1) * -1);
+  cursor: nwse-resize;
+}
+
+.window-resize.is-se {
+  bottom: calc(var(--x-space-1) * -1);
+  right: calc(var(--x-space-1) * -1);
+  cursor: nwse-resize;
+}
+
+.window-resize.is-sw {
+  bottom: calc(var(--x-space-1) * -1);
+  left: calc(var(--x-space-1) * -1);
+  cursor: nesw-resize;
+}
+
+.window-body {
+  padding: var(--x-space-5) var(--x-space-6) var(--x-space-6);
+  scrollbar-color: var(--x-hairline-strong) transparent;
+}
+
+.window-xborg[data-dimmed='true'] {
+  opacity: 1;
+  filter: brightness(0.55) saturate(0.8);
+  transition: filter var(--x-dur-3) var(--x-ease);
+}
+
+/* Desktop geometry. The chat window stays fixed, with room above the dock. */
+@media (min-width: 900px) {
+  .window-xborg {
+    top: calc(var(--menu-bar) + (100dvh - var(--menu-bar) - 112px) / 2);
+    width: 720px;
+    height: var(--chat-height);
+  }
+}
+
+/* Chat. */
+.conversation {
+  padding: 0 0 var(--x-space-6) var(--x-sender-gutter);
+}
+
+.beat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 var(--x-space-8);
+}
+
+.beat > * {
+  max-width: 100%;
+}
+
+.beat > div:first-child {
+  align-self: stretch;
+}
+
+@media (min-width: 900px) {
+  /* Messaging order: the first beat rests at the foot of the window,
+     so the space above it is the start of the conversation, not a gap below. */
+  .beat:first-child {
+    min-height: 0;
+  }
+
+  .conversation > .beat:first-child {
+    min-height: calc(var(--chat-height) - var(--x-titlebar) - var(--x-space-5) - var(--x-space-6) - 1px);
+    justify-content: flex-end;
+    margin-bottom: var(--x-space-8);
+  }
+
+  .conversation > .beat:first-child::before {
+    content: '';
+    display: block;
+    align-self: center;
+    width: 56px;
+    height: 56px;
+    margin: auto 0 var(--x-space-6);
+    transform: translateX(calc(var(--x-sender-gutter) / -2));
+    border-radius: var(--x-radius-mark-lg);
+    clip-path: var(--x-clip-mark-lg);
+    background:
+      var(--x-mark-glyph) center / 26px 28px no-repeat,
+      var(--x-mark-tile);
+    box-shadow: var(--x-shadow-2);
+  }
+}
+
+.beat-label {
+  gap: var(--x-space-2);
+  margin: 0 0 var(--x-space-3) calc(var(--x-sender-gutter) * -1);
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: var(--x-label-tracking);
+  text-transform: var(--x-label-case);
+  color: var(--x-ink-3);
+}
+
+.beat-label .beat-index {
+  color: var(--x-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.beat-label .beat-name {
+  color: var(--x-ink-2);
+}
+
+.beat-label::after {
+  background: var(--x-hairline);
+}
+
+.bubble {
+  --cut: var(--x-cut-bubble);
+  position: relative;
+  width: fit-content;
+  max-width: var(--x-bubble-max);
+  margin: 0;
+  padding: var(--x-bubble-pad-y) var(--x-bubble-pad-x);
+  border-radius: var(--x-bubble-r-single);
+  clip-path: none;
+  background: var(--x-bubble-bg);
+  box-shadow: var(--x-bubble-edge);
+  color: var(--x-ink-1);
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+  text-wrap: pretty;
+}
+
+.bubble + .bubble {
+  margin-top: var(--x-bubble-gap);
+}
+
+.bubble:has(+ .bubble) {
+  border-radius: var(--x-bubble-r-first);
+}
+
+.bubble + .bubble:has(+ .bubble) {
+  border-radius: var(--x-bubble-r-middle);
+}
+
+.bubble + .bubble:not(:has(+ .bubble)) {
+  border-radius: var(--x-bubble-r-last);
+}
+
+/* Sender identity at the start of each group. */
+.beat > div:first-child + .bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(var(--x-sender-gutter) * -1);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--x-radius-mark);
+  clip-path: var(--x-clip-mark);
+  background:
+    var(--x-mark-glyph) center / 13px 14px no-repeat,
+    var(--x-mark-tile);
+}
+
+/* Rich attachments inside the conversation. */
+.product-panel {
+  width: 100%;
+  gap: var(--x-space-2);
+  margin-top: var(--x-space-2);
+  background: none;
+}
+
+.product-tile {
+  --cut: var(--x-cut-sm);
+  gap: var(--x-space-2);
+  padding: var(--x-space-4);
+  border-radius: var(--x-radius-card);
+  clip-path: var(--x-clip-card);
+  background: var(--x-bubble-bg);
+  box-shadow: var(--x-bubble-edge);
+  transition: background-color var(--x-dur-1) var(--x-ease), transform var(--x-dur-2) var(--x-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-tile:hover {
+    background: var(--x-surface-3);
+    transform: translateY(-2px);
+  }
+}
+
+.product-tile-icon,
+.product-mark {
+  --cut: var(--x-cut-sm);
+  width: 32px;
+  height: 32px;
+  margin-bottom: var(--x-space-1);
+  border-radius: var(--x-radius-tile-sm);
+  clip-path: var(--x-clip-control);
+  background: var(--x-surface-3);
+}
+
+.product-tile-icon img,
+.product-mark img,
+.dock-icon img {
+  filter: brightness(0) invert(1);
+}
+
+.product-tile-icon img,
+.product-mark img {
+  width: 16px;
+  height: 16px;
+}
+
+.product-tile-name,
+.product-name {
+  font-family: var(--x-font-display);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 700;
+  font-stretch: 112%;
+  font-variation-settings: 'wdth' 112;
+  letter-spacing: 0.08em;
+}
+
+.product-tile-lead {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  color: var(--x-ink-2);
+}
+
+.product-tile-status,
+.product-status {
+  margin-top: auto;
+  padding-top: var(--x-space-1);
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: var(--x-label-tracking);
+  text-transform: var(--x-label-case);
+  color: var(--x-ink-3);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--x-radius-dot);
+  background: var(--x-success);
+  animation: none;
+}
+
+.status-dot.is-wait {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--x-ink-3);
+}
+
+.portal-panel {
+  --cut: var(--x-cut-sm);
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--x-space-4);
+  margin-top: var(--x-space-2);
+  padding: var(--x-space-5);
+  border-radius: var(--x-radius-card);
+  clip-path: var(--x-clip-card);
+  background: var(--x-attachment-bg);
+  box-shadow: var(--x-bubble-edge);
+}
+
+.portal-panel .product-tile-icon.is-portal {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  background: var(--x-mark-glyph) center / 18px 19px no-repeat, var(--x-mark-tile);
+}
+
+.portal-panel .product-tile-icon.is-portal svg {
+  display: none;
+}
+
+.portal-panel-line {
+  flex: 1 1 240px;
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+  font-weight: 500;
+}
+
+/* Product window content. */
+.product-body {
+  gap: var(--x-space-4);
+  padding: var(--x-space-6);
+}
+
+.product-head {
+  gap: var(--x-space-3);
+}
+
+.product-mark {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.product-name {
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  letter-spacing: 0.04em;
+}
+
+.product-status {
+  margin-top: calc(var(--x-space-2) * -1);
+  padding: 0;
+}
+
+.product-lead {
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+}
+
+.product-proof {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  color: var(--x-ink-2);
+}
+
+.product-media {
+  --cut: var(--x-cut-sm);
+  border-radius: var(--x-radius-card);
+  clip-path: var(--x-clip-card);
+  box-shadow: inset 0 0 0 1px var(--x-hairline);
+}
+
+.scan {
+  display: none;
+}
+
+.capture-label {
+  left: var(--x-space-3);
+  bottom: var(--x-space-3);
+  padding: var(--x-space-1) var(--x-space-2);
+  border-radius: var(--x-radius-hairline);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: 0;
+  text-transform: none;
+  background: rgb(0 0 0 / 60%);
+  backdrop-filter: blur(8px);
+}
+
+.product-body > * {
+  flex-shrink: 0;
+}
+
+/* The capture gives up height first, so the window's action stays in view. */
+.product-body > .product-media {
+  flex: 0 1 auto;
+  min-height: var(--x-media-min);
+}
+
+.product-body .btn-wrap {
+  align-self: flex-start;
+}
+
+/* Dock. */
+.dock {
+  bottom: var(--x-space-5);
+}
+
+.dock-tray {
+  --cut: var(--x-cut-dock);
+  gap: var(--x-space-2);
+  padding: var(--x-space-2);
+  border-radius: var(--x-radius-dock);
+  filter: var(--x-dock-shadow-filter);
+}
+
+.dock-tray::before {
+  border-radius: inherit;
+  clip-path: var(--x-clip-dock);
+  background: var(--x-dock-bg);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong), inset 0 1px 0 var(--x-window-highlight);
+}
+
+.dock-item {
+  width: 48px;
+  height: 48px;
+  color: var(--x-ink-2);
+  transform: none;
+  transition: transform var(--x-dur-2) var(--x-ease);
+}
+
+.dock-item:has(+ .dock-item:hover),
+.dock-item:hover + .dock-item,
+.dock-item:has(+ .dock-item:focus-visible),
+.dock-item:focus-visible + .dock-item {
+  transform: none;
+}
+
+.dock-icon,
+.dock-product .dock-icon,
+.dock-item.is-x .dock-icon,
+.dock-item.is-discord .dock-icon,
+.dock-item.is-portal .dock-icon,
+.dock-item.is-portal.is-active .dock-icon {
+  --cut: var(--x-cut-sm);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--x-radius-tile);
+  clip-path: var(--x-clip-tile);
+  background: var(--x-tile-bg);
+  box-shadow: var(--x-tile-edge);
+  color: var(--x-ink-1);
+  transition: background-color var(--x-dur-1) var(--x-ease);
+}
+
+.dock-icon img,
+.dock-item.is-x .dock-icon img,
+.dock-item.is-discord .dock-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.dock-item.is-x .dock-icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.dock-item.is-portal .xborg-favicon svg {
+  width: 20px;
+  height: 21px;
+}
+
+.dock-rule {
+  height: 32px;
+  margin: 0 var(--x-space-1);
+  background: var(--x-hairline-strong);
+}
+
+.dock-label {
+  bottom: calc(100% + var(--x-space-3));
+  padding: var(--x-space-1) var(--x-space-2);
+  border: 0;
+  border-radius: var(--x-radius-hairline);
+  background: var(--x-surface-3);
+  box-shadow: var(--x-shadow-2);
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--x-ink-1);
+}
+
+.dock-dot {
+  bottom: -6px;
+  width: var(--x-indicator-w);
+  height: 3px;
+  margin-left: calc(var(--x-indicator-w) / -2);
+  border-radius: var(--x-radius-dot);
+  background: var(--x-indicator);
+}
+
+@media (min-width: 900px) and (hover: hover) and (pointer: fine) {
+  .dock-item:hover {
+    transform: translateY(-4px) scale(1.08);
+    color: var(--x-ink-1);
+  }
+
+  .dock-item:hover .dock-icon {
+    background: var(--x-tile-bg-hover);
+  }
+
+  .dock-item:hover .dock-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (min-width: 900px) {
+  .dock-item.is-hover {
+    transform: translateY(-4px) scale(1.08);
+  }
+
+  .dock-item.is-hover .dock-icon {
+    background: var(--x-tile-bg-hover);
+  }
+
+  .dock-item.is-hover .dock-label,
+  [data-input='keyboard'] .dock-item:focus-visible .dock-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .dock-item:focus-visible {
+    transform: none;
+  }
+
+  :root:not([data-input='keyboard']) .dock-item:focus-visible .dock-label {
+    opacity: 0;
+  }
+}
+
+/* The tile itself is clipped, so the ring sits outside it on the button. */
+.dock-item.is-focus,
+[data-input='keyboard'] .dock-item:focus-visible {
+  outline: var(--x-focus-width) solid var(--x-focus);
+  outline-offset: 3px;
+  border-radius: var(--x-radius-tile);
+}
+
+/* Portal. Styling only: copy, figures and features are unchanged. */
+.portal-app {
+  --portal-secondary: var(--x-ink-2);
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+}
+
+.window-portal .portal-app {
+  background: var(--x-surface-1);
+}
+
+.demo-badge,
+.status-badge {
+  --cut: var(--x-cut-xs);
+  min-height: 0;
+  height: 22px;
+  gap: var(--x-space-2);
+  padding: 0 var(--x-space-2);
+  border: 0;
+  border-radius: var(--x-radius-badge);
+  clip-path: var(--x-clip-badge);
+  background: var(--x-badge-bg);
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  font-weight: 500;
+  letter-spacing: var(--x-label-tracking);
+  text-transform: var(--x-label-case);
+  color: var(--x-ink-2);
+}
+
+.demo-badge::before,
+.status-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: var(--x-radius-dot);
+  background: var(--x-ink-3);
+}
+
+.demo-badge::before {
+  background: var(--x-warning);
+}
+
+.status-badge.is-available::before,
+.status-badge.is-completed::before,
+.status-badge.is-distributed::before,
+.status-badge.is-claimed::before {
+  background: var(--x-success);
+}
+
+.status-badge.is-in-progress::before,
+.status-badge.is-pending::before,
+.status-badge.is-in-review::before {
+  background: var(--x-accent);
+}
+
+.status-badge.is-locked::before {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--x-ink-3);
+}
+
+.status-badge.is-available,
+.status-badge.is-completed,
+.status-badge.is-distributed,
+.status-badge.is-claimed,
+.status-badge.is-in-progress,
+.status-badge.is-pending,
+.status-badge.is-in-review,
+.status-badge.is-locked {
+  color: var(--x-ink-2);
+}
+
+/* Sidebar: navigation on top, the demo reset at its foot. */
+.portal-sidebar {
+  display: flex;
+  width: 200px;
+  flex: none;
+  flex-direction: column;
+  border-right: 1px solid var(--x-hairline);
+  background: var(--x-sidebar-bg);
+}
+
+.portal-tabs {
+  width: 100%;
+  gap: var(--x-space-1);
+  padding: var(--x-space-4) var(--x-space-3);
+  border-right: 0;
+  background: none;
+}
+
+.portal-sidebar > .portal-reset {
+  align-self: flex-start;
+  margin: auto var(--x-space-5) var(--x-space-4);
+  color: var(--x-ink-3);
+}
+
+/* The page level reset shows only when the sidebar cannot hold it. */
+.portal-page-foot {
+  display: none;
+  width: min(100%, 880px);
+  margin: var(--x-space-10) auto 0;
+}
+
+.portal-page-foot > .portal-reset {
+  color: var(--x-ink-3);
+}
+
+/* Demo Data sits once, quietly, in the Portal title bar. */
+.window-accessory {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  display: inline-flex;
+  min-width: 0;
+}
+
+.portal-tabs button,
+.portal-tabbar button {
+  --cut: var(--x-cut-sm);
+  min-height: 0;
+  height: var(--x-control-md);
+  gap: var(--x-space-3);
+  padding: 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  clip-path: var(--x-clip-control);
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 500;
+}
+
+.portal-tabs button.is-on,
+.portal-tabbar button.is-on {
+  border: 0;
+  background: var(--x-nav-on);
+  box-shadow: none;
+  color: var(--x-ink-1);
+}
+
+.portal-tabs svg,
+.portal-tabbar svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portal-tabs button:hover,
+  .portal-tabbar button:hover {
+    border: 0;
+    background: var(--x-quiet-hover);
+    color: var(--x-ink-1);
+  }
+
+  .mission-card:hover,
+  .experience-card:hover {
+    border-color: transparent;
+    background: var(--x-surface-3);
+  }
+}
+
+.portal-body {
+  padding: var(--x-space-8) var(--x-space-8) var(--x-space-10);
+}
+
+.portal-page {
+  width: min(100%, 880px);
+}
+
+.portal-kicker {
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: var(--x-label-tracking);
+  text-transform: var(--x-label-case);
+  color: var(--x-ink-3);
+}
+
+.portal-page-heading {
+  margin-bottom: var(--x-space-8);
+}
+
+.portal-page-heading h1,
+.portal-entry-content h1 {
+  margin: var(--x-space-2) 0 var(--x-space-2);
+  font-family: var(--x-font-display);
+  font-size: var(--x-t2);
+  line-height: var(--x-l2);
+  font-weight: var(--x-display-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  letter-spacing: var(--x-display-tracking);
+}
+
+.portal-page-heading > p:last-child,
+.portal-entry-content > p,
+.modal-lead,
+.experience-modal-content > p {
+  font-size: var(--x-t5);
+  line-height: var(--x-l5);
+}
+
+.active-heading {
+  align-items: flex-end;
+}
+
+.section-heading-row {
+  margin-bottom: var(--x-space-4);
+}
+
+.staking-heading h2,
+.section-heading-row h2 {
+  margin-top: var(--x-space-1);
+  font-family: var(--x-font-display);
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  font-weight: var(--x-display-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  letter-spacing: var(--x-display-tracking);
+}
+
+.portal-section {
+  margin-top: var(--x-space-10);
+}
+
+.portal-section:first-of-type {
+  margin-top: 0;
+}
+
+.staking-module,
+.season-panel,
+.reward-summary,
+.reward-breakdown,
+.reward-history,
+.mission-card,
+.experience-card,
+.activity-list,
+.breakdown-list,
+.portal-empty-state {
+  --cut: var(--x-cut-card);
+  border: 0;
+  border-radius: var(--x-radius-card);
+  clip-path: var(--x-clip-card);
+  background: var(--x-card-bg);
+  box-shadow: var(--x-card-edge);
+}
+
+.season-panel,
+.staking-module,
+.mission-card {
+  padding: var(--x-space-6);
+}
+
+.season-pool strong {
+  font-family: var(--x-font-display);
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+  font-weight: var(--x-display-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+}
+
+.season-pool span,
+.season-panel-footer,
+.mission-type,
+.experience-level {
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  color: var(--x-ink-3);
+}
+
+.season-metrics,
+.reward-metrics,
+.stake-preview-grid,
+.mission-meta {
+  gap: var(--x-space-6);
+  margin-top: var(--x-space-6);
+  border: 0;
+  background: none;
+}
+
+.season-metrics > div,
+.reward-metrics > div,
+.stake-preview-grid > div,
+.mission-meta > div {
+  gap: var(--x-space-1);
+  padding: 0;
+  background: none;
+}
+
+.season-metrics > div + div,
+.reward-metrics > div + div {
+  padding-left: var(--x-space-6);
+  box-shadow: inset 1px 0 0 var(--x-hairline);
+}
+
+.season-metrics span,
+.reward-metrics span,
+.stake-preview-grid dt,
+.confirmation-list dt,
+.mission-meta dt {
+  font-family: var(--x-label-font);
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  letter-spacing: var(--x-label-tracking);
+  text-transform: var(--x-label-case);
+  color: var(--x-ink-3);
+}
+
+.season-metrics strong,
+.reward-metrics strong {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  font-weight: var(--x-figure-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  letter-spacing: var(--x-figure-tracking);
+  font-variant-numeric: tabular-nums;
+}
+
+.stake-preview-grid dd,
+.confirmation-list dd,
+.mission-meta dd,
+.breakdown-list strong,
+.modal-summary-row strong {
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.season-progress {
+  height: 4px;
+  margin-top: var(--x-space-6);
+  border-radius: var(--x-radius-dot);
+  background: var(--x-surface-3);
+  overflow: hidden;
+}
+
+.season-progress span {
+  border-radius: inherit;
+}
+
+.season-panel-footer {
+  margin-top: var(--x-space-3);
+}
+
+.mission-card-head {
+  align-items: center;
+}
+
+.venture-mark {
+  --cut: var(--x-cut-sm);
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--x-radius-tile-sm);
+  clip-path: var(--x-clip-control);
+  background: var(--x-surface-3);
+  color: var(--x-ink-1);
+  font-size: var(--x-t6);
+}
+
+.venture-mark.is-fanbase {
+  background: var(--x-surface-3);
+  color: var(--x-ink-1);
+}
+
+.mission-venture {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.mission-copy {
+  margin: var(--x-space-5) 0;
+}
+
+.mission-copy h3,
+.experience-card h3 {
+  margin: 0 0 var(--x-space-2);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+  font-weight: 600;
+}
+
+.mission-copy p,
+.experience-card p {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+.mission-meta {
+  margin: 0 0 var(--x-space-6);
+  row-gap: var(--x-space-4);
+}
+
+.experience-grid {
+  gap: var(--x-space-3);
+}
+
+.experience-card {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.experience-visual {
+  border-right: 0;
+  background:
+    radial-gradient(120% 100% at 0% 0%, var(--x-accent-soft), transparent 70%),
+    var(--x-surface-3);
+}
+
+.experience-visual span {
+  font-size: var(--x-t3);
+  line-height: var(--x-l3);
+  color: var(--x-ink-2);
+}
+
+.experience-card-body {
+  padding: var(--x-space-5);
+}
+
+.experience-card-body > strong {
+  color: var(--x-ink-2);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t7);
+}
+
+.experience-card .btn {
+  min-height: 0;
+  font-size: var(--x-t6);
+}
+
+.activity-row {
+  gap: var(--x-space-3);
+  padding: var(--x-space-4) var(--x-space-5);
+}
+
+.activity-row + .activity-row,
+.breakdown-list > div + div {
+  border-top: 1px solid var(--x-hairline);
+}
+
+.activity-dot {
+  border-radius: var(--x-radius-dot);
+}
+
+.activity-row strong {
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 500;
+}
+
+.activity-row span,
+.activity-row time {
+  font-size: var(--x-t7);
+  line-height: var(--x-l7);
+  color: var(--x-ink-3);
+}
+
+/* Inputs. */
+.amount-field {
+  --cut: var(--x-cut-sm);
+  min-height: 0;
+  height: 52px;
+  padding: 0 var(--x-space-4);
+  border: 0;
+  border-radius: var(--x-radius-control-lg);
+  clip-path: var(--x-clip-control);
+  background: var(--x-input-bg);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong);
+  transition: box-shadow var(--x-dur-1) var(--x-ease);
+}
+
+.amount-field:focus-within,
+.amount-field.is-focus {
+  border: 0;
+  box-shadow: inset 0 0 0 1.5px var(--x-accent);
+}
+
+.amount-field.is-error {
+  box-shadow: inset 0 0 0 1.5px var(--x-error);
+}
+
+.amount-field input {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t3);
+  font-weight: var(--x-figure-weight);
+  font-variant-numeric: tabular-nums;
+}
+
+.amount-field span {
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  font-weight: 600;
+  color: var(--x-ink-2);
+}
+
+.stake-presets button,
+.mission-filters button {
+  --cut: var(--x-cut-sm);
+  min-height: 0;
+  height: var(--x-control-sm);
+  padding: 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  clip-path: var(--x-clip-control);
+  background: var(--x-surface-2);
+  box-shadow: var(--x-secondary-edge);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t7);
+  font-weight: 600;
+  color: var(--x-ink-2);
+}
+
+.stake-presets button.is-on,
+.mission-filters button.is-on {
+  border: 0;
+  background: var(--x-nav-on);
+  box-shadow: inset 0 0 0 1px var(--x-accent);
+  color: var(--x-ink-1);
+}
+
+/* Portal window content never touches the dock. */
+/* The connect step sits in the middle of its window at any size. */
+.portal-entry.is-embedded {
+  height: 100%;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+@media (min-width: 900px) {
+  .portal-entry-content {
+    width: min(100% - 48px, 520px);
+    min-height: 0;
+    margin: 0 auto;
+    padding: var(--x-space-16) 0;
+  }
+}
+
+.portal-entry-mark {
+  --cut: var(--x-cut-sm);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--x-radius-mark-lg);
+  clip-path: var(--x-clip-mark-lg);
+}
+
+/* Modals and toasts. */
+.portal-modal {
+  --cut: var(--x-cut-window);
+  border: 0;
+  border-radius: var(--x-radius-window);
+  clip-path: var(--x-clip-window);
+  background: var(--x-surface-1);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong), var(--x-window-shadow);
+}
+
+.portal-modal-header {
+  border-bottom: 1px solid var(--x-hairline);
+}
+
+.portal-modal-header h2 {
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+}
+
+.portal-toast {
+  --cut: var(--x-cut-sm);
+  border: 0;
+  border-radius: var(--x-radius-card);
+  clip-path: var(--x-clip-card);
+  background: var(--x-surface-3);
+  box-shadow: var(--x-shadow-3);
+  font-size: var(--x-t6);
+}
+
+/* Review bar sits clear of content. */
+.review {
+  --cut: 0px;
+  border-radius: var(--x-radius-control);
+  border-color: var(--x-hairline-strong);
+  background: var(--x-surface-2);
+}
+
+/* Mobile. */
+@media (max-width: 899px) {
+  .workspace {
+    --chamfer-tile: var(--x-cut-sm);
+    --chamfer-btn: var(--x-cut-sm);
+  }
+
+  .window-xborg {
+    filter: none;
+  }
+
+  .window-xborg .window-frame {
+    border-radius: 0;
+    clip-path: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .window-xborg .window-frame::before {
+    display: none;
+  }
+
+  .window-xborg .window-body {
+    padding: 0;
+  }
+
+  .mobile-hero {
+    gap: var(--x-space-5);
+    padding: var(--x-space-20) var(--x-space-5) var(--x-space-10);
+  }
+
+  .hero-display {
+    font-size: var(--x-t1);
+    line-height: var(--x-l1);
+    letter-spacing: var(--x-display-tracking);
+  }
+
+  .lead {
+    font-size: var(--x-t4);
+    line-height: var(--x-l4);
+    color: var(--x-ink-2);
+  }
+
+  .mobile-hero .btn {
+    height: var(--x-control-lg);
+    padding: 0 var(--x-space-5);
+  }
+
+  .conversation {
+    padding: 0 var(--x-space-5) var(--x-space-8) calc(var(--x-space-5) + var(--x-sender-gutter));
+  }
+
+  .bubble {
+    max-width: 85%;
+  }
+
+  .product-panel {
+    gap: var(--x-space-2);
+  }
+
+  /* The dock becomes a solid bottom bar and the conversation ends above it,
+     so nothing ever scrolls underneath. */
+  .workspace {
+    --mobile-dock: 84px;
+  }
+
+  .window-xborg {
+    height: calc(100dvh - var(--mobile-dock));
+  }
+
+  .dock {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+  }
+
+  .dock-tray {
+    align-items: flex-start;
+    justify-content: space-around;
+    height: var(--mobile-dock);
+    padding: var(--x-space-2) var(--x-space-3) calc(var(--x-space-2) + env(safe-area-inset-bottom));
+    border-radius: 0;
+    filter: none;
+  }
+
+  .dock-tray::before {
+    border-radius: 0;
+    clip-path: none;
+    background: var(--x-menubar-scrolled);
+    box-shadow: inset 0 1px 0 var(--x-hairline-strong);
+  }
+
+  .product-tile {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: var(--x-space-3);
+    row-gap: var(--x-space-1);
+    align-items: start;
+  }
+
+  .product-tile-icon {
+    grid-row: 1 / 4;
+    margin: 0;
+  }
+
+  .product-tile-status {
+    margin-top: 0;
+  }
+
+  .dock-item {
+    width: 64px;
+    height: auto;
+  }
+
+  .dock-icon,
+  .dock-product .dock-icon,
+  .dock-item.is-portal .dock-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dock-label {
+    margin-top: var(--x-space-1);
+    background: none;
+    box-shadow: none;
+    color: var(--x-ink-2);
+    font-size: var(--x-t7);
+  }
+
+  .dock-dot {
+    display: none;
+  }
+
+  /* The review bar shrinks to its screen picker in the top left corner,
+     clear of the conversation, window titles and close controls. */
+  .review {
+    top: var(--x-space-2);
+    bottom: auto;
+    left: var(--x-space-2);
+    right: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .review > .mark,
+  .review > button {
+    display: none;
+  }
+
+  .review select {
+    width: 112px;
+    height: 28px;
+    border-radius: var(--x-radius-control);
+    background: var(--x-surface-2);
+  }
+
+  .window-product .window-title,
+  .window-portal .window-title {
+    padding-top: 0;
+  }
+
+  .window-product .window-frame,
+  .window-portal .window-frame {
+    border-radius: 0;
+    clip-path: none;
+  }
+
+  .portal-body {
+    padding: var(--x-space-6) var(--x-space-5) var(--x-space-30);
+    /* Focus moves never park a control under the tab bar. */
+    scroll-padding-top: var(--x-space-4);
+    scroll-padding-bottom: calc(var(--x-portal-tabbar) + var(--x-space-4));
+  }
+
+  .portal-tabbar {
+    height: var(--x-portal-tabbar);
+    border-top: 1px solid var(--x-hairline);
+    background: var(--x-surface-1);
+  }
+
+  .portal-tabbar button {
+    height: auto;
+    border-radius: 0;
+    clip-path: none;
+    font-size: var(--x-t7);
+  }
+
+  .portal-tabbar button.is-on {
+    background: none;
+    color: var(--x-ink-1);
+  }
+
+  .season-metrics > div + div,
+  .reward-metrics > div + div {
+    padding-left: 0;
+    box-shadow: none;
+  }
+
+  .season-metrics,
+  .reward-metrics {
+    row-gap: var(--x-space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.is-loading::after,
+  .wallet-control .wallet-spinner {
+    animation: none;
+  }
+}
+
+/* Wallet menu. */
+.wallet-anchor {
+  position: relative;
+  display: inline-flex;
+}
+
+.wallet-menu {
+  position: absolute;
+  top: calc(100% + var(--x-space-2));
+  right: 0;
+  z-index: 30;
+  display: flex;
+  min-width: 208px;
+  flex-direction: column;
+  padding: var(--x-space-1);
+  border-radius: var(--x-radius-card);
+  background: var(--x-surface-3);
+  box-shadow: inset 0 0 0 1px var(--x-hairline-strong), var(--x-shadow-3);
+  transform-origin: 100% 0;
+}
+
+.wallet-menu > button,
+.wallet-menu > span:not(.wallet-menu-rule) {
+  display: flex;
+  height: var(--x-control-md);
+  align-items: center;
+  gap: var(--x-space-3);
+  padding: 0 var(--x-space-3);
+  border: 0;
+  border-radius: var(--x-radius-tile-sm);
+  background: transparent;
+  color: var(--x-ink-1);
+  font-family: var(--x-font-body);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.wallet-menu svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--x-ink-2);
+}
+
+.wallet-menu > button:hover,
+.wallet-menu > button:focus-visible,
+.wallet-menu > .is-active {
+  background: var(--x-quiet-hover);
+  outline: none;
+}
+
+.wallet-menu-rule {
+  height: 1px;
+  margin: var(--x-space-1) var(--x-space-2);
+  background: var(--x-hairline);
+}
+
+.sys-wallet-menu {
+  position: static;
+}
+
+/* Product names inside chat messages. */
+.inline-link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--x-ink-1);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--x-accent);
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: text-decoration-color var(--x-dur-1) var(--x-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .inline-link:hover {
+    text-decoration-color: var(--x-ink-1);
+  }
+}
+
+[data-input='keyboard'] .inline-link:focus-visible {
+  outline-offset: 2px;
+  border-radius: var(--x-radius-glyph);
+}
+
+/* Portal content reflows to the window width, not the viewport. */
+.window-portal .portal-app {
+  container: portal-app / inline-size;
+}
+
+.portal-body {
+  container: portal-body / inline-size;
+}
+
+@container portal-app (max-width: 960px) {
+  .portal-sidebar {
+    width: 64px;
+  }
+
+  .portal-sidebar > .portal-reset {
+    display: none;
+  }
+
+  .portal-page-foot {
+    display: block;
+  }
+
+  .portal-tabs {
+    width: 64px;
+    align-items: center;
+    padding-left: var(--x-space-2);
+    padding-right: var(--x-space-2);
+  }
+
+  .portal-tabs button {
+    width: var(--x-control-lg);
+    justify-content: center;
+    padding: 0;
+  }
+
+  .portal-tabs button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@container portal-body (max-width: 760px) {
+  .season-metrics,
+  .stake-preview-grid,
+  .mission-meta,
+  .mission-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .season-metrics > div:nth-child(odd) {
+    padding-left: 0;
+    box-shadow: none;
+  }
+
+  .staking-grid,
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card:first-child {
+    grid-column: auto;
+  }
+
+  .reward-table-wrap table {
+    min-width: 0;
+  }
+}
+
+@container portal-body (max-width: 560px) {
+  .active-heading,
+  .staking-heading,
+  .section-heading-row,
+  .review-actions,
+  .referral-link-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .reward-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reward-metrics > div {
+    padding-left: 0;
+    box-shadow: none;
+  }
+
+}
+
+@media (max-width: 899px) {
+  .topbar .wallet-anchor {
+    display: none;
+  }
+
+  /* On mobile the menu bar is only the progress line. */
+  .topbar,
+  .topbar[data-scrolled='true'] {
+    height: 2px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Touch targets stay at 44px or more. */
+  .portal-app button,
+  .portal-app .btn,
+  .portal-app .text-action,
+  .portal-tabs button,
+  .stake-presets button,
+  .mission-filters button {
+    min-height: var(--x-control-lg);
+  }
+
+  .portal-app .btn,
+  .stake-presets button,
+  .mission-filters button {
+    height: var(--x-control-lg);
+  }
+}
+
+/* Keyboard focus on a dock tile lifts it and shows its label, as hover does. */
+@media (min-width: 900px) {
+  [data-input='keyboard'] .dock-item:focus-visible {
+    transform: translateY(-4px) scale(1.08);
+  }
+}
+
+/* Modal details. */
+.portal-icon-button {
+  width: var(--x-control-md);
+  height: var(--x-control-md);
+  border: 0;
+  border-radius: var(--x-radius-control);
+  background: transparent;
+  color: var(--x-ink-2);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portal-icon-button:hover {
+    border: 0;
+    background: var(--x-quiet-hover);
+    color: var(--x-ink-1);
+  }
+}
+
+.confirmation-list,
+.modal-summary-row,
+.referral-link-row,
+.referral-progress {
+  border: 0;
+  border-radius: var(--x-radius-control-lg);
+  background: var(--x-surface-2);
+}
+
+.confirmation-list > div {
+  align-items: baseline;
+  padding: var(--x-space-3) var(--x-space-4);
+}
+
+.confirmation-list dd {
+  margin: 0;
+}
+
+.confirmation-list > div + div {
+  border-top: 1px solid var(--x-hairline);
+}
+
+.modal-summary-row {
+  padding: var(--x-space-3) var(--x-space-4);
+}
+
+/* States that used to live in the legacy layer. */
+@media (hover: hover) and (pointer: fine) {
+  .stake-presets button:hover,
+  .mission-filters button:hover {
+    background: var(--x-surface-3);
+    color: var(--x-ink-1);
+  }
+}
+
+.proof-form input:focus,
+.proof-form textarea:focus {
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--x-accent);
+}
+
+.portal-body:focus,
+.window-body:focus {
+  outline: none;
+}
+
+@media (max-width: 899px) {
+  .portal-sidebar {
+    display: contents;
+  }
+
+  .portal-sidebar > .portal-reset {
+    display: none;
+  }
+
+  .portal-page-foot {
+    display: block;
+  }
+}
+
+/* A stat can carry a short note under its figure, such as the access level name. */
+.season-metrics .metric-note {
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+@media (max-width: 899px) {
+  /* The review picker shrinks to an icon in the top left corner. */
+  .review {
+    width: var(--x-control-md);
+    height: var(--x-control-sm);
+  }
+
+  .review::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: var(--x-ink-2);
+    mask: url('/V2/icons/review.svg') center / 16px 16px no-repeat;
+    -webkit-mask: url('/V2/icons/review.svg') center / 16px 16px no-repeat;
+    pointer-events: none;
+  }
+
+  .review select {
+    width: 100%;
+    color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: none;
+  }
+
+  .review select option {
+    color: var(--x-ink-1);
+    background: var(--x-surface-2);
+  }
+
+  .window-title {
+    padding-left: var(--x-space-12);
+  }
+}
+
+/* Size changes, such as maximise or the Portal growing after connect, glide. */
+@media (min-width: 900px) {
+  .window.is-placed:not(.is-interacting) {
+    transition:
+      left var(--x-dur-3) var(--x-ease),
+      top var(--x-dur-3) var(--x-ease),
+      width var(--x-dur-3) var(--x-ease),
+      height var(--x-dur-3) var(--x-ease);
+  }
+}
+
+/* Portal figures and strips, round 5 Milestone 8. */
+.staking-heading > strong {
+  font-family: var(--x-figure-font);
+  font-size: var(--x-t4);
+  line-height: var(--x-l4);
+  font-weight: var(--x-figure-weight);
+  font-stretch: var(--x-display-stretch);
+  font-variation-settings: 'wdth' var(--x-display-wdth);
+  white-space: nowrap;
+}
+
+.benefit-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--x-space-3);
+  background: none;
+  box-shadow: none;
+}
+
+.benefit-strip span,
+.benefit-strip span + span {
+  padding: var(--x-space-4) var(--x-space-5);
+  border: 0;
+  border-radius: var(--x-radius-card);
+  background: var(--x-card-bg);
+  color: var(--x-ink-2);
+  font-size: var(--x-t6);
+  line-height: var(--x-l6);
+}
+
+/* Five reward figures sit three and two, and in one row only when there is room. */
+.reward-metrics {
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: var(--x-space-6);
+}
+
+.reward-metrics > div:nth-child(3n + 1) {
+  padding-left: 0;
+  box-shadow: none;
+}
+
+@container portal-body (min-width: 1040px) {
+  .reward-metrics {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .reward-metrics > div:nth-child(3n + 1) {
+    padding-left: var(--x-space-6);
+    box-shadow: inset 1px 0 0 var(--x-hairline);
+  }
+
+  .reward-metrics > div:first-child {
+    padding-left: 0;
+    box-shadow: none;
+  }
+}
+
+@container portal-body (max-width: 760px) {
+  .benefit-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stake-preview-grid {
+  align-content: start;
+}
+
+/* Reduced motion: nothing travels or scales, states change in place. */
+@media (prefers-reduced-motion: reduce) {
+  .dock-item:hover,
+  .dock-item.is-hover,
+  [data-input='keyboard'] .dock-item:focus-visible,
+  .product-tile:hover,
+  .btn:active,
+  .btn.is-pressed,
+  .wallet-control.is-pressed,
+  .btn.wallet-control.is-pressed {
+    transform: none;
+  }
+}
+
+/* Narrow Portal bodies keep reward figures two across. */
+@container portal-body (max-width: 560px) {
+  .reward-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reward-metrics > div,
+  .reward-metrics > div:nth-child(3n + 1) {
+    padding-left: 0;
+    box-shadow: none;
+  }
+}
+
+.breakdown-list strong,
+.modal-summary-row strong {
+  white-space: nowrap;
+}
+
+/* Reward history on narrow Portal widths: each row stacks into a two column entry
+   instead of a five column table that scrolls sideways out of its card. */
+@container portal-body (max-width: 560px) {
+  .reward-table-wrap {
+    overflow-x: visible;
+    margin-right: 0;
+  }
+
+  .reward-table-wrap table,
+  .reward-table-wrap tbody {
+    display: block;
+    min-width: 0;
+  }
+
+  .reward-table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .reward-table-wrap tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: var(--x-space-4);
+    row-gap: var(--x-space-1);
+    padding: var(--x-space-3) var(--x-space-4);
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .reward-table-wrap tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .reward-table-wrap td {
+    display: block;
+    padding: 0;
+    border: 0;
+  }
+
+  .reward-table-wrap td:nth-child(1) {
+    grid-area: 1 / 1;
+    color: var(--x-ink-2);
+  }
+
+  .reward-table-wrap td:nth-child(2) {
+    grid-area: 2 / 1;
+    color: var(--x-ink-1);
+    font-size: var(--x-t6);
+    line-height: var(--x-l6);
+  }
+
+  .reward-table-wrap td:nth-child(3) {
+    grid-area: 1 / 2 / 3 / 3;
+    align-self: center;
+    text-align: right;
+    color: var(--x-ink-1);
+    font-size: var(--x-t6);
+    line-height: var(--x-l6);
+    font-weight: 600;
+  }
+
+  .reward-table-wrap td:nth-child(4) {
+    grid-area: 3 / 1;
+    margin-top: var(--x-space-2);
+  }
+
+  .reward-table-wrap td:nth-child(5) {
+    grid-area: 3 / 2;
+    align-self: end;
+    text-align: right;
+  }
+}
+
+/* An error toast reads as a problem: neutral mark, error tone, never the success tick. */
+.portal-toast.is-error .toast-mark {
+  background: var(--x-surface-2);
+  color: var(--x-error);
+  box-shadow: inset 0 0 0 1.5px var(--x-error);
+}
+

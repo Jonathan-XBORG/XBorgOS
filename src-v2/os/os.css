@@ -1,0 +1,3345 @@
+/*
+  XBorg OS (V2 desktop). Values follow the Figma file "XBorg OS", node 37:352.
+*/
+@font-face {
+  font-family: 'Geist';
+  /* V2: every bold weight of Geist renders as Medium. */
+  src: url('/V2/fonts/geist-sans-500.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --os-ink: #f5f5f8;
+  --os-ink-2: #d4d4dc;
+  --os-ink-3: #8c8c96;
+  --os-glass: rgba(0, 0, 0, 0.3);
+  --os-glass-strong: rgba(0, 0, 0, 0.5);
+  --os-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  --os-button-dark: #121212;
+  --os-green: #4ade80;
+  --os-text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  --os-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.os {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+  color: var(--os-ink);
+  font-family: 'Geist', system-ui, sans-serif;
+  line-height: normal;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.os input,
+.os .os-readme,
+.os .os-lead,
+.os .os-proof {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+:where(.os) :where(button) {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.os :focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.os-wallpaper {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.os-wallpaper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* 3840 x 2160 for large and high density screens, 1920 x 1080 otherwise. */
+  background: var(--os-wallpaper, url('/V2/os/wallpaper.webp')) center / cover no-repeat;
+  opacity: var(--os-wallpaper-opacity, 0.4);
+  transition: background-image 0.4s ease, opacity 0.4s ease;
+}
+
+/* WebGL copy of the wallpaper that ripples under the cursor. It fades in
+   over the CSS image once its texture is ready. */
+.os-wallpaper-gl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.os-wallpaper-gl.is-ready {
+  opacity: 1;
+}
+
+@media (max-width: 1280px) and (max-resolution: 1.5dppx) {
+  .os-wallpaper::before {
+    background-image: var(--os-wallpaper-small, url('/V2/os/wallpaper-1920.webp'));
+  }
+}
+
+/* ---------- 3D cursor ---------- */
+
+.has-3d-cursor,
+.has-3d-cursor * {
+  cursor: none !important;
+}
+
+.os-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, filter;
+}
+
+.os-cursor canvas {
+  display: block;
+}
+
+/* ---------- Notifications ---------- */
+
+.os-notifs {
+  position: absolute;
+  top: 60px;
+  left: 32px;
+  z-index: 9;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.os-notif {
+  position: relative;
+  border-radius: 16px;
+  background: var(--os-glass);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: var(--os-highlight);
+  touch-action: pan-y;
+}
+
+.os-notif-main {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  border-radius: inherit;
+}
+
+.os-notif-icon {
+  flex: none;
+  display: block;
+  pointer-events: none;
+}
+
+.os-notif-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.os-notif-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--os-ink);
+}
+
+.os-notif-body {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--os-ink-2);
+}
+
+.os-notif-close {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(30, 30, 34, 0.92);
+  box-shadow: var(--os-highlight), 0 2px 6px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.15s var(--os-ease), transform 0.15s var(--os-ease);
+}
+
+.os-notif:hover .os-notif-close,
+.os-notif:focus-within .os-notif-close {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.os-notif-close:hover {
+  background: rgba(60, 60, 66, 0.95);
+}
+
+/* ---------- XBG widget ---------- */
+
+.os-widget {
+  position: absolute;
+  top: 60px;
+  right: 32px;
+  z-index: 5;
+  width: 270px;
+  min-height: 270px;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 32px;
+  background: var(--os-glass);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: var(--os-highlight);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.os-widget p {
+  margin: 0;
+  text-shadow: var(--os-text-shadow);
+  font-weight: 500;
+}
+
+.os-widget-head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.os-widget-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.os-widget-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.os-widget .os-widget-label {
+  opacity: 0.85;
+}
+
+.os-widget-token {
+  display: block;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.os-widget .os-widget-price {
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.os-widget-change.is-down .os-widget-value {
+  color: #ff6b6b;
+}
+
+.os-widget-change.is-down .os-widget-arrow {
+  color: #ff6b6b;
+}
+
+.os-widget-change.is-down .os-widget-arrow svg {
+  transform: rotate(180deg);
+}
+
+.os-widget-value {
+  font-variant-numeric: tabular-nums;
+}
+
+.os-widget-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.os-widget-arrow {
+  display: block;
+  color: var(--os-green);
+}
+
+.os-widget-arrow svg {
+  display: block;
+  transition: transform 0.3s var(--os-ease);
+}
+
+.os-widget-value {
+  flex: 1;
+  color: var(--os-green);
+  font-size: 24px;
+  line-height: 17px;
+}
+
+.os-widget-period {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.os-widget-chart {
+  position: relative;
+  height: 79.38px;
+}
+
+.os-widget-chart img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+
+.os-chart-high {
+  top: 0;
+  height: 48.687px;
+}
+
+.os-chart-low {
+  top: 48.69px;
+  height: 30.694px;
+}
+
+.os-widget-wallet {
+  align-self: stretch;
+  justify-content: center;
+  height: 60px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: var(--os-button-dark);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--os-ink);
+  transition: transform 0.18s var(--os-ease), background 0.18s, opacity 0.18s;
+}
+
+.os-widget-wallet:hover {
+  background: #1e1e1e;
+  transform: translateY(-1px);
+}
+
+.os-widget-wallet:active {
+  transform: scale(0.98);
+}
+
+.os-widget-wallet:disabled {
+  opacity: 0.6;
+}
+
+/* ---------- Desktop icons ---------- */
+
+.os-icon {
+  position: absolute;
+  z-index: 2;
+  width: 186px;
+  padding: 16px 10px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  touch-action: none;
+  transition: background 0.15s;
+}
+
+.os-icon.is-selected {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.os-icon.is-dragging {
+  z-index: 8;
+  opacity: 0.85;
+  transition: none;
+}
+
+.os-icon-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 10px;
+  color: var(--os-ink);
+  text-shadow: var(--os-text-shadow);
+  white-space: nowrap;
+}
+
+.os-folder {
+  position: relative;
+  display: block;
+  width: 166px;
+  height: 100px;
+}
+
+.os-folder-back {
+  position: absolute;
+  left: 14.95px;
+  top: 0;
+  width: 136px;
+  height: 101px;
+  border-radius: 15.614px;
+  background: #121212;
+  box-shadow: inset 0 0.488px 0 0 rgba(255, 255, 255, 0.25);
+}
+
+.os-folder-sheet {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s var(--os-ease);
+}
+
+.os-sheet-paper {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 48px;
+  height: 66px;
+  transform: rotate(var(--r, 0deg));
+}
+
+.os-sheet-paper img {
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 64px;
+  height: 82px;
+  max-width: none;
+}
+
+.os-sheet-paper.is-card {
+  height: 48px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.os-sheet-paper.is-card img {
+  left: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.os-icon:hover .os-folder-sheet {
+  transform: translateY(-6px);
+}
+
+.os-icon:hover .os-folder-sheet:nth-child(odd) {
+  transform: translateY(-9px);
+}
+
+.os-folder-blur {
+  position: absolute;
+  left: 9.615px;
+  top: 26px;
+  width: 146.899px;
+  height: 75px;
+  clip-path: path('M0.0813809 26.9942C-0.852384 17.7949 6.36851 9.80392 15.6151 9.80392H53.4049C58.4514 9.80392 63.3453 8.07374 67.2703 4.90196C71.1954 1.73018 76.0893 0 81.1357 0H131.285C140.449 0 147.643 7.85657 146.838 16.9859L142.975 60.7588C142.264 68.8188 135.514 75 127.422 75H19.0631C11.0505 75 4.33851 68.9348 3.52937 60.9632L0.0813809 26.9942Z');
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.os-folder-front {
+  position: absolute;
+  left: 7.95px;
+  top: 26px;
+  width: 150px;
+  height: 75px;
+  display: block;
+}
+
+.os-file {
+  display: block;
+  width: 48px;
+  height: 66px;
+  transition: transform 0.25s var(--os-ease);
+}
+
+.os-icon:hover .os-file {
+  transform: translateY(-4px) rotate(-3deg);
+}
+
+/* ---------- Windows ---------- */
+
+.os-win {
+  position: absolute;
+  max-width: calc(100vw - 32px);
+  padding-bottom: 32px;
+  border-radius: 32px;
+  background: var(--os-glass-strong);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight), 0 32px 24px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  transform-origin: 50% 50%;
+}
+
+.os-win:not(.is-front) {
+  box-shadow: var(--os-highlight), 0 16px 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+.os-win.is-full {
+  max-width: none;
+  border-radius: 24px;
+}
+
+.os-win.is-animating {
+  transition: left 0.42s cubic-bezier(0.16, 1, 0.3, 1), top 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1), height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.os-win.is-full,
+.os-win.is-animating,
+.os-win.has-height {
+  overflow: hidden;
+}
+
+.os-win.is-full .os-win-body,
+.os-win.is-animating .os-win-body,
+.os-win.has-height .os-win-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.os-win-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 32px;
+  touch-action: none;
+}
+
+.os-win-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 24px;
+  height: 32px;
+}
+
+.os-win-icon img {
+  display: block;
+}
+
+.os-win-file-icon {
+  margin: 0 -8px -16px;
+}
+
+.os-win-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 13px;
+  color: #fff;
+}
+
+.os-win-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.os-win-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  opacity: 0.9;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.os-win-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.os-win-btn img {
+  display: block;
+}
+
+.os-win-body {
+  padding: 0 32px;
+}
+
+.os-product {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.os-shot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 432 / 280;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #d9d9d9;
+}
+
+.os-product .os-shot {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+}
+
+.os-product-copy {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.os-product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-shadow: var(--os-text-shadow);
+  color: #fff;
+}
+
+.os-lead {
+  margin: 0;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.os-lead-sm {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.os-proof {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.35;
+  opacity: 0.6;
+}
+
+.os-cta {
+  align-self: flex-start;
+  height: 60px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: #fff;
+  color: #121212;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: transform 0.18s var(--os-ease), box-shadow 0.18s;
+}
+
+.os-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.os-cta:hover img {
+  transform: translate(2px, -2px);
+}
+
+.os-cta img {
+  display: block;
+  transition: transform 0.18s var(--os-ease);
+}
+
+.os-cta:active {
+  transform: scale(0.98);
+}
+
+.os-readme {
+  font-size: 18px;
+  line-height: normal;
+  color: #fff;
+  text-shadow: var(--os-text-shadow);
+}
+
+.os-readme p {
+  margin: 0 0 8px;
+  opacity: 0.6;
+}
+
+.os-readme p:last-child {
+  margin-bottom: 0;
+}
+
+.os-readme strong {
+  font-weight: 700;
+}
+
+.os-folder-empty {
+  min-height: 160px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.os-folder-empty p {
+  margin: 0;
+}
+
+/* Stake and Earn keep the previous chrome; lift them above the desktop. */
+.os .window-portal,
+.os .window-product {
+  z-index: 40;
+}
+
+/* ---------- Mission control ---------- */
+
+.os-mc {
+  position: absolute;
+  inset: 0;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 51px 160px;
+  background: rgba(217, 217, 217, 0.01);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.os-mc-row {
+  width: 100%;
+  max-width: 1338px;
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.os-mc-card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-bottom: 32px;
+  border-radius: 32px;
+  background: var(--os-glass-strong);
+  box-shadow: var(--os-highlight), 0 32px 24px 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
+.os-mc-card:focus-visible {
+  box-shadow: var(--os-highlight), 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+.os-mc-body {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1;
+}
+
+.os-mc-copy {
+  flex: 1;
+  min-height: 309px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* ---------- Dock ---------- */
+
+.os-dock {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  z-index: 50;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  border-radius: 24px;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+}
+
+/* The dock's glass sits on a pseudo element: a blur on the dock itself would
+   stop the search panel inside it from blurring what is behind. */
+.os-dock::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--os-glass);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  pointer-events: none;
+}
+
+.os-dock-apps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+}
+
+.os-dock-apps > li {
+  position: relative;
+  display: flex;
+}
+
+.os-dock-item {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  transition: transform 0.18s var(--os-ease);
+}
+
+.os-dock-item > img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.os-dock-item:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* White inner highlight along the top edge of every app icon (Figma 36:99:
+   inner shadow 0 1px, white 25%), on top of the icon's own artwork. */
+.os-dock-item::after,
+.os-win-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+.os-dock-item:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.os-dock-all {
+  display: grid;
+  place-items: center;
+  background: rgba(15, 15, 15, 0.3);
+  box-shadow: inset 0 -3px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.os-dock-all[aria-pressed='true'] {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.os-dock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 10px);
+  grid-template-rows: repeat(2, 10px);
+  gap: 2px;
+}
+
+.os-dock-grid span {
+  background: #fff;
+  border-radius: 2px;
+}
+
+.os-dock-stake {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(15, 15, 15, 0.3);
+  box-shadow: inset 0 -3px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.os-dock-stake img,
+.os-dock-stake svg {
+  display: block;
+  margin-bottom: -1px;
+}
+
+.os-dock-rule {
+  width: 16px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.os-dock-rule::before {
+  content: '';
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.os-dock-item.is-running {
+  transform: translateY(-14px);
+}
+
+.os-dock-item.is-running:hover {
+  transform: translateY(-17px) scale(1.05);
+}
+
+.os-dock-item.is-running:active {
+  transform: translateY(-15px) scale(1.02);
+}
+
+.os-dock-item {
+  transition: transform 0.34s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.os-dock-dot {
+  position: absolute;
+  left: 50%;
+  /* Centred in the gap the raised icon leaves above the dock. */
+  bottom: -10px;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+}
+
+.os-dock-label {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 14px);
+  transform: translate(-50%, 4px);
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(20, 20, 24, 0.92);
+  box-shadow: var(--os-highlight);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--os-ink);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s, transform 0.12s var(--os-ease);
+}
+
+.os-dock-item:hover .os-dock-label,
+.os-dock-item:focus-visible .os-dock-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- Search ---------- */
+
+.os-search {
+  position: relative;
+}
+
+.os-search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 400px;
+  height: 44px;
+  padding: 0 12px 0 16px;
+  border-radius: 16px;
+  /* Light field, as in Figma 36:209. */
+  background: rgba(213, 213, 211, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--os-highlight);
+}
+
+.os-search-field img {
+  display: block;
+  flex: none;
+}
+
+.os-search-field input:focus-visible {
+  outline: none;
+}
+
+.os-search-field input {
+  flex: 1;
+  min-width: 0;
+  height: 43px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #181617;
+  caret-color: #181617;
+  font: 500 15px 'Geist', system-ui, sans-serif;
+}
+
+.os-search-field input::placeholder {
+  color: #848381;
+}
+
+.os-search-field:focus-within {
+  box-shadow: var(--os-highlight), 0 0 0 2px rgba(255, 255, 255, 0.45);
+}
+
+.os-search-panel {
+  position: absolute;
+  left: -8px;
+  bottom: calc(100% + 18px);
+  width: 480px;
+  max-height: min(440px, 60vh);
+  overflow: auto;
+  padding: 8px;
+  border-radius: 20px;
+  background: rgba(16, 16, 20, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight), 0 24px 48px rgba(0, 0, 0, 0.35);
+  transform-origin: 30% 100%;
+}
+
+.os-search-group {
+  display: block;
+  padding: 10px 12px 6px;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--os-ink-3);
+}
+
+.os-search-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--os-ink);
+  cursor: pointer;
+}
+
+.os-search-option[aria-selected='true'] {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.os-search-glyph {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  color: var(--os-ink-2);
+  flex: none;
+}
+
+.os-search-glyph img {
+  display: block;
+}
+
+.os-search-glyph svg {
+  width: 16px;
+  height: 16px;
+}
+
+.os-search-mark {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: #171717;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.os-search-mark svg {
+  width: 12px;
+  height: 12px;
+}
+
+.os-search-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.os-search-hint {
+  font-size: 12px;
+  color: var(--os-ink-3);
+  opacity: 0;
+}
+
+.os-search-option[aria-selected='true'] .os-search-hint {
+  opacity: 1;
+}
+
+.os-search-empty {
+  margin: 0;
+  padding: 16px 12px;
+  font-size: 14px;
+  color: var(--os-ink-2);
+}
+
+.os-search-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 8px 8px 10px;
+}
+
+.os-search-answer-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.os-search-back {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--os-ink-2);
+}
+
+.os-search-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.os-search-back svg {
+  width: 16px;
+  height: 16px;
+}
+
+.os-search-answer-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.os-search-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.os-search-bubble {
+  margin: 0;
+  align-self: flex-start;
+  max-width: 92%;
+  padding: 10px 14px;
+  border-radius: 6px 16px 16px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--os-ink);
+}
+
+.os-search-action {
+  align-self: flex-start;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 20px;
+  background: #fff;
+  color: #121212;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.os-search-action svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 1180px) {
+  .os-lead {
+    font-size: 32px;
+  }
+  .os-lead-sm {
+    font-size: 24px;
+  }
+  .os-mc {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 899px) {
+  /* Phone layout: the XBG widget across the top, notifications under it and
+     the three desktop items on one row above the dock. */
+  .os-widget {
+    top: 44px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    min-height: 0;
+    padding: 20px;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'head action'
+      'chart chart';
+    align-items: center;
+    gap: 14px 12px;
+  }
+  .os-widget-head {
+    grid-area: head;
+    min-width: 0;
+  }
+  .os-widget-chart {
+    grid-area: chart;
+  }
+  .os-widget-wallet {
+    grid-area: action;
+    align-self: center;
+    height: 48px;
+    padding: 0 20px;
+    gap: 10px;
+    font-size: 15px;
+  }
+  .os-widget-wallet img {
+    width: 20px;
+    height: 20px;
+  }
+  .os-notifs {
+    left: 16px;
+    right: 16px;
+    top: 244px;
+    width: auto;
+  }
+  .os-icon {
+    top: auto !important;
+    bottom: 136px !important;
+    left: auto !important;
+    right: auto !important;
+    transform: scale(0.6) !important;
+  }
+  .os-icon[data-desktop-item='docs'] {
+    left: 4px !important;
+    transform-origin: left bottom;
+  }
+  .os-icon[data-desktop-item='secret'] {
+    left: calc(50% - 93px) !important;
+    transform-origin: center bottom;
+  }
+  .os-icon[data-desktop-item='readme'] {
+    right: 4px !important;
+    transform-origin: right bottom;
+  }
+  .os-icon-label {
+    font-size: 20px;
+    line-height: 16px;
+  }
+  .os-dock {
+    left: 8px;
+    right: 8px;
+    bottom: 12px;
+    transform: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .os-search-field {
+    width: 100%;
+  }
+  .os-search-panel {
+    left: 0;
+    width: 100%;
+  }
+  /* Every icon fits on one row, so nothing scrolls and a raised (running)
+     icon is never clipped. Icons shrink with the screen, up to 48px. */
+  .os-dock-apps {
+    overflow: visible;
+    justify-content: center;
+    gap: 4px;
+    height: auto;
+    padding-top: 6px;
+  }
+  .os-dock-apps > li {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 56px;
+    justify-content: center;
+  }
+  .os-dock-apps > li.os-dock-rule {
+    flex: 0 0 9px;
+    width: 9px;
+    height: auto;
+    align-self: stretch;
+  }
+  .os-dock-item,
+  .os-dock-stake,
+  .os-dock-item > img {
+    width: 100%;
+    max-width: 48px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .os-dock-item.is-running {
+    transform: translateY(-10px);
+  }
+  .os-dock-dot {
+    bottom: -7.5px;
+    width: 5px;
+    height: 5px;
+    margin-left: -2.5px;
+  }
+  .os-product,
+  .os-mc-row {
+    flex-direction: column;
+  }
+  .os-mc {
+    align-items: flex-start;
+    overflow: auto;
+    padding: 16px 16px 200px;
+  }
+  /* Phones: every window sits just under the menu bar, 8px from both
+     edges, and stops above the dock. */
+  .os-win {
+    top: 44px !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    max-width: none;
+    max-height: calc(100dvh - 44px - 150px);
+    overflow: auto;
+  }
+  .os-win.has-height {
+    height: calc(100dvh - 44px - 150px) !important;
+  }
+}
+
+/* ---------- App windows (Stake, Earn) ---------- */
+
+.os-win-app {
+  padding-bottom: 16px;
+}
+
+.os-win-app .os-win-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.os-win-app .portal-window-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.os-win-app .portal-app {
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  background: transparent;
+  container: portal-app / inline-size;
+}
+
+.os-win-app .portal-sidebar {
+  background: transparent;
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+.os-win-tile {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 10.667px;
+  background: #171717;
+  box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+}
+
+.os-demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 10px;
+  margin-right: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--os-ink-2);
+}
+
+.os-demo-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d9ae6a;
+}
+
+/* ---------- Widget entrance ---------- */
+
+.os-widget-chart img,
+.os-chart-live svg {
+  clip-path: inset(0 100% 0 0);
+  animation: os-chart-draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.55s forwards;
+}
+
+@keyframes os-chart-draw {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.os-widget-chart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  left: 0;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(74, 222, 128, 0.9), transparent);
+  opacity: 0;
+  animation: os-chart-scan 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.55s;
+}
+
+@keyframes os-chart-scan {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-widget-chart img {
+    animation: none;
+    clip-path: none;
+  }
+  .os-widget-chart::after {
+    animation: none;
+  }
+}
+
+/* ---------- Scrollbars: thin, rounded, no arrows or track ---------- */
+
+@supports selector(::-webkit-scrollbar) {
+  html .os,
+  html .os * {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+}
+
+.os ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.os ::-webkit-scrollbar-track,
+.os ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.os ::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22) padding-box;
+}
+
+.os ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4) padding-box;
+}
+
+.os ::-webkit-scrollbar-button {
+  display: none;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  html .os * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+}
+
+.os-earn-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.os-readme-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.os-readme-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.os-icon:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.55);
+}
+
+/* The dock slides up when the desktop opens. */
+.os-dock {
+  /* backwards, not both: a finished animation must not linger, or the dock
+     stays a backdrop root and the search panel loses its blur. */
+  animation: os-dock-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s backwards;
+}
+
+@keyframes os-dock-in {
+  from {
+    translate: 0 calc(100% + 48px);
+    opacity: 0;
+  }
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-dock {
+    animation: none;
+  }
+}
+
+
+/* ---------- Menu bar ---------- */
+
+.os-menubar {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: 32px;
+  padding: 0 14px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: inset 0 -0.5px 0 rgba(255, 255, 255, 0.12);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  animation: os-menubar-in 0.5s var(--os-ease) backwards;
+}
+
+/* Same trick as the dock, so the XBorg menu can blur the desktop. */
+.os-menubar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(10, 12, 24, 0.38);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  pointer-events: none;
+}
+
+@keyframes os-menubar-in {
+  from {
+    transform: translateY(-100%);
+  }
+}
+
+.os-menubar-left,
+.os-menubar-status,
+.os-menubar-apps {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.os-menubar-left {
+  gap: 2px;
+}
+
+.os-menubar-menu {
+  position: relative;
+}
+
+.os-menubar-logo,
+.os-menubar-item {
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.os-menubar-logo:hover,
+.os-menubar-logo.is-open,
+.os-menubar-item:hover,
+.os-menubar-item:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.os-menubar-brand {
+  padding: 0 10px 0 4px;
+  font-weight: 700;
+}
+
+.os-menubar-apps {
+  overflow: hidden;
+}
+
+.os-menubar-item {
+  opacity: 0.92;
+}
+
+.os-menubar-divider {
+  width: 1px;
+  height: 14px;
+  margin: 0 6px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.os-menubar-dropdown {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  min-width: 220px;
+  padding: 6px;
+  /* Same surface and hover as the dock search panel. */
+  border-radius: 16px;
+  background: rgba(16, 16, 20, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight), 0 24px 48px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  text-shadow: none;
+}
+
+.os-menubar-dropdown button,
+.os-menubar-dropdown a {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--os-ink);
+}
+
+.os-menubar-dropdown a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.os-menubar-dropdown button:hover,
+.os-menubar-dropdown button:focus-visible,
+.os-menubar-dropdown a:hover,
+.os-menubar-dropdown a:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.os-menubar-sep {
+  height: 1px;
+  margin: 4px 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.os-menubar-status {
+  gap: 14px;
+  flex: none;
+}
+
+.os-menubar-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.92;
+}
+
+.os-menubar-time {
+  display: inline-flex;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1100px) {
+  .os-menubar-apps .os-menubar-item:nth-child(n + 4):not(a) {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .os-menubar-apps,
+  .os-menubar-brand,
+  .os-menubar-stat:first-child,
+  .os-menubar-time span:first-child {
+    display: none;
+  }
+}
+
+/* ---------- Clients ---------- */
+
+.os-client-grid {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+/* Logos only: one tile per client, the name stays as the image's alt text. */
+.os-client {
+  height: 96px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.os-client img {
+  max-width: 64%;
+  max-height: 44px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+/* ---------- Preferences ---------- */
+
+.os-prefs {
+  color: #fff;
+}
+
+.os-prefs-title {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.os-prefs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.os-prefs-option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.os-prefs-thumb {
+  display: block;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  background: #000 center / cover no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: box-shadow 0.15s, transform 0.15s var(--os-ease);
+}
+
+.os-prefs-option:hover .os-prefs-thumb {
+  transform: translateY(-2px);
+}
+
+.os-prefs-option.is-selected .os-prefs-thumb {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.os-prefs-option:focus-visible {
+  outline: none;
+}
+
+.os-prefs-option:focus-visible .os-prefs-thumb {
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.os-prefs-name {
+  opacity: 0.75;
+}
+
+.os-prefs-option.is-selected .os-prefs-name {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* ---------- Stake (live xborg.com/earn) ---------- */
+
+.os-win.os-win-stake {
+  padding-bottom: 0;
+}
+
+.os-win-stake .os-win-body {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.os-stake {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  background: #05060a;
+  border-radius: 0 0 inherit inherit;
+}
+
+.os-stake-frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.os-stake-frame.is-loaded {
+  opacity: 1;
+}
+
+.os-stake-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.os-stake-loading a {
+  color: #fff;
+  font-size: 13px;
+}
+
+.os-spinner {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(255, 255, 255, 0.15);
+  border-top-color: #fff;
+  animation: os-spin 0.8s linear infinite;
+}
+
+@keyframes os-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.os-win-open-out {
+  flex: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-menubar {
+    animation: none;
+  }
+}
+
+/* ---------- Messages ---------- */
+
+.os-win-tile-chat {
+  background: #695dd4;
+  color: #fff;
+}
+
+.os-win-chat .os-win-body {
+  padding: 0 16px;
+}
+
+.os-chat {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.os-chat-list {
+  width: 248px;
+  flex: none;
+  padding: 14px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  overflow-y: auto;
+}
+
+.os-chat-list-title {
+  margin: 0 8px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--os-ink-3);
+}
+
+.os-chat-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.os-chat-contact {
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.os-chat-contact:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.os-chat-contact.is-active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.os-chat-contact-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.os-chat-contact-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.os-chat-contact-preview {
+  font-size: 12px;
+  color: var(--os-ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.os-chat-avatar {
+  position: relative;
+  flex: none;
+  display: block;
+}
+
+.os-chat-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.os-chat-avatar.is-icon img {
+  border-radius: 28%;
+}
+
+.os-chat-online {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 28%;
+  height: 28%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: var(--os-green);
+  box-shadow: 0 0 0 2px #15161c;
+}
+
+.os-chat-pane {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.os-chat-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.os-chat-head-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.os-chat-head-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.os-chat-head-status {
+  font-size: 12px;
+  color: var(--os-green);
+}
+
+.os-chat-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.os-chat-day {
+  align-self: center;
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--os-ink-3);
+}
+
+.os-chat-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: 78%;
+}
+
+.os-chat-row.is-grouped {
+  margin-top: -6px;
+}
+
+.os-chat-row.is-me {
+  align-self: flex-end;
+}
+
+.os-chat-row-avatar {
+  width: 28px;
+  flex: none;
+}
+
+.os-chat-bubble {
+  padding: 9px 13px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.4;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.os-chat-row.is-me .os-chat-bubble {
+  background: #695dd4;
+}
+
+/* Corners as in Messenger: a run of bubbles from the same sender is round
+   at its top and bottom and squared where the bubbles meet. */
+.os-chat-row.is-them.is-grouped .os-chat-bubble {
+  border-top-left-radius: 5px;
+}
+
+.os-chat-row.is-them.is-continued .os-chat-bubble {
+  border-bottom-left-radius: 5px;
+}
+
+.os-chat-row.is-me.is-grouped .os-chat-bubble {
+  border-top-right-radius: 5px;
+}
+
+.os-chat-row.is-me.is-continued .os-chat-bubble {
+  border-bottom-right-radius: 5px;
+}
+
+.os-chat-bubble p {
+  margin: 0;
+}
+
+.os-chat-action {
+  margin-top: 8px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #121212;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s var(--os-ease);
+}
+
+.os-chat-action:hover {
+  transform: translateY(-1px);
+}
+
+.os-chat-dots {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 2px;
+}
+
+.os-chat-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  animation: os-chat-dot 1s ease-in-out infinite;
+}
+
+.os-chat-dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.os-chat-dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes os-chat-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+.os-chat-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.os-chat-choices-title {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: var(--os-ink-3);
+}
+
+.os-chat-choices-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.os-chat-choice {
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  /* Same fill as the message field below. */
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s var(--os-ease);
+}
+
+.os-chat-choice:hover,
+.os-chat-choice:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.os-chat-composer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 14px 14px;
+  padding: 6px 6px 6px 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.os-chat-composer input {
+  flex: 1;
+  min-width: 0;
+  height: 32px;
+  border: 0;
+  outline: none;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+}
+
+.os-chat-composer input:focus,
+.os-chat-composer input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.os-chat-composer:focus-within {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.os-chat-composer input::placeholder {
+  color: var(--os-ink-3);
+}
+
+.os-chat-send {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #121212;
+  transition: opacity 0.15s;
+}
+
+.os-chat-send:disabled {
+  opacity: 0.35;
+}
+
+@media (max-width: 899px) {
+  .os-chat-pane {
+    min-height: 0;
+  }
+  .os-chat-list {
+    width: auto;
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    overflow-x: auto;
+  }
+  .os-chat-list-title,
+  .os-chat-contact-preview {
+    display: none;
+  }
+  .os-chat-list ul {
+    flex-direction: row;
+  }
+  .os-chat-contact {
+    width: auto;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .os-chat-contact-name {
+    font-size: 11px;
+  }
+  .os-chat-row {
+    max-width: 90%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-chat-dots i {
+    animation: none;
+  }
+}
+
+
+/* ---------- Phone tweaks ---------- */
+
+@media (max-width: 899px) {
+  /* No notifications and no All apps on phones. */
+  .os-notifs,
+  .os-dock-apps > li:has(> .os-dock-all) {
+    display: none;
+  }
+  /* Every tile keeps the same corner ratio as the 48px icons (16/48). */
+  .os-dock-all,
+  .os-dock-stake,
+  .os-dock-item {
+    border-radius: 33.333%;
+  }
+  /* Smaller type inside windows. */
+  .os-win-bar {
+    padding: 20px;
+  }
+  .os-win-title {
+    font-size: 16px;
+  }
+  .os-win-body {
+    padding: 0 20px;
+  }
+  .os-win {
+    padding-bottom: 20px;
+    border-radius: 24px;
+  }
+  .os-lead,
+  .os-lead-sm {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  .os-proof,
+  .os-readme {
+    font-size: 15px;
+  }
+  .os-product {
+    gap: 20px;
+  }
+  .os-product-copy {
+    gap: 20px;
+  }
+  .os-cta {
+    height: 48px;
+    padding: 0 22px;
+    font-size: 14px;
+  }
+  .os-mc-card {
+    padding-bottom: 20px;
+  }
+  .os-mc-body {
+    padding: 0 20px;
+    gap: 20px;
+  }
+  .os-mc-copy {
+    min-height: 0;
+    gap: 20px;
+  }
+}
+
+/* ---------- Custom scrollbar (ScrollArea) ---------- */
+
+.os-scroll {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+html .os .os-scroll-view {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+html .os .os-scroll-view::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.os-scroll-track {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 6px;
+  width: 10px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Shown while the pointer is over the window (or the bar is held). */
+.os-win:hover .os-scroll-track,
+.os-scroll.is-dragging .os-scroll-track {
+  opacity: 1;
+}
+
+.os-scroll-thumb {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  right: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.28);
+  transition: background 0.15s, left 0.15s, right 0.15s;
+  touch-action: none;
+}
+
+.os-scroll-track:hover .os-scroll-thumb,
+.os-scroll.is-dragging .os-scroll-thumb {
+  left: 1px;
+  right: 1px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+@media (hover: none) {
+  .os-scroll-track {
+    display: none;
+  }
+}
+
+/* ---------- Live XBG curve ---------- */
+
+.os-chart-live {
+  position: absolute;
+  inset: 0;
+  touch-action: pan-y;
+  cursor: crosshair;
+}
+
+.os-chart-live svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.os-chart-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5), 0 0 10px currentColor;
+  pointer-events: none;
+}
+
+.os-chart-tip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: rgba(16, 16, 20, 0.86);
+  box-shadow: var(--os-highlight), 0 6px 16px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.os-chart-tip strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.os-chart-tip span {
+  color: var(--os-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.os-chart-tip.is-right {
+  transform: translateX(-12px);
+}
+
+.os-chart-tip.is-left {
+  transform: translateX(calc(-100% + 12px));
+}
+
+.os-widget-price.is-up {
+  animation: os-tick-up 0.9s ease-out;
+}
+
+.os-widget-price.is-down {
+  animation: os-tick-down 0.9s ease-out;
+}
+
+@keyframes os-tick-up {
+  from {
+    color: var(--os-green);
+  }
+}
+
+@keyframes os-tick-down {
+  from {
+    color: #ff6b6b;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-chart-live svg {
+    animation: none;
+    clip-path: none;
+  }
+  .os-widget-price.is-up,
+  .os-widget-price.is-down {
+    animation: none;
+  }
+}
+
+/* iOS zooms into any field under 16px when it gets focus: keep them at 16. */
+@media (max-width: 899px) {
+  .os-search-field input,
+  .os-chat-composer input {
+    font-size: 16px;
+  }
+}
+
+/* No hover on touch screens: dock labels would stay stuck after a tap. */
+@media (hover: none) {
+  .os-dock-label {
+    display: none;
+  }
+}
+
+/* ---------- Boot screen ---------- */
+
+.os-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: #000;
+  color: #fff;
+}
+
+.os-boot-logo {
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.25));
+}
+
+.os-boot-bar {
+  width: 180px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.os-boot-bar span {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border-radius: inherit;
+  transform-origin: left center;
+  transition: transform 0.25s ease-out;
+}
+
+/* ---------- Context menus ---------- */
+
+.os {
+  -webkit-touch-callout: none;
+}
+
+.os-ctx {
+  position: fixed;
+  min-width: 220px;
+  padding: 5px;
+  border-radius: 12px;
+  /* Same frosted glass as the windows. */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight), 0 0 0 0.5px rgba(255, 255, 255, 0.12), 0 16px 40px rgba(0, 0, 0, 0.35);
+  color: var(--os-ink);
+  font-size: 13px;
+  outline: none;
+  transform-origin: top left;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.os-ctx-item {
+  height: 28px;
+  padding: 0 10px 0 6px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.os-ctx-item.is-active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.os-ctx-item.is-disabled {
+  opacity: 0.4;
+}
+
+.os-ctx-check {
+  width: 16px;
+  flex: none;
+  text-align: center;
+  font-size: 12px;
+}
+
+.os-ctx-label {
+  flex: 1;
+  padding-right: 24px;
+}
+
+.os-ctx-key {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--os-ink-3);
+  text-align: right;
+}
+
+.os-ctx-item.is-active .os-ctx-key {
+  color: var(--os-ink-2);
+}
+
+.os-ctx-more {
+  color: var(--os-ink-2);
+  flex: none;
+}
+
+.os-ctx-sep {
+  height: 1px;
+  margin: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (hover: none) {
+  .os-ctx-key {
+    display: none;
+  }
+  .os-ctx-item {
+    height: 36px;
+  }
+}
+
+/* ---------- Toast ---------- */
+
+.os-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 140px;
+  z-index: 950;
+  translate: -50% 0;
+  padding: 9px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--os-highlight);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--os-ink);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ---------- Get Info / About this OS / .secret ---------- */
+
+.os-info,
+.os-about {
+  padding: 0 8px 8px;
+  color: var(--os-ink);
+}
+
+.os-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.os-info-icon {
+  width: 56px;
+  height: 56px;
+  flex: none;
+  display: grid;
+  place-items: center;
+}
+
+.os-info-tile {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+}
+
+.os-info-name {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.os-info-kind {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--os-ink-3);
+}
+
+.os-info-rows {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+}
+
+.os-info-rows dt {
+  color: var(--os-ink-3);
+  text-align: right;
+}
+
+.os-info-rows dd {
+  margin: 0;
+  color: var(--os-ink);
+}
+
+.os-mono {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+
+.os-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.os-about-logo {
+  color: #fff;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.2));
+}
+
+.os-about-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.os-about-version {
+  margin: 4px 0 18px;
+  font-size: 13px;
+  color: var(--os-ink-3);
+}
+
+.os-about .os-info-rows {
+  width: 100%;
+  text-align: left;
+}
+
+.os-secret {
+  padding: 8px 8px 20px;
+  text-align: center;
+}
+
+.os-secret p {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--os-ink);
+}
+
+.os-icon.is-hidden-file,
+img.is-hidden-file {
+  opacity: 0.45;
+}
+
+/* Clean Up: icons glide back to their places. */
+.os.is-tidying .os-icon {
+  transition: left 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+    right 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), bottom 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---------- Live XBG wallpaper ---------- */
+
+.os-wallpaper.is-live::before {
+  display: none;
+}
+
+.os-wallpaper-live {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- CRT mode (Konami code) ---------- */
+
+.os.is-crt {
+  filter: grayscale(1) sepia(1) hue-rotate(68deg) saturate(3.2) brightness(0.92) contrast(1.15);
+  animation: os-crt-on 0.45s ease-out;
+}
+
+.os.is-crt,
+.os.is-crt * {
+  font-family: 'Geist Mono', ui-monospace, monospace !important;
+}
+
+.os.is-crt * {
+  text-shadow: 0 0 6px rgba(120, 255, 140, 0.55) !important;
+}
+
+.os-crt {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0, rgba(0, 0, 0, 0.28) 1px, transparent 1px, transparent 3px),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.6) 100%);
+  animation: os-crt-flicker 0.12s steps(2) infinite;
+}
+
+@keyframes os-crt-flicker {
+  50% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes os-crt-on {
+  0% {
+    transform: scaleY(0.004) scaleX(0.6);
+    filter: brightness(3) grayscale(1);
+  }
+  40% {
+    transform: scaleY(0.004) scaleX(1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os-crt,
+  .os.is-crt {
+    animation: none;
+  }
+}
+
+/* Full screen makes no sense on a phone, where windows already fill it. */
+@media (max-width: 899px) {
+  .os-win-full {
+    display: none;
+  }
+}
+
+/* Snap preview: the half of the screen a dragged window will take. */
+.os-snap-preview {
+  position: absolute;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  animation: os-snap-in 0.18s ease-out;
+}
+
+@keyframes os-snap-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+/* =====================================================================
+   V2 design (Figma node 75:1992)
+   Flat, square panels: solid #171717, a 1px white 10% border, small
+   corner brackets (top left and bottom right), 4px radius on controls,
+   monochrome app tiles, and a dithered wallpaper. Applied to the dock,
+   notifications and widget as drawn, and to every other surface too.
+   ===================================================================== */
+
+.os {
+  --v2-surface: #171717;
+  --v2-border: rgba(255, 255, 255, 0.1);
+  --v2-bracket: rgba(255, 255, 255, 0.3);
+  --v2-tile: #141416;
+  --v2-text: #f4f4f5;
+  --v2-text-2: #b4b4ba;
+  --v2-text-3: #848381;
+  /* Corner brackets, from the Figma vector: one solid #5C5C5C L shape,
+     14px with 2px arms, 7px inside the border (top left and bottom right). */
+  --v2-brackets:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M0 14H2V2H14V0H0Z' fill='%235C5C5C'/%3E%3C/svg%3E") 7px 7px / 14px 14px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cpath d='M14 0H12V12H0V14H14Z' fill='%235C5C5C'/%3E%3C/svg%3E") right 7px bottom 7px / 14px 14px no-repeat;
+}
+
+/* Dithered wallpaper: full strength and crisp pixels. */
+.os-wallpaper::before {
+  image-rendering: pixelated;
+}
+
+/* ---------- Panels: notifications, widget, windows, All apps cards ---------- */
+
+.os .os-notif,
+.os .os-widget,
+.os .os-win,
+.os .os-mc-card {
+  border-radius: 0;
+  background: var(--v2-brackets), var(--v2-surface);
+  border: 1px solid var(--v2-border);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.os .os-notif *,
+.os .os-widget * {
+  text-shadow: none;
+}
+
+.os .os-win:not(.is-front) {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.os .os-win.is-full,
+.os .os-win.is-snapped {
+  border-radius: 0;
+}
+
+/* Notifications */
+.os .os-notifs {
+  width: 294px;
+}
+
+.os .os-notif-main {
+  padding: 24px;
+  border-radius: 0;
+}
+
+.os .os-notif-title {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--v2-text);
+}
+
+.os .os-notif-body {
+  font-size: 12px;
+  color: var(--v2-text-2);
+}
+
+.os .os-notif-close {
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--v2-tile);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+}
+
+/* Widget */
+.os .os-widget {
+  padding: 25px;
+}
+
+.os .os-widget-label {
+  font-size: 18px;
+}
+
+.os .os-widget-wallet {
+  border-radius: 4px;
+  background: #fff;
+  color: var(--v2-surface);
+  font-weight: 500;
+}
+
+.os .os-widget-wallet:hover {
+  background: #e9e9ea;
+}
+
+/* ---------- Dock ---------- */
+
+.os .os-dock {
+  height: 66px;
+  padding: 11px 23px 11px 11px;
+  gap: 16px;
+  border-radius: 0;
+  border: 1px solid var(--v2-border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.os .os-dock::before {
+  border-radius: 0;
+  background: var(--v2-surface);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.os .os-search-field {
+  width: 300px;
+  height: 44px;
+  padding: 0 9px 0 17px;
+  gap: 13px;
+  border-radius: 64px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.os .os-search-field input {
+  height: 42px;
+  font-size: 12px;
+  color: var(--v2-text);
+  caret-color: var(--v2-text);
+}
+
+.os .os-search-field input::placeholder {
+  color: var(--v2-text-3);
+}
+
+.os .os-search-field:focus-within {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+}
+
+.os-search-kbd {
+  flex: none;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font: 400 11px 'Geist Mono', ui-monospace, monospace;
+  color: #a1a1a8;
+}
+
+/* Separators: 1px, 28px tall, white 12%. */
+.os .os-dock-rule {
+  width: 1px;
+  height: 28px;
+  margin: 0 8px;
+}
+
+.os .os-dock-rule::before {
+  height: 28px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* The dock opens with a separator between search and the apps. */
+.os .os-dock-apps {
+  height: 44px;
+  gap: 8px;
+  padding-left: 17px;
+  position: relative;
+}
+
+.os .os-dock-apps::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.os .os-dock-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  transition: background 0.15s, transform 0.15s var(--os-ease);
+}
+
+.os .os-dock-item > img {
+  width: 44px;
+  height: 44px;
+  /* Same fade as the Messages tile when an app opens or closes. */
+  transition: filter 0.15s;
+}
+
+.os .os-dock-item::after {
+  display: none;
+}
+
+.os .os-dock-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Open apps: the tile turns white with a dark glyph (no raise, no dot). */
+.os .os-dock-item.is-running {
+  transform: none;
+}
+
+.os .os-dock-item.is-running:hover {
+  transform: translateY(-2px);
+}
+
+.os .os-dock-item.is-running > img {
+  filter: invert(1) brightness(1.04);
+}
+
+.os .os-dock-dot {
+  display: none;
+}
+
+.os-dock-tile {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  background: var(--v2-tile);
+  color: #fff;
+  transition: background 0.15s, color 0.15s;
+}
+
+.os .os-dock-item.is-running .os-dock-tile {
+  background: #f4f4f5;
+  color: #000;
+}
+
+/* X and Discord: bare white glyphs, 32px apart. */
+.os .os-dock-social {
+  width: 20px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin: 0 8px;
+}
+
+.os .os-dock-social > img {
+  width: 20px;
+  height: 19px;
+  opacity: 0.9;
+}
+
+.os .os-dock-social:hover > img {
+  opacity: 1;
+}
+
+.os .os-dock-label {
+  border-radius: 4px;
+  background: var(--v2-surface);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+  font-size: 12px;
+}
+
+/* ---------- Floating surfaces: menus, search results, toast, bar ---------- */
+
+.os .os-search-panel,
+.os .os-menubar-dropdown,
+.os .os-ctx,
+.os .os-toast {
+  border-radius: 0;
+  background: var(--v2-surface);
+  border: 1px solid var(--v2-border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.os .os-search-option,
+.os .os-menubar-dropdown button,
+.os .os-menubar-dropdown a,
+.os .os-ctx-item {
+  border-radius: 4px;
+}
+
+.os .os-menubar::before {
+  background: var(--v2-surface);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.os .os-menubar {
+  box-shadow: inset 0 -1px 0 var(--v2-border);
+}
+
+/* ---------- Windows ---------- */
+
+.os .os-win-title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.os .os-win-btn {
+  border-radius: 4px;
+}
+
+.os .os-win-tile,
+.os .os-info-tile {
+  border-radius: 4px;
+  background: var(--v2-tile);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+}
+
+.os .os-win-tile::after {
+  display: none;
+}
+
+.os .os-shot,
+.os .os-prefs-thumb,
+.os .os-client {
+  border-radius: 4px;
+}
+
+.os .os-client {
+  background: var(--v2-tile);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+}
+
+/* Main buttons: white, 4px radius, medium weight. */
+.os .os-cta {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.os .os-chat-action {
+  border-radius: 4px;
+}
+
+/* Messages */
+.os .os-chat {
+  border-radius: 0;
+  background: #121212;
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+}
+
+.os .os-chat-bubble {
+  border-radius: 4px;
+}
+
+.os .os-chat-row.is-them .os-chat-bubble,
+.os .os-chat-row.is-me .os-chat-bubble {
+  border-radius: 4px;
+}
+
+.os .os-chat-row.is-them .os-chat-bubble {
+  background: var(--v2-tile);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+}
+
+.os .os-chat-choice {
+  border-radius: 4px;
+}
+
+.os .os-chat-composer {
+  border-radius: 64px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.os .os-chat-avatar.is-photo img {
+  border-radius: 4px;
+}
+
+/* Stake iframe sits flush in the square window. */
+.os .os-stake {
+  border-radius: 0;
+}
+
+/* Snap preview */
+.os .os-snap-preview {
+  border-radius: 0;
+  background: var(--v2-brackets), rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* Phones: the same flat look, dock tiles shrink with the screen. */
+@media (max-width: 899px) {
+  .os .os-dock {
+    height: auto;
+    padding: 10px;
+  }
+  .os .os-search-field {
+    width: 100%;
+  }
+  .os .os-dock-apps {
+    height: auto;
+    padding-left: 0;
+  }
+  .os .os-dock-apps::before {
+    display: none;
+  }
+  .os .os-dock-item,
+  .os .os-dock-item > img,
+  .os-dock-tile {
+    width: 100%;
+    max-width: 44px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  .os .os-dock-social {
+    width: 20px;
+    max-width: 20px;
+    aspect-ratio: auto;
+    margin: 0 6px;
+  }
+  .os .os-win {
+    border-radius: 0;
+  }
+  .os-search-kbd {
+    display: none;
+  }
+}

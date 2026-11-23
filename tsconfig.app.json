@@ -20,6 +20,6 @@
     "noUncheckedSideEffectImports": true,
     "types": ["vite/client", "vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", "src-v2"],
   "exclude": ["src/test"]
 }

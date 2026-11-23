@@ -1,0 +1,900 @@
+/*
+  Portal structure: page layouts, grids and dialog content for every Portal state.
+  Shared visual treatment lives in components.css.
+*/
+.portal-app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.window-portal .portal-app {
+  height: 100%;
+  min-height: 0;
+}
+
+.portal-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--x-t7);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--portal-secondary);
+}
+
+.demo-badge,
+.status-badge {
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.portal-shell {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+}
+
+.portal-tabs {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+}
+
+.portal-tabs button,
+.portal-tabbar button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+.portal-tabs button {
+  width: 100%;
+  text-align: left;
+}
+
+.portal-tabs svg,
+.portal-tabbar svg {
+  flex: none;
+}
+
+.portal-tabbar {
+  display: none;
+}
+
+.portal-body {
+  min-width: 0;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.portal-page {
+  margin: 0 auto;
+}
+
+.portal-page-heading h1,
+.portal-entry-content h1 {
+  text-wrap: balance;
+}
+
+.portal-page-heading > p:last-child,
+.portal-entry-content > p,
+.modal-lead,
+.experience-modal-content > p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--portal-secondary);
+  text-wrap: pretty;
+}
+
+.active-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--x-space-6);
+}
+
+.text-action {
+  text-underline-offset: 4px;
+}
+
+.portal-entry-content {
+  display: flex;
+  min-height: 100%;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--x-space-12) var(--x-space-5) var(--x-space-20);
+  text-align: center;
+}
+
+.portal-entry-content > p {
+  max-width: 540px;
+  margin-bottom: var(--x-space-6);
+}
+
+.portal-entry-mark {
+  display: grid;
+  margin-bottom: var(--x-space-5);
+  place-items: center;
+  background: var(--ink);
+  color: var(--base);
+}
+
+.portal-entry-mark svg {
+  width: 24px;
+  height: 26px;
+}
+
+.portal-entry-content .demo-badge {
+  margin-bottom: var(--x-space-3);
+}
+
+.staking-heading,
+.section-heading-row,
+.experience-title-row,
+.mission-card-head,
+.season-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-5);
+}
+
+.staking-heading {
+  align-items: start;
+  margin-bottom: var(--x-space-6);
+}
+
+.staking-heading h2,
+.section-heading-row h2 {
+  margin: var(--x-space-1) 0 0;
+}
+
+.staking-heading p {
+  margin: var(--x-space-1) 0 0;
+  color: var(--portal-secondary);
+  font-size: var(--x-t6);
+}
+
+.staking-heading > strong {
+  font-family: var(--font-mono);
+}
+
+.staking-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.05fr) minmax(280px, 0.95fr);
+  gap: var(--x-space-8);
+  margin-bottom: var(--x-space-6);
+}
+
+.stake-control label,
+.stake-step label,
+.proof-form label {
+  display: block;
+  margin-bottom: var(--x-space-2);
+  color: var(--portal-secondary);
+  font-size: var(--x-t6);
+  font-weight: 500;
+}
+
+.amount-field {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-3);
+}
+
+.amount-field input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.stake-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--x-space-2);
+  margin-top: var(--x-space-2);
+}
+
+.stake-control > .portal-primary-action {
+  margin-top: var(--x-space-6);
+}
+
+.stake-presets button,
+.mission-filters button {
+  cursor: pointer;
+}
+
+.stake-preview-grid,
+.confirmation-list {
+  display: grid;
+  margin: 0;
+}
+
+.stake-preview-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stake-preview-grid > div {
+  min-width: 0;
+}
+
+.stake-preview-grid dd,
+.confirmation-list dd,
+.mission-meta dd {
+  margin: var(--x-space-1) 0 0;
+}
+
+.benefit-strip {
+  display: flex;
+  margin-top: var(--x-space-5);
+}
+
+.benefit-strip span {
+  flex: 1;
+  padding: var(--x-space-4) var(--x-space-4);
+  font-size: var(--x-t6);
+}
+
+.benefit-strip span + span {
+  border-left: 1px solid var(--line-strong);
+}
+
+.section-heading-row {
+  align-items: end;
+}
+
+.season-pool {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.season-metrics,
+.reward-metrics {
+  display: grid;
+}
+
+.season-metrics {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.season-metrics > div,
+.reward-metrics > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.season-progress span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.mission-list {
+  display: grid;
+  gap: var(--x-space-3);
+}
+
+.venture-lockup {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-3);
+}
+
+.venture-lockup > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.venture-mark {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.mission-venture {
+  font-weight: 600;
+}
+
+.mission-copy p,
+.experience-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  color: var(--portal-secondary);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.mission-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mission-meta > div {
+  min-width: 0;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+}
+
+.experience-card:first-child {
+  grid-column: 1 / -1;
+  grid-template-columns: 180px 1fr;
+}
+
+.experience-visual {
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+}
+
+.experience-card.is-locked .experience-visual {
+  filter: saturate(0.45);
+  opacity: 0.74;
+}
+
+.experience-visual span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.experience-card-body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-title-row {
+  width: 100%;
+  align-items: start;
+}
+
+.experience-level {
+  margin: var(--x-space-3) 0;
+  font-family: var(--font-mono);
+}
+
+.experience-card-body > strong {
+  margin-bottom: var(--x-space-3);
+  font-weight: 500;
+}
+
+.activity-row {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: center;
+}
+
+.activity-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+.activity-row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--x-space-2);
+  margin-bottom: var(--x-space-4);
+}
+
+.portal-empty-state {
+  display: flex;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  padding: var(--x-space-8);
+  background: var(--surface-raised);
+}
+
+.portal-empty-state h2 {
+  margin: 0 0 var(--x-space-2);
+}
+
+.portal-empty-state p {
+  margin: 0 0 var(--x-space-5);
+  color: var(--portal-secondary);
+}
+
+.reward-summary,
+.reward-breakdown,
+.reward-history {
+  margin-top: var(--x-space-5);
+  padding: var(--x-space-5);
+}
+
+.reward-metrics {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.breakdown-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-4);
+  padding: var(--x-space-3) var(--x-space-4);
+}
+
+.breakdown-list span {
+  color: var(--portal-secondary);
+  font-size: var(--x-t6);
+}
+
+.reward-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line-strong);
+}
+
+.reward-table-wrap table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: var(--x-t7);
+}
+
+.reward-table-wrap th,
+.reward-table-wrap td {
+  padding: var(--x-space-3) var(--x-space-3);
+  border-bottom: 1px solid var(--line-strong);
+  text-align: left;
+}
+
+.reward-table-wrap th {
+  background: var(--surface);
+  color: var(--portal-secondary);
+  font-weight: 500;
+}
+
+.reward-table-wrap td:nth-child(1),
+.reward-table-wrap td:nth-child(3),
+.reward-table-wrap .tx-hash {
+  font-family: var(--font-mono);
+}
+
+.reward-table-wrap .tx-hash {
+  color: var(--x-ink-2);
+}
+
+.portal-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: var(--x-space-5);
+  background: var(--x-scrim);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.portal-modal {
+  display: flex;
+  width: min(100%, 680px);
+  max-height: calc(100% - 16px);
+  flex-direction: column;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.portal-modal-header {
+  display: flex;
+  min-height: 58px;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-4);
+  padding: var(--x-space-3) var(--x-space-3) var(--x-space-3) var(--x-space-5);
+}
+
+.portal-modal-header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.portal-icon-button {
+  display: grid;
+  flex: none;
+  place-items: center;
+  cursor: pointer;
+}
+
+.portal-icon-button svg {
+  width: 18px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 1.6;
+}
+
+.portal-modal-body {
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--x-space-6);
+}
+
+.stake-step,
+.mission-detail,
+.experience-modal-content,
+.proof-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--x-space-4);
+}
+
+.stake-step h3,
+.mission-detail h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--x-t3);
+}
+
+.modal-summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-4);
+}
+
+.modal-summary-row span {
+  color: var(--portal-secondary);
+  font-size: var(--x-t7);
+}
+
+.confirmation-list {
+  gap: 0;
+}
+
+.confirmation-list > div {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--x-space-5);
+}
+
+.confirmation-list dd {
+  text-align: right;
+}
+
+.stake-complete {
+  align-items: center;
+  text-align: center;
+}
+
+.stake-complete .modal-summary-row {
+  width: 100%;
+}
+
+.confirmation-mark,
+.toast-mark {
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--x-canvas);
+  font-weight: 800;
+}
+
+.confirmation-mark {
+  width: 50px;
+  height: 50px;
+  font-size: var(--x-t3);
+}
+
+.mission-detail-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-3);
+  color: var(--portal-secondary);
+  font-size: var(--x-t7);
+}
+
+.mission-steps {
+  margin: var(--x-space-3) 0 0;
+  padding-left: var(--x-space-6);
+  color: var(--portal-secondary);
+  font-size: var(--x-t6);
+}
+
+.mission-steps li + li {
+  margin-top: var(--x-space-2);
+}
+
+.mission-detail-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.review-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--x-space-4);
+}
+
+.submitted-state {
+  margin: 0;
+  color: var(--x-ink-1);
+  font-weight: 600;
+}
+
+.proof-form input,
+.proof-form textarea {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  outline: 0;
+  background: var(--surface);
+  color: var(--ink);
+  padding: var(--x-space-3) var(--x-space-3);
+  font-family: var(--font-body);
+  font-size: var(--x-t5);
+  resize: vertical;
+}
+
+.proof-form input {
+  min-height: 44px;
+}
+
+.form-error {
+  margin: calc(var(--x-space-2) * -1) 0 0;
+  color: var(--x-error);
+  font-size: var(--x-t7);
+}
+
+.referral-link-row {
+  display: flex;
+  align-items: center;
+  gap: var(--x-space-3);
+  border: 1px solid var(--line-strong);
+  padding: var(--x-space-3);
+}
+
+.referral-link-row code {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: var(--x-t7);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.referral-progress {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line-strong);
+}
+
+.referral-stage {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--x-space-2);
+  padding: var(--x-space-3);
+  color: var(--portal-secondary);
+}
+
+.referral-stage + .referral-stage {
+  border-left: 1px solid var(--line-strong);
+}
+
+.referral-stage span {
+  font-family: var(--font-mono);
+  font-size: var(--x-t7);
+}
+
+.referral-stage strong {
+  font-size: var(--x-t7);
+}
+
+.referral-stage.is-complete,
+.referral-stage.is-current {
+  background: var(--x-accent-soft);
+  color: var(--ink);
+}
+
+.referral-stage.is-current {
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.mission-detail-note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-space-1);
+  border-left: 3px solid var(--x-warning);
+  padding: var(--x-space-2) var(--x-space-3);
+  background: var(--x-warning-soft);
+}
+
+.mission-detail-note strong {
+  font-size: var(--x-t6);
+}
+
+.mission-detail-note span {
+  color: var(--portal-secondary);
+  font-size: var(--x-t7);
+}
+
+.portal-toast {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 12;
+  display: flex;
+  max-width: min(420px, calc(100% - 32px));
+  min-height: 48px;
+  align-items: center;
+  gap: var(--x-space-3);
+  padding: var(--x-space-3) var(--x-space-4);
+}
+
+.toast-mark {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  font-size: var(--x-t7);
+}
+
+@media (max-width: 899px) {
+  .window-portal .portal-app {
+    height: calc(100dvh - 36px);
+  }
+
+  .portal-shell {
+    display: block;
+    overflow: hidden;
+  }
+
+  .portal-tabs {
+    display: none;
+  }
+
+  .portal-tabbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portal-tabbar button {
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .portal-body {
+    height: 100%;
+  }
+
+  .portal-entry-content {
+    width: min(100% - 24px, 620px);
+    padding: var(--x-space-10) var(--x-space-3) var(--x-space-20);
+  }
+
+  .proof-form input,
+  .proof-form textarea {
+    font-size: var(--x-t4);
+  }
+
+  .reward-metrics > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .portal-modal-backdrop {
+    padding: var(--x-space-3);
+  }
+
+  .portal-modal {
+    max-height: calc(100% - 8px);
+  }
+
+  .portal-toast {
+    right: 16px;
+    bottom: 82px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .active-heading,
+  .staking-heading,
+  .section-heading-row,
+  .review-actions,
+  .referral-link-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .active-heading .btn,
+  .stake-control > .portal-primary-action,
+  .referral-link-row .btn {
+    width: 100%;
+  }
+
+  .staking-module,
+  .season-panel,
+  .reward-summary,
+  .reward-breakdown,
+  .reward-history,
+  .mission-card {
+    padding: var(--x-space-4);
+  }
+
+  .stake-preview-grid,
+  .season-metrics,
+  .reward-metrics,
+  .mission-meta,
+  .mission-detail-grid,
+  .referral-progress {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience-card,
+  .experience-card:first-child {
+    grid-template-columns: 88px 1fr;
+  }
+
+  .activity-row {
+    grid-template-columns: 8px 1fr;
+  }
+
+  .activity-row time {
+    grid-column: 2;
+  }
+
+  .reward-table-wrap {
+    margin-right: calc(var(--x-space-4) * -1);
+  }
+
+  .portal-modal-header {
+    padding-left: var(--x-space-4);
+  }
+
+  .portal-modal-body {
+    padding: var(--x-space-4);
+  }
+
+  .referral-stage {
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .referral-stage + .referral-stage {
+    border-left: 0;
+  }
+
+  .referral-stage:nth-child(even) {
+    border-left: 1px solid var(--line-strong);
+  }
+}

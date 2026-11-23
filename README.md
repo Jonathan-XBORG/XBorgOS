@@ -133,3 +133,16 @@ This copy (`D:\XBORG\XBorgOS-V2`) replaces the chat workspace with the desktop f
 Stake and Earn now open in the same window chrome as the products; their content is unchanged. The review bar is gone, but every review state still opens from its address (for example `#stake-active`).
 
 Assets exported from Figma are in `public/os/`. The XBG widget figures (5.79%, chart) are the design's demo values. The Playwright suites in `tests/` still describe the round 6 workspace and need rewriting for this desktop; `npm test` (unit tests) passes.
+
+## /V2: a copy to experiment on
+
+The build serves two sites:
+
+- `/` from `index.html` + `src/` + `public/` (the live version)
+- `/V2` from `V2/index.html` + `src-v2/` + `public/V2/` (a full copy)
+
+Change anything under `src-v2/` or `public/V2/` and only `/V2` moves. In dev,
+open `http://127.0.0.1:5174/V2/` (with the trailing slash). Asset paths in
+`src-v2` start with `/V2/` (for example `/V2/os/wallpaper-wave.webp`), and
+its wallpaper choice is saved under its own key, so the two sites never
+share a setting.
