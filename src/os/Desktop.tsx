@@ -1,12 +1,33 @@
 import { AnimatePresence, motion } from 'motion/react'
-import { Suspense, lazy, useCallback, useEffect, useRef, useState, type CSSProperties, type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactNode } from 'react'
+import {
+  Suspense,
+  lazy,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type MouseEvent as ReactMouseEvent,
+  type PointerEvent as ReactPointerEvent,
+  type ReactNode,
+} from 'react'
 import type { DockAppId } from '../components/Dock'
 import { isStakeScreen, type NavigationSource, type ProductId, type ScreenId } from '../screens'
 import type { WalletState } from '../wallet'
 import Boot from './Boot'
 import { beep } from './chatSound'
 import ContextMenu, { type MenuItem } from './ContextMenu'
-import { AboutOsContent, ClientsContent, FolderContent, InfoContent, PreferencesContent, ProductContent, ReadmeContent, SecretContent, StakeContent } from './Contents'
+import {
+  AboutOsContent,
+  ClientsContent,
+  FolderContent,
+  InfoContent,
+  PreferencesContent,
+  ProductContent,
+  ReadmeContent,
+  SecretContent,
+  StakeContent,
+} from './Contents'
 import { useKonami } from './konami'
 import LiveWallpaper from './LiveWallpaper'
 import { formatPrice } from './XbgChart'
@@ -35,12 +56,24 @@ const isProduct = (id: string): id is ProductId => (PRODUCT_IDS as string[]).inc
 const isDesktopItem = (id: string): id is DesktopItemKind => id === 'readme' || id === 'docs' || id === 'changelog' || id === 'secret'
 const isInfo = (id: string): id is InfoWin => id.startsWith('info-')
 
-const ICONS: { kind: DesktopItemKind; label: string; position: CSSProperties }[] = [
+const ICONS: {
+  kind: DesktopItemKind
+  label: string
+  position: CSSProperties
+}[] = [
   { kind: 'docs', label: 'Clients', position: { left: 82, top: 558 } },
-  { kind: 'readme', label: 'about_us.txt', position: { right: 81, bottom: 143 } },
+  {
+    kind: 'readme',
+    label: 'about_us.txt',
+    position: { right: 81, bottom: 143 },
+  },
 ]
 // Shown with "Show Hidden Files" in the desktop's right click menu.
-const SECRET_ICON = { kind: 'secret' as const, label: '.secret', position: { right: 81, bottom: 282 } as CSSProperties }
+const SECRET_ICON = {
+  kind: 'secret' as const,
+  label: '.secret',
+  position: { right: 81, bottom: 282 } as CSSProperties,
+}
 
 // Deep links: ?open=propr opens that window. Copy Link writes these.
 const OPEN_PARAM: Record<string, WinId> = {
@@ -136,7 +169,11 @@ export default function Desktop({
   const stakeOpen = isStakeScreen(screen)
   const paper = OS_WALLPAPERS.find((w) => w.id === wallpaper) ?? OS_WALLPAPERS[0]
   const [booted, setBooted] = useState(false)
-  const [menu, setMenu] = useState<{ x: number; y: number; items: MenuItem[] } | null>(null)
+  const [menu, setMenu] = useState<{
+    x: number
+    y: number
+    items: MenuItem[]
+  } | null>(null)
   const [toast, setToast] = useState<{ text: string; n: number } | null>(null)
   const [showHidden, setShowHidden] = useState(false)
   const [tidying, setTidying] = useState(false)
@@ -227,9 +264,7 @@ export default function Desktop({
 
   // Links such as #stake open that window too.
   useEffect(() => {
-    for (const [id, open] of [
-      ['stake', stakeOpen],
-    ] as const) {
+    for (const [id, open] of [['stake', stakeOpen]] as const) {
       setWindows((list) => {
         const has = list.some((w) => w.id === id)
         if (open && !has) return [...list, { id, origin: originOf(id), cascade: list.length % 6 }]
@@ -252,7 +287,9 @@ export default function Desktop({
     return () => window.removeEventListener('keydown', onKey)
   })
 
-  const running = windows.map((w) => w.id).filter((id): id is DockAppId => id === 'propr' || id === 'fanbase' || id === 'trigr' || id === 'stake')
+  const running = windows
+    .map((w) => w.id)
+    .filter((id): id is DockAppId => id === 'propr' || id === 'fanbase' || id === 'trigr' || id === 'stake')
   const frontId = windows[windows.length - 1]?.id
 
   // ---------- Right click menus ----------
@@ -277,7 +314,11 @@ export default function Desktop({
   function itemMenu(id: string): MenuItem[] {
     return [
       { label: 'Open', shortcut: '⌘O', onSelect: () => openTarget(id) },
-      { label: 'Get Info', shortcut: '⌘I', onSelect: () => openWindow(`info-${id}`) },
+      {
+        label: 'Get Info',
+        shortcut: '⌘I',
+        onSelect: () => openWindow(`info-${id}`),
+      },
       { type: 'separator' },
       { label: 'Copy Link', shortcut: '⌘C', onSelect: () => copyLink(id) },
     ]
@@ -287,11 +328,19 @@ export default function Desktop({
     return [
       {
         label: 'Change Wallpaper',
-        submenu: OS_WALLPAPERS.map((w) => ({ label: w.name, checked: w.id === paper.id, onSelect: () => chooseWallpaper(w) })),
+        submenu: OS_WALLPAPERS.map((w) => ({
+          label: w.name,
+          checked: w.id === paper.id,
+          onSelect: () => chooseWallpaper(w),
+        })),
       },
       { label: 'Clean Up', onSelect: cleanUp },
       { type: 'separator' },
-      { label: 'Get Info', shortcut: '⌘I', onSelect: () => openWindow('about') },
+      {
+        label: 'Get Info',
+        shortcut: '⌘I',
+        onSelect: () => openWindow('about'),
+      },
       {
         label: showHidden ? 'Hide Hidden Files' : 'Show Hidden Files',
         shortcut: '⇧⌘.',
@@ -318,7 +367,11 @@ export default function Desktop({
           onSelect: async () => say((await copyText(c.address)) ? `${c.network} address copied` : 'Could not copy'),
         })),
       },
-      { label: 'Open Chart', shortcut: '⌘O', onSelect: () => window.open(XBG_CHART_URL, '_blank', 'noopener') },
+      {
+        label: 'Open Chart',
+        shortcut: '⌘O',
+        onSelect: () => window.open(XBG_CHART_URL, '_blank', 'noopener'),
+      },
       { type: 'separator' },
       { label: 'Stake', onSelect: openStake },
     ]
@@ -357,7 +410,12 @@ export default function Desktop({
   }
 
   // Touch screens: a long press opens the same menus.
-  const longPress = useRef<{ timer: number; x: number; y: number; fired: number }>({ timer: 0, x: 0, y: 0, fired: -1e9 })
+  const longPress = useRef<{
+    timer: number
+    x: number
+    y: number
+    fired: number
+  }>({ timer: 0, x: 0, y: 0, fired: -1e9 })
   function onTouchDown(e: ReactPointerEvent) {
     if (e.pointerType !== 'touch') return
     const lp = longPress.current
@@ -420,7 +478,15 @@ export default function Desktop({
     if (isProduct(w.id)) {
       const p = osProduct(w.id)
       return (
-        <OsWindow key={w.id} {...common} title={p.name} icon={<img src={p.icon} alt="" width={32} height={32} />} width={1050} top={277} className="os-win-product">
+        <OsWindow
+          key={w.id}
+          {...common}
+          title={p.name}
+          icon={<img src={p.icon} alt="" width={32} height={32} />}
+          width={1050}
+          top={277}
+          className="os-win-product"
+        >
           <ProductContent product={p} />
         </OsWindow>
       )
@@ -440,8 +506,25 @@ export default function Desktop({
           height={820}
           className="os-win-app os-win-stake"
           accessory={
-            <a className="os-win-btn os-win-open-out" href={STAKE_PAGE} target="_blank" rel="noreferrer" aria-label="Open Stake in a new tab" title="Open in a new tab">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <a
+              className="os-win-btn os-win-open-out"
+              href={STAKE_PAGE}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Stake in a new tab"
+              title="Open in a new tab"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
                 <path d="M8 16 16 8" />
                 <path d="M9 8h7v7" />
               </svg>
@@ -459,7 +542,12 @@ export default function Desktop({
           {...common}
           title="Messages"
           icon={
-            <img src="/os/button-messages.svg" alt="" width={32} height={32} />
+            // Same tile as the dock icon: dark glass, white bubble.
+            <span className="os-win-tile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+                <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.47 1.17 4.7 3.05 6.3L4.3 21.4a.5.5 0 0 0 .7.56l3.9-1.8c.98.25 2.02.38 3.1.38 5.52 0 10-3.94 10-8.8S17.52 3 12 3Z" />
+              </svg>
+            </span>
           }
           width={640}
           height={580}
@@ -472,7 +560,16 @@ export default function Desktop({
     }
     if (w.id === 'about') {
       return (
-        <OsWindow key={w.id} {...common} title="About this OS" icon={<XMark />} width={420} top={150} className="os-win-app os-win-info">
+        <OsWindow
+          key={w.id}
+          {...common}
+          title="About this OS"
+          noFull
+          icon={<XMark />}
+          width={420}
+          top={150}
+          className="os-win-app os-win-info"
+        >
           <AboutOsContent />
         </OsWindow>
       )
@@ -481,7 +578,15 @@ export default function Desktop({
       const target = w.id.slice(5)
       const info = APP_INFO[target]
       return (
-        <OsWindow key={w.id} {...common} title={`${NAMES[target] ?? target} Info`} icon={iconFor(target, 32)} width={440} top={160} className="os-win-app os-win-info">
+        <OsWindow
+          key={w.id}
+          {...common}
+          title={`${NAMES[target] ?? target} Info`}
+          icon={iconFor(target, 32)}
+          width={440}
+          top={160}
+          className="os-win-app os-win-info"
+        >
           <InfoContent icon={iconFor(target, 48)} name={NAMES[target] ?? target} kind={info?.kind ?? ''} rows={info?.rows ?? []} />
         </OsWindow>
       )
@@ -521,7 +626,15 @@ export default function Desktop({
         width={meta.width}
         top={meta.top}
       >
-        {w.id === 'readme' ? <ReadmeContent /> : w.id === 'docs' ? <ClientsContent /> : w.id === 'secret' ? <SecretContent /> : <FolderContent />}
+        {w.id === 'readme' ? (
+          <ReadmeContent />
+        ) : w.id === 'docs' ? (
+          <ClientsContent />
+        ) : w.id === 'secret' ? (
+          <SecretContent />
+        ) : (
+          <FolderContent />
+        )}
       </OsWindow>
     )
   }
@@ -608,7 +721,12 @@ export default function Desktop({
                 onSelect={() => setSelected(icon.kind)}
                 onBlur={() => setSelected((cur) => (cur === icon.kind ? null : cur))}
                 onOpen={() => openWindow(icon.kind)}
-                onMove={(dx, dy) => setMoved((all) => ({ ...all, [icon.kind]: { x: m.x + dx, y: m.y + dy } }))}
+                onMove={(dx, dy) =>
+                  setMoved((all) => ({
+                    ...all,
+                    [icon.kind]: { x: m.x + dx, y: m.y + dy },
+                  }))
+                }
               />
             )
           })}
@@ -672,9 +790,30 @@ function iconFor(id: string, size: number): ReactNode {
     const p = osProduct(id)
     return <img src={size > 32 ? p.dockIcon : p.icon} alt="" width={size} height={size} />
   }
-  if (id === 'chat') return <img src="/os/button-messages.svg" alt="" width={size} height={size} />
+  if (id === 'chat')
+    return size > 32 ? (
+      <span className="os-win-tile os-info-tile">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.47 1.17 4.7 3.05 6.3L4.3 21.4a.5.5 0 0 0 .7.56l3.9-1.8c.98.25 2.02.38 3.1.38 5.52 0 10-3.94 10-8.8S17.52 3 12 3Z" />
+        </svg>
+      </span>
+    ) : (
+      <span className="os-win-tile">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M12 3C6.48 3 2 6.94 2 11.8c0 2.47 1.17 4.7 3.05 6.3L4.3 21.4a.5.5 0 0 0 .7.56l3.9-1.8c.98.25 2.02.38 3.1.38 5.52 0 10-3.94 10-8.8S17.52 3 12 3Z" />
+        </svg>
+      </span>
+    )
   if (id === 'readme' || id === 'secret')
-    return <img src="/os/readme-title-icon.svg" alt="" width={size * 0.8} height={size} className={id === 'secret' ? 'is-hidden-file' : undefined} />
+    return (
+      <img
+        src="/os/readme-title-icon.svg"
+        alt=""
+        width={size * 0.8}
+        height={size}
+        className={id === 'secret' ? 'is-hidden-file' : undefined}
+      />
+    )
   if (id === 'docs') return <img src="/os/folder-front.svg" alt="" width={size} height={size / 2} />
   return size > 32 ? (
     <span className="os-win-tile os-info-tile">

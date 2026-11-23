@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type PointerEvent, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 
 export type OsWindowOrigin = { x: number; y: number } | null
 
@@ -16,8 +17,28 @@ type Rect = { x: number; y: number; w: number; h: number | null }
 // Where each window was last dragged to, so it reopens there (this visit).
 const placed = new Map<string, { x: number; y: number }>()
 
+// Snap: drag a window against the left or right edge and it takes that half
+// of the screen. SNAP_EDGE is how close (px) the pointer must get.
+type Side = 'left' | 'right'
+const SNAP_EDGE = 12
+
+function halfRect(side: Side): Rect {
+  const w = (window.innerWidth - MARGIN * 3) / 2
+  return {
+    x: side === 'left' ? MARGIN : MARGIN * 2 + w,
+    y: TOP,
+    w,
+    h: window.innerHeight - TOP - DOCK_SPACE,
+  }
+}
+
 function fullRect(): Rect {
-  return { x: MARGIN, y: TOP, w: window.innerWidth - MARGIN * 2, h: window.innerHeight - TOP - DOCK_SPACE }
+  return {
+    x: MARGIN,
+    y: TOP,
+    w: window.innerWidth - MARGIN * 2,
+    h: window.innerHeight - TOP - DOCK_SPACE,
+  }
 }
 
 // One chrome for every XBorg OS window: icon, title, full screen and close
@@ -36,6 +57,7 @@ export default function OsWindow({
   origin,
   className,
   accessory,
+  noFull = false,
   onFocus,
   onClose,
   children,
@@ -52,6 +74,8 @@ export default function OsWindow({
   origin: OsWindowOrigin
   className?: string
   accessory?: ReactNode
+  // No full screen button or double click (small windows like Clients).
+  noFull?: boolean
   onFocus: () => void
   onClose: () => void
   children: ReactNode
@@ -62,7 +86,12 @@ export default function OsWindow({
   const [full, setFull] = useState(false)
   const [animating, setAnimating] = useState(false)
   const restore = useRef<Rect | null>(null)
-  const drag = useRef<{ dx: number; dy: number } | null>(null)
+  const drag = useRef<{ dx: number; dy: number; x0: number; y0: number; moved: boolean } | null>(null)
+  // The side the window is snapped to, the side the pointer is over while
+  // dragging (shown as a preview), and the size to go back to when unsnapped.
+  const [snapped, setSnapped] = useState<Side | null>(null)
+  const [preview, setPreview] = useState<Side | null>(null)
+  const beforeSnap = useRef<Rect | null>(null)
   const timer = useRef(0)
 
   // First placement: centred horizontally, at the design's height when it fits.
@@ -106,7 +135,12 @@ export default function OsWindow({
     const w = Math.min(width, vw - MARGIN * 2)
     const h = height ? Math.min(height, vh - DOCK_SPACE - TOP) : null
     setAnimating(!reduce)
-    setRect({ x: Math.max(MARGIN, (vw - w) / 2), y: Math.max(TOP, (vh - DOCK_SPACE - (h ?? 400)) / 2), w, h })
+    setRect({
+      x: Math.max(MARGIN, (vw - w) / 2),
+      y: Math.max(TOP, (vh - DOCK_SPACE - (h ?? 400)) / 2),
+      w,
+      h,
+    })
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => setAnimating(false), reduce ? 0 : FULL_MS + 40)
   }, [width, height, rect, full, reduce])
@@ -128,7 +162,7 @@ export default function OsWindow({
   // can't transition, so the current height is pinned first.
   function toggleFull() {
     const el = ref.current
-    if (!el || !rect || window.innerWidth < 900) return
+    if (!el || !rect || noFull || window.innerWidth < 900) return
     window.clearTimeout(timer.current)
     const current: Rect = { ...rect, h: el.offsetHeight }
     if (!full) {
@@ -147,34 +181,79 @@ export default function OsWindow({
       setAnimating(!reduce)
       setFull(false)
       setRect({ ...back, h: backH })
-      timer.current = window.setTimeout(() => {
-        setAnimating(false)
-        setRect(back)
-      }, reduce ? 0 : FULL_MS)
+      timer.current = window.setTimeout(
+        () => {
+          setAnimating(false)
+          setRect(back)
+        },
+        reduce ? 0 : FULL_MS,
+      )
     }
     if (!reduce && !full) timer.current = window.setTimeout(() => setAnimating(false), FULL_MS + 40)
   }
 
+  const canSnap = !noFull && typeof window !== 'undefined' && window.innerWidth >= 900
+
   function onPointerDown(e: PointerEvent<HTMLElement>) {
     if (full || e.button !== 0 || !rect) return
     if ((e.target as Element).closest('button, a')) return
-    drag.current = { dx: e.clientX - rect.x, dy: e.clientY - rect.y }
+    drag.current = { dx: e.clientX - rect.x, dy: e.clientY - rect.y, x0: e.clientX, y0: e.clientY, moved: false }
     e.currentTarget.setPointerCapture(e.pointerId)
   }
   function onPointerMove(e: PointerEvent<HTMLElement>) {
     const d = drag.current
     if (!d || !rect) return
+    if (!d.moved) {
+      if (Math.hypot(e.clientX - d.x0, e.clientY - d.y0) < 4) return
+      d.moved = true
+      // Pulling a snapped window away: it gets its old size back, under the
+      // pointer at the same relative spot.
+      if (snapped && beforeSnap.current) {
+        const back = beforeSnap.current
+        const ratio = (e.clientX - rect.x) / rect.w
+        d.dx = back.w * ratio
+        setSnapped(null)
+        beforeSnap.current = null
+        setRect({ x: e.clientX - d.dx, y: rect.y, w: back.w, h: back.h })
+        return
+      }
+    }
     const el = ref.current!
     setRect({
       ...rect,
       x: Math.min(window.innerWidth - 80, Math.max(80 - el.offsetWidth, e.clientX - d.dx)),
       y: Math.min(window.innerHeight - 80, Math.max(MENUBAR, e.clientY - d.dy)),
     })
+    if (canSnap) {
+      const side: Side | null = e.clientX <= SNAP_EDGE ? 'left' : e.clientX >= window.innerWidth - SNAP_EDGE ? 'right' : null
+      if (side !== preview) setPreview(side)
+    }
   }
   function onPointerUp() {
-    if (drag.current && rect) placed.set(id, { x: rect.x, y: rect.y })
+    const d = drag.current
     drag.current = null
+    if (!d || !rect) return
+    if (preview) {
+      const side = preview
+      setPreview(null)
+      beforeSnap.current = { ...rect, h: height ? rect.h : null }
+      setSnapped(side)
+      window.clearTimeout(timer.current)
+      setAnimating(!reduce)
+      setRect(halfRect(side))
+      timer.current = window.setTimeout(() => setAnimating(false), reduce ? 0 : FULL_MS + 40)
+      return
+    }
+    if (d.moved) placed.set(id, { x: rect.x, y: rect.y })
   }
+
+  // A snapped window keeps its half when the screen is resized.
+  useEffect(() => {
+    if (!snapped) return
+    const onResize = () => setRect(halfRect(snapped))
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [snapped])
 
   const style: CSSProperties = {
     zIndex: z,
@@ -189,38 +268,69 @@ export default function OsWindow({
 
   const hidden = reduce ? { opacity: 0 } : { opacity: 0, scale: 0.06 }
 
+  const host = ref.current?.parentElement
+  const previewRect = preview ? halfRect(preview) : null
+
   return (
-    <motion.section
-      ref={ref}
-      role="dialog"
-      aria-label={title}
-      data-window={id}
-      data-front={front ? 'true' : undefined}
-      className={`os-win${full ? ' is-full' : ''}${front ? ' is-front' : ''}${animating ? ' is-animating' : ''}${height ? ' has-height' : ''}${className ? ` ${className}` : ''}`}
-      style={style}
-      onPointerDownCapture={onFocus}
-      initial={hidden}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ ...hidden, transition: { duration: reduce ? 0 : 0.28, ease: [0.5, 0, 0.75, 0] } }}
-      transition={{ duration: reduce ? 0 : 0.5, ease: [0.32, 0.72, 0, 1] }}
-    >
-      <header className="os-win-bar" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onDoubleClick={toggleFull}>
-        <span className="os-win-icon" aria-hidden="true">
-          {icon}
-        </span>
-        <h2 className="os-win-title">{title}</h2>
-        {accessory}
-        <div className="os-win-controls">
-          <button type="button" className="os-win-btn os-win-full" aria-label={full ? 'Exit full screen' : 'Full screen'} onClick={toggleFull}>
-            <img src="/os/fullscreen.svg" alt="" width={24} height={24} />
-          </button>
-          <button type="button" className="os-win-btn os-win-close" aria-label={`Close ${title}`} onClick={onClose}>
-            <img src="/os/close.svg" alt="" width={24} height={24} />
-          </button>
-        </div>
-      </header>
-      <div className="os-win-body">{children}</div>
-    </motion.section>
+    <>
+      {previewRect && host
+        ? createPortal(
+            <div
+              className="os-snap-preview"
+              aria-hidden="true"
+              style={{ left: previewRect.x, top: previewRect.y, width: previewRect.w, height: previewRect.h ?? undefined, zIndex: z - 1 }}
+            />,
+            host,
+          )
+        : null}
+      <motion.section
+        ref={ref}
+        role="dialog"
+        aria-label={title}
+        data-window={id}
+        data-front={front ? 'true' : undefined}
+        className={`os-win${full ? ' is-full' : ''}${front ? ' is-front' : ''}${animating ? ' is-animating' : ''}${height || rect?.h ? ' has-height' : ''}${snapped ? ' is-snapped' : ''}${className ? ` ${className}` : ''}`}
+        style={style}
+        onPointerDownCapture={onFocus}
+        initial={hidden}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{
+          ...hidden,
+          transition: { duration: reduce ? 0 : 0.28, ease: [0.5, 0, 0.75, 0] },
+        }}
+        transition={{ duration: reduce ? 0 : 0.5, ease: [0.32, 0.72, 0, 1] }}
+      >
+        <header
+          className="os-win-bar"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onDoubleClick={toggleFull}
+        >
+          <span className="os-win-icon" aria-hidden="true">
+            {icon}
+          </span>
+          <h2 className="os-win-title">{title}</h2>
+          {accessory}
+          <div className="os-win-controls">
+            {noFull ? null : (
+              <button
+                type="button"
+                className="os-win-btn os-win-full"
+                aria-label={full ? 'Exit full screen' : 'Full screen'}
+                onClick={toggleFull}
+              >
+                <img src="/os/fullscreen.svg" alt="" width={24} height={24} />
+              </button>
+            )}
+            <button type="button" className="os-win-btn os-win-close" aria-label={`Close ${title}`} onClick={onClose}>
+              <img src="/os/close.svg" alt="" width={24} height={24} />
+            </button>
+          </div>
+        </header>
+        <div className="os-win-body">{children}</div>
+      </motion.section>
+    </>
   )
 }
 
