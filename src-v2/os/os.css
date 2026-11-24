@@ -2922,6 +2922,9 @@ img.is-hidden-file {
 
 .os {
   --v2-surface: #171717;
+  /* Figma: every panel is #171717 at 80% over a 4px blur. */
+  --v2-glass: rgba(23, 23, 23, 0.8);
+  --v2-blur: blur(4px);
   --v2-border: rgba(255, 255, 255, 0.1);
   --v2-bracket: rgba(255, 255, 255, 0.3);
   --v2-tile: #141416;
@@ -2947,11 +2950,11 @@ img.is-hidden-file {
 .os .os-win,
 .os .os-mc-card {
   border-radius: 0;
-  background: var(--v2-brackets), var(--v2-surface);
+  background: var(--v2-brackets), var(--v2-glass);
   border: 1px solid var(--v2-border);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: var(--v2-blur);
+  -webkit-backdrop-filter: var(--v2-blur);
 }
 
 .os .os-notif *,
@@ -3032,9 +3035,9 @@ img.is-hidden-file {
 
 .os .os-dock::before {
   border-radius: 0;
-  background: var(--v2-surface);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: var(--v2-glass);
+  backdrop-filter: var(--v2-blur);
+  -webkit-backdrop-filter: var(--v2-blur);
 }
 
 .os .os-search-field {
@@ -3182,7 +3185,9 @@ img.is-hidden-file {
 
 .os .os-dock-label {
   border-radius: 4px;
-  background: var(--v2-surface);
+  background: var(--v2-glass);
+  backdrop-filter: var(--v2-blur);
+  -webkit-backdrop-filter: var(--v2-blur);
   box-shadow: inset 0 0 0 1px var(--v2-border);
   font-size: 12px;
 }
@@ -3194,7 +3199,9 @@ img.is-hidden-file {
 .os .os-ctx,
 .os .os-toast {
   border-radius: 0;
-  background: var(--v2-surface);
+  background: var(--v2-glass);
+  backdrop-filter: var(--v2-blur);
+  -webkit-backdrop-filter: var(--v2-blur);
   border: 1px solid var(--v2-border);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
@@ -3207,9 +3214,9 @@ img.is-hidden-file {
 }
 
 .os .os-menubar::before {
-  background: var(--v2-surface);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  background: var(--v2-glass);
+  backdrop-filter: var(--v2-blur);
+  -webkit-backdrop-filter: var(--v2-blur);
 }
 
 .os .os-menubar {
@@ -3262,7 +3269,7 @@ img.is-hidden-file {
 /* Messages */
 .os .os-chat {
   border-radius: 0;
-  background: #121212;
+  background: rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 0 0 1px var(--v2-border);
 }
 
@@ -3342,4 +3349,30 @@ img.is-hidden-file {
   .os-search-kbd {
     display: none;
   }
+}
+
+/* Call to action buttons are square, no rounded corners. */
+.os .os-cta,
+.os .os-widget-wallet,
+.os .os-chat-action,
+.os .os-search-action {
+  border-radius: 0;
+}
+
+/* Chat bubbles, dock icons and inputs are square too. */
+.os .os-chat-bubble,
+.os .os-chat-row.is-them .os-chat-bubble,
+.os .os-chat-row.is-me .os-chat-bubble,
+.os .os-chat-row.is-them.is-grouped .os-chat-bubble,
+.os .os-chat-row.is-them.is-continued .os-chat-bubble,
+.os .os-chat-row.is-me.is-grouped .os-chat-bubble,
+.os .os-chat-row.is-me.is-continued .os-chat-bubble,
+.os .os-dock-item,
+.os .os-dock-item > img,
+.os .os-dock-tile,
+.os .os-search-field,
+.os .os-search-kbd,
+.os .os-chat-composer,
+.os .os-chat-send {
+  border-radius: 0;
 }
