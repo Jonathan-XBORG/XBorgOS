@@ -27,7 +27,7 @@ export default function LiveWallpaper() {
     let dot: { x: number; y: number; color: string } | null = null
 
     function size() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = Math.min(window.devicePixelRatio || 1, 3)
       w = canvas.clientWidth || window.innerWidth
       h = canvas.clientHeight || window.innerHeight
       canvas.width = layer.width = Math.round(w * dpr)

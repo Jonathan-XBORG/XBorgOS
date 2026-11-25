@@ -178,9 +178,11 @@ export default function LogoWallpaper() {
     let w = 0
     let h = 0
     function size() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      // Up to 3x for 3x screens, within a pixel budget so huge screens stay smooth.
       w = canvas.clientWidth || window.innerWidth
       h = canvas.clientHeight || window.innerHeight
+      let dpr = Math.min(window.devicePixelRatio || 1, 3)
+      if (w * h * dpr * dpr > 9_000_000) dpr = Math.max(1, Math.sqrt(9_000_000 / (w * h)))
       renderer.setPixelRatio(dpr)
       renderer.setSize(w, h, false)
       const W = Math.round(w * dpr)

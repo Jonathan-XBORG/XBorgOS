@@ -52,7 +52,8 @@ export default function Cursor3D() {
     const canvas = canvasRef.current!
     document.documentElement.classList.add('has-3d-cursor')
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    // Up to 3x so the cursor stays sharp on 3x screens (phones, some laptops).
+    const dpr = Math.min(window.devicePixelRatio || 1, 3)
     const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true, premultipliedAlpha: true })
     renderer.setPixelRatio(dpr)
     renderer.setSize(SIZE, SIZE, false)

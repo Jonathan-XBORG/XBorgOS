@@ -3376,3 +3376,12 @@ img.is-hidden-file {
 .os .os-chat-send {
   border-radius: 0;
 }
+
+/* Search answers: the same square bubbles as the chat (Gauthier's side). */
+.os .os-search-bubble {
+  padding: 9px 13px;
+  border-radius: 0;
+  background: var(--v2-tile);
+  box-shadow: inset 0 0 0 1px var(--v2-border);
+  line-height: 1.4;
+}

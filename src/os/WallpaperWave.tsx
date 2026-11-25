@@ -155,7 +155,7 @@ export default function WallpaperWave({ src, small, opacity }: { src: string; sm
 
     function size() {
       css = { w: el!.clientWidth || window.innerWidth, h: el!.clientHeight || window.innerHeight }
-      let scale = Math.min(window.devicePixelRatio || 1, 2)
+      let scale = Math.min(window.devicePixelRatio || 1, 3)
       if (css.w * css.h * scale * scale > MAX_PIXELS) scale = Math.sqrt(MAX_PIXELS / (css.w * css.h))
       el!.width = Math.round(css.w * scale)
       el!.height = Math.round(css.h * scale)

@@ -61,7 +61,8 @@ const ICONS: {
   label: string
   position: CSSProperties
 }[] = [
-  { kind: 'docs', label: 'Clients', position: { left: 82, top: 558 } },
+  // Hidden for now; put this line back to show the Clients folder again.
+  // { kind: 'docs', label: 'Clients', position: { left: 82, top: 558 } },
   {
     kind: 'readme',
     label: 'about_us.txt',
