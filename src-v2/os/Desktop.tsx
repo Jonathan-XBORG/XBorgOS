@@ -22,6 +22,7 @@ import {
   ClientsContent,
   FolderContent,
   InfoContent,
+  PreferencesContent,
   ProductContent,
   ReadmeContent,
   SecretContent,
@@ -32,7 +33,7 @@ import LiveWallpaper from './LiveWallpaper'
 import LogoWallpaper from './LogoWallpaper'
 import { formatPrice } from './XbgChart'
 import { getMarket } from './xbgMarket'
-import { APP_INFO, OS_WALLPAPERS, STAKE_PAGE, XBG_CHART_URL, XBG_CONTRACTS, osProduct } from './data'
+import { APP_INFO, OS_WALLPAPERS, STAKE_PAGE, XBG_CHART_URL, XBG_CONTRACTS, osProduct, type OsWallpaper } from './data'
 import MessagesApp from './MessagesApp'
 import MenuBar from './MenuBar'
 import WallpaperWave from './WallpaperWave'
@@ -46,7 +47,7 @@ import './os.css'
 
 const Cursor3D = lazy(() => import('./Cursor3D'))
 
-type AppWin = 'stake' | 'earn' | 'chat' | 'about'
+type AppWin = 'stake' | 'earn' | 'prefs' | 'chat' | 'about'
 type InfoWin = `info-${string}`
 type WinId = ProductId | DesktopItemKind | AppWin | InfoWin
 type OpenWin = { id: WinId; origin: OsWindowOrigin; cascade: number }
@@ -85,6 +86,7 @@ const OPEN_PARAM: Record<string, WinId> = {
   messages: 'chat',
   about: 'readme',
   clients: 'docs',
+  preferences: 'prefs',
   secret: 'secret',
 }
 const paramFor = (id: string) => Object.keys(OPEN_PARAM).find((k) => OPEN_PARAM[k] === id) ?? id
@@ -125,10 +127,25 @@ const WINDOW_META: Record<DesktopItemKind, { title: string; width: number; top?:
 }
 
 // Where a window grows from: its dock tile, or its desktop icon.
+// The chosen wallpaper is remembered; XBorg 3D is the default.
+const WALLPAPER_KEY = 'xborg-os-v2-wallpaper-2'
+
+function savedWallpaper(): string {
+  try {
+    const id = window.localStorage.getItem(WALLPAPER_KEY)
+    if (id && OS_WALLPAPERS.some((w) => w.id === id)) return id
+  } catch {
+    // Storage blocked: use the default.
+  }
+  return OS_WALLPAPERS[0].id
+}
+
 function originOf(id: WinId): OsWindowOrigin {
   const el = isDesktopItem(id)
     ? document.querySelector<HTMLElement>(`[data-desktop-item="${id}"]`)
-    : document.querySelector<HTMLElement>(`[data-dock="${id}"]`)
+    : id === 'prefs'
+      ? document.querySelector<HTMLElement>('.os-menubar-logo')
+      : document.querySelector<HTMLElement>(`[data-dock="${id}"]`)
   if (!el) return null
   const r = el.getBoundingClientRect()
   return { x: r.left + r.width / 2, y: r.top + r.height / 2 }
@@ -152,8 +169,8 @@ export default function Desktop({
   const [selected, setSelected] = useState<DesktopItemKind | null>(null)
   const [moved, setMoved] = useState<Record<string, { x: number; y: number }>>({})
   const stakeOpen = isStakeScreen(screen)
-  // V2: one wallpaper, XBorg 3D, with no way to change it.
-  const paper = OS_WALLPAPERS[0]
+  const [wallpaper, setWallpaper] = useState(savedWallpaper)
+  const paper = OS_WALLPAPERS.find((w) => w.id === wallpaper) ?? OS_WALLPAPERS[0]
   const [booted, setBooted] = useState(false)
   const [menu, setMenu] = useState<{
     x: number
@@ -184,6 +201,15 @@ export default function Desktop({
       return !on
     })
   })
+
+  function chooseWallpaper(w: OsWallpaper) {
+    setWallpaper(w.id)
+    try {
+      window.localStorage.setItem(WALLPAPER_KEY, w.id)
+    } catch {
+      // Not remembered, still applied.
+    }
+  }
 
   function openWindow(id: WinId) {
     setMission(false)
@@ -303,6 +329,14 @@ export default function Desktop({
 
   function desktopMenu(): MenuItem[] {
     return [
+      {
+        label: 'Change Wallpaper',
+        submenu: OS_WALLPAPERS.map((w) => ({
+          label: w.name,
+          checked: w.id === paper.id,
+          onSelect: () => chooseWallpaper(w),
+        })),
+      },
       { label: 'Clean Up', onSelect: cleanUp },
       { type: 'separator' },
       {
@@ -560,6 +594,24 @@ export default function Desktop({
         </OsWindow>
       )
     }
+    if (w.id === 'prefs') {
+      return (
+        <OsWindow
+          key={w.id}
+          {...common}
+          title="Preferences"
+          icon={
+            <span className="os-win-tile">
+              <img src="/V2/os/stake-icon.svg" alt="" width={14} height={15} />
+            </span>
+          }
+          width={640}
+          className="os-win-app os-win-prefs"
+        >
+          <PreferencesContent value={paper.id} onChange={chooseWallpaper} />
+        </OsWindow>
+      )
+    }
     if (w.id === 'earn') return null
     const meta = WINDOW_META[w.id]
     return (
@@ -647,6 +699,7 @@ export default function Desktop({
             onOpenApp={openApp}
             onAbout={() => openWindow('readme')}
             onClients={() => openWindow('docs')}
+            onPreferences={() => openWindow('prefs')}
             onMessages={() => openWindow('chat')}
           />
 

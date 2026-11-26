@@ -1,16 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import WallpaperWave from './WallpaperWave'
 import { formatPrice } from './XbgChart'
 import { getMarket, subscribeMarket } from './xbgMarket'
 
 // The "Live XBG" wallpaper: the last 24 hours of the XBG price drawn across
 // the whole desktop, green above the opening price and red below, with a
-// pulse on the latest price. It redraws as new prices arrive.
+// pulse on the latest price. It redraws as new prices arrive. V2: the chart
+// is painted off screen and shown through WallpaperWave, so it gets the same
+// grid of squares and the same pointer effect as the other wallpapers; the
+// price label and the pulse are drawn sharp on a canvas on top.
 
 const GREEN = '#16C784'
 const RED = '#EA3943'
+const CELL = 16 // css px per square, gap included
+const GAP = 2
 
 export default function LiveWallpaper() {
   const ref = useRef<HTMLCanvasElement>(null)
+  const [layer] = useState(() => document.createElement('canvas'))
+  const [version, setVersion] = useState(0)
 
   useEffect(() => {
     const canvas = ref.current!
@@ -20,14 +28,13 @@ export default function LiveWallpaper() {
     let w = 0
     let h = 0
     let raf = 0
-    // The curve is painted once per data change into this layer; each frame
-    // only copies it and draws the pulse.
-    const layer = document.createElement('canvas')
+    // The chart, painted once per data change; WallpaperWave turns it into squares.
     const lctx = layer.getContext('2d')!
     let dot: { x: number; y: number; color: string } | null = null
-
+    let label: { price: number; change: number } | null = null
+    let waiting = false
     function size() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = Math.min(window.devicePixelRatio || 1, 3)
       w = canvas.clientWidth || window.innerWidth
       h = canvas.clientHeight || window.innerHeight
       canvas.width = layer.width = Math.round(w * dpr)
@@ -38,8 +45,15 @@ export default function LiveWallpaper() {
     }
 
     function paint() {
+      paintChart()
+      setVersion((v) => v + 1)
+    }
+
+    function paintChart() {
       const c = lctx
       dot = null
+      label = null
+      waiting = false
       const { points, quote } = getMarket()
       const bg = c.createRadialGradient(w * 0.5, h * 0.42, 0, w * 0.5, h * 0.42, Math.max(w, h) * 0.75)
       bg.addColorStop(0, '#0c1714')
@@ -67,8 +81,7 @@ export default function LiveWallpaper() {
       c.font = '500 13px "Geist Mono", ui-monospace, monospace'
 
       if (!points || points.length < 2) {
-        c.fillStyle = 'rgba(255,255,255,0.35)'
-        c.fillText('Waiting for live XBG data…', 32, h - 48)
+        waiting = true
         c.strokeStyle = 'rgba(22,199,132,0.4)'
         c.setLineDash([6, 8])
         c.beginPath()
@@ -141,35 +154,50 @@ export default function LiveWallpaper() {
       const [lt, lp] = points[points.length - 1]
       dot = { x: X(lt), y: Y(lp), color: Y(lp) <= base ? GREEN : RED }
 
-      // Price and 24h change, just left of the latest point.
-      const price = quote.price ?? points[points.length - 1][1]
-      const change = quote.change
-      c.textAlign = 'right'
-      c.font = '500 15px "Geist Mono", ui-monospace, monospace'
-      c.fillStyle = 'rgba(255,255,255,0.6)'
-      c.fillText(`XBG ${formatPrice(price)}`, dot.x - 22, dot.y - 26)
-      c.fillStyle = change < 0 ? RED : GREEN
-      c.fillText(`${change < 0 ? '▼' : '▲'} ${Math.abs(change).toFixed(2)}%  24h`, dot.x - 22, dot.y - 6)
-      c.textAlign = 'left'
+      label = { price: quote.price ?? points[points.length - 1][1], change: quote.change }
     }
 
     function frame(time: number) {
       const c = ctx!
       c.setTransform(1, 0, 0, 1, 0, 0)
-      c.drawImage(layer, 0, 0)
-      if (!dot) return
+      c.clearRect(0, 0, canvas.width, canvas.height)
       const dpr = canvas.width / w
       c.setTransform(dpr, 0, 0, dpr, 0, 0)
+      if (waiting) {
+        c.font = '500 13px "Geist Mono", ui-monospace, monospace'
+        c.fillStyle = 'rgba(255,255,255,0.35)'
+        c.fillText('Waiting for live XBG data…', 32, h - 48)
+      }
+      if (!dot || !label) return
+      // Price and 24h change, just left of the latest point.
+      c.textAlign = 'right'
+      c.font = '500 15px "Geist Mono", ui-monospace, monospace'
+      c.fillStyle = 'rgba(255,255,255,0.6)'
+      c.fillText(`XBG ${formatPrice(label.price)}`, dot.x - 22, dot.y - 26)
+      c.fillStyle = label.change < 0 ? RED : GREEN
+      c.fillText(`${label.change < 0 ? '▼' : '▲'} ${Math.abs(label.change).toFixed(2)}%  24h`, dot.x - 22, dot.y - 6)
+      c.textAlign = 'left'
       const phase = reduce ? 0.5 : (time / 1600) % 1
+      // The pulse, in squares: the square under the latest price lights up
+      // and a ring of squares spreads from it.
+      const cx = Math.floor(dot.x / CELL)
+      const cy = Math.floor(dot.y / CELL)
+      const side = CELL - GAP
       c.fillStyle = dot.color
-      c.globalAlpha = 0.35 * (1 - phase)
-      c.beginPath()
-      c.arc(dot.x, dot.y, 6 + phase * 22, 0, Math.PI * 2)
-      c.fill()
+      for (let y = cy - 3; y <= cy + 3; y++) {
+        for (let x = cx - 3; x <= cx + 3; x++) {
+          const d = Math.hypot((x + 0.5) * CELL - dot.x, (y + 0.5) * CELL - dot.y)
+          const k = (d - phase * 44) / 9
+          const ring = Math.exp(-k * k) * (1 - phase) * 0.55
+          const a = x === cx && y === cy ? 1 : ring
+          if (a < 0.02) continue
+          c.globalAlpha = a
+          c.beginPath()
+          c.roundRect(x * CELL + GAP / 2, y * CELL + GAP / 2, side, side, 1.5)
+          c.fill()
+        }
+      }
       c.globalAlpha = 1
-      c.beginPath()
-      c.arc(dot.x, dot.y, 5, 0, Math.PI * 2)
-      c.fill()
     }
 
     // About 30 frames a second is plenty for the pulse.
@@ -206,7 +234,12 @@ export default function LiveWallpaper() {
       window.removeEventListener('resize', onResize)
       document.removeEventListener('visibilitychange', onVisible)
     }
-  }, [])
+  }, [layer])
 
-  return <canvas ref={ref} className="os-wallpaper-live" aria-hidden="true" />
+  return (
+    <>
+      <WallpaperWave source={layer} version={version} opacity={1} />
+      <canvas ref={ref} className="os-wallpaper-live" aria-hidden="true" />
+    </>
+  )
 }

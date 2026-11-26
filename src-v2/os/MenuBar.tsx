@@ -54,11 +54,13 @@ export default function MenuBar({
   onAbout,
   onClients,
   onMessages,
+  onPreferences,
 }: {
   onOpenApp: (id: DockAppId) => void
   onAbout: () => void
   onClients: () => void
   onMessages: () => void
+  onPreferences: () => void
 }) {
   const reduce = useReducedMotion()
   const now = useClock()
@@ -146,6 +148,10 @@ export default function MenuBar({
                 <a role="menuitem" href={LINKS.discord} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>
                   Discord
                 </a>
+                <span className="os-menubar-sep" role="separator" />
+                <button type="button" role="menuitem" onClick={run(onPreferences)}>
+                  Preferences…
+                </button>
               </motion.div>
             ) : null}
           </AnimatePresence>
